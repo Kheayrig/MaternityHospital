@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Главное окно" 
+        Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-
+        <DataGrid x:Name="PatientsDataGrid" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="364,0,0,0" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" Binding="{Binding FIO}" Header="ФИО"/>
+                <DataGridTextColumn Width="150" Binding="{Binding BirthDate}" Header="Дата рождения"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

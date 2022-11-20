@@ -1,5 +1,9 @@
-﻿using System;
+﻿using MaternityHospital.DB;
+using MaternityHospital.DB.Repositories;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +24,27 @@ namespace MaternityHospital
     /// </summary>
     public partial class MainWindow : Window
     {
+        private BindingList<Patient> _data;
+
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            using(var db = new ApplicationContext())
+            {
+                _data = new BindingList<Patient>();
+                // загружаем данные из БД
+                _data = Patients.GetAllTableView();
+                db.Patients.Load();
+                _data = db.Patients.Local.ToBindingList();
+                PatientsDataGrid.ItemsSource = _data;
+            }
+            
+
         }
     }
 }
