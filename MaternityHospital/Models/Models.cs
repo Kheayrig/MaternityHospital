@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MaternityHospital.DB
 {
-    internal class Models
+    public class Patient
     {
 
     }
