@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,6 +28,25 @@ namespace MaternityHospital
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedItem = (TextBlock)plod.SelectedItem;
+            if(selectedItem.Text == "один")
+            {
+                plod_Copy.Visibility = Visibility.Hidden;  //не видно
+            }
+            else
+            {
+                plod_Copy.Visibility = Visibility.Visible;  //видно
+            }
+        }
+
+        public void limitnumber(object sender, TextCompositionEventArgs e)
+        {
+            Regex re = new Regex("[^0-9]+");
+            e.Handled = re.IsMatch(e.Text);
         }
     }
 }

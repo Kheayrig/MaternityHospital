@@ -29,6 +29,7 @@ namespace MaternityHospital
         public MainWindow()
         {
             InitializeComponent();
+            new Window1().Show();
 
         }
 
@@ -38,6 +39,7 @@ namespace MaternityHospital
             {
                 _data = new BindingList<Patient>();
                 // загружаем данные из БД
+                db.Database.EnsureCreated();
                 _data = Patients.GetAllTableView();
                 db.Patients.Load();
                 _data = db.Patients.Local.ToBindingList();
