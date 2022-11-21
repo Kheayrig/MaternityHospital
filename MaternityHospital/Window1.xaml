@@ -5,8 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
-    <Grid>
-        
+        Title="общие сведения" Height="450" Width="800">
+    <Grid Margin="-3,0,3,0">
+        <ComboBox HorizontalAlignment="Left" Margin="41,70,0,0" VerticalAlignment="Top" Width="120">
+            <TextBlock Text="двойня"/>
+            <TextBlock Text="тройня"/>
+            <TextBlock Text="один"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="41,168,0,0" VerticalAlignment="Top" Width="120">
+            <TextBlock Text="косое"/>
+            <TextBlock Text="продольное"/>
+            <TextBlock Text="поперечное"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="383,81,0,0" VerticalAlignment="Top" Width="120">
+            <TextBlock Text="3 цифры?"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="41,269,0,0" VerticalAlignment="Top" Width="120">
+            <TextBlock Text="тазовое"/>
+            <TextBlock Text="головное"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="378,168,0,0" VerticalAlignment="Top" Width="120">
+            <TextBlock Text="синусовый"/>
+            <TextBlock Text="брадикардия"/>
+            <TextBlock Text="тахикардия"/>
+            <TextBlock Text="..."/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="383,264,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock Text="да, меньше 3 эпизодов"/>
+            <TextBlock Text="да, >= 3 эпизода"/>
+            <TextBlock Text="нет"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="383,368,0,0" VerticalAlignment="Top" Width="120">
+            <TextBlock Text="да, меньше 30 сек"/>
+            <TextBlock Text="да, 30 и более сек"/>
+            <TextBlock Text="нет"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="41,373,0,0" VerticalAlignment="Top" Width="120">
+            <TextBlock Text="да"/>
+            <TextBlock Text="нет"/>
+        </ComboBox>
+                <Label Content="положение" HorizontalAlignment="Left" Margin="41,119,0,0" VerticalAlignment="Top" Width="120" Height="33"/>
+        <Label Content="плод&#xD;&#xA;" HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" Width="120" Height="37" HorizontalContentAlignment="Left" VerticalContentAlignment="Top"/>
+        <Label Content="предлежание&#xD;&#xA;" HorizontalAlignment="Left" Margin="41,227,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
+        <Label Content="движение&#xD;&#xA;" HorizontalAlignment="Left" Margin="383,219,0,0" VerticalAlignment="Top" Width="120" Height="33"/>
+        <Label Content="ЧСС&#xD;&#xA;" HorizontalAlignment="Left" Margin="383,36,0,0" VerticalAlignment="Top" Width="109" Height="29"/>
+        <Label Content="ритм&#xD;&#xA;" HorizontalAlignment="Left" Margin="383,124,0,0" VerticalAlignment="Top" Width="120" Height="28"/>
+        <Label Content="дыхательное движение&#xD;&#xA;" HorizontalAlignment="Left" Margin="383,325,0,0" VerticalAlignment="Top" Width="148" Height="43"/>
+        <Label Content="серцебиение&#xD;&#xA;" HorizontalAlignment="Left" Margin="41,325,0,0" VerticalAlignment="Top" Width="120" Height="43"/>
+
+
     </Grid>
 </Window>
