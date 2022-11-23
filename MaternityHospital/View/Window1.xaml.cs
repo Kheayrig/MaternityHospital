@@ -29,19 +29,29 @@ namespace MaternityHospital
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            if (dvijeniye == null) return;
+            var selectedItem = (TextBlock)dvijeniye.SelectedItem;
+            if (selectedItem.Text == "нет")
+            {
+                dvijeniye_Copy.Visibility = Visibility.Hidden;  //не видно
+            }
+            else
+            {
+                dvijeniye_Copy.Visibility = Visibility.Visible;  //видно
+            }
         }
 
         private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            var selectedItem = (TextBlock)plod.SelectedItem;
-            if(selectedItem.Text == "один")
+            if (Breath_movement == null) return;
+            var selectedItem = (TextBlock)Breath_movement.SelectedItem;
+            if (selectedItem.Text == "нет")
             {
-                plod_Copy.Visibility = Visibility.Hidden;  //не видно
+                Breath_movement_Copy.Visibility = Visibility.Hidden;  //не видно
             }
             else
             {
-                plod_Copy.Visibility = Visibility.Visible;  //видно
+                Breath_movement_Copy.Visibility = Visibility.Visible;  //видно
             }
         }
     }

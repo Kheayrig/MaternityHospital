@@ -6,55 +6,59 @@
         xmlns:local="clr-namespace:MaternityHospital"
         mc:Ignorable="d"
         Title="общие сведения" Height="450" Width="800">
-    <Grid Margin="-3,0,3,0">
-        <ComboBox x:Name="plod" HorizontalAlignment="Left" Margin="41,70,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged_1">
+    <Grid Margin="0,0,3,-6">
+        <ComboBox SelectedIndex="2" x:Name="plod" HorizontalAlignment="Left" Margin="330,32,0,0" VerticalAlignment="Top" Width="142">
             <TextBlock Text="двойня"/>
             <TextBlock Text="тройня"/>
             <TextBlock Text="один"/>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Margin="41,168,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox SelectedIndex="1" HorizontalAlignment="Left" Margin="330,73,0,0" VerticalAlignment="Top" Width="142">
             <TextBlock Text="косое"/>
             <TextBlock Text="продольное"/>
             <TextBlock Text="поперечное"/>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Margin="41,269,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox SelectedIndex="1" HorizontalAlignment="Left" Margin="330,119,0,0" VerticalAlignment="Top" Width="142">
             <TextBlock Text="тазовое"/>
             <TextBlock Text="головное"/>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Margin="378,168,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="330,276,0,0" VerticalAlignment="Top" Width="142">
             <TextBlock Text="синусовый"/>
             <TextBlock Text="брадикардия"/>
             <TextBlock Text="тахикардия"/>
             <TextBlock Text="..."/>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Margin="383,264,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
-            <TextBlock Text="да, меньше 3 эпизодов"/>
-            <TextBlock Text="да, >= 3 эпизода"/>
-            <TextBlock Text="нет"/>
-        </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Margin="383,368,0,0" VerticalAlignment="Top" Width="120">
-            <TextBlock Text="да, меньше 30 сек"/>
-            <TextBlock Text="да, 30 и более сек"/>
-            <TextBlock Text="нет"/>
-        </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Margin="41,373,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="330,166,0,0" VerticalAlignment="Top" Width="142">
             <TextBlock Text="да"/>
             <TextBlock Text="нет"/>
         </ComboBox>
-        <Label Content="положение" HorizontalAlignment="Left" Margin="41,119,0,0" VerticalAlignment="Top" Width="120" Height="33"/>
-        <Label Content="плод&#xD;&#xA;" HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" Width="120" Height="37" HorizontalContentAlignment="Left" VerticalContentAlignment="Top"/>
-        <Label Content="предлежание&#xD;&#xA;" HorizontalAlignment="Left" Margin="41,227,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
-        <Label Content="движение&#xD;&#xA;" HorizontalAlignment="Left" Margin="383,219,0,0" VerticalAlignment="Top" Width="120" Height="33"/>
-        <Label Content="ЧСС&#xD;&#xA;" HorizontalAlignment="Left" Margin="383,36,0,0" VerticalAlignment="Top" Width="109" Height="29"/>
-        <Label Content="ритм&#xD;&#xA;" HorizontalAlignment="Left" Margin="383,124,0,0" VerticalAlignment="Top" Width="120" Height="28"/>
-        <Label Content="дыхательное движение&#xD;&#xA;" HorizontalAlignment="Left" Margin="383,325,0,0" VerticalAlignment="Top" Width="148" Height="43"/>
-        <Label Content="серцебиение&#xD;&#xA;" HorizontalAlignment="Left" Margin="41,325,0,0" VerticalAlignment="Top" Width="120" Height="43"/>
-        <TextBox x:Name="heartRate" InputMethod.IsInputMethodEnabled="False" MaxLength="3" HorizontalAlignment="Left" Margin="375,70,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" Height="22"/>
-        <ComboBox x:Name="plod_Copy" HorizontalAlignment="Left" Margin="190,70,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged_1" Visibility="Hidden">
-            <TextBlock Text="двойня"/>
-            <TextBlock Text="тройня"/>
-            <TextBlock Text="один"/>
+        <Label Content="положение" HorizontalAlignment="Left" Margin="19,64,0,0" VerticalAlignment="Top" Width="160" Height="39" FontSize="24"/>
+        <Label Content="плод&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,17,0,0" VerticalAlignment="Top" Width="142" Height="37" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" FontSize="24"/>
+        <Label Content="предлежание&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,112,0,0" VerticalAlignment="Top" Width="207" Height="45" FontSize="24"/>
+        <Label Content="движение&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,314,0,0" VerticalAlignment="Top" Width="160" Height="49" FontSize="24"/>
+        <Label Content="ЧСС&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,217,0,0" VerticalAlignment="Top" Width="171" Height="42" FontSize="24"/>
+        <Label Content="ритм&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,264,0,0" VerticalAlignment="Top" Width="160" Height="45" FontSize="24"/>
+        <Label Content="дыхательное движение&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,367,0,0" VerticalAlignment="Top" Width="320" Height="43" FontSize="24"/>
+        <Label Content="серцебиение&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,157,0,0" VerticalAlignment="Top" Width="207" Height="40" FontSize="24"/>
+        <TextBox x:Name="heartRate" InputMethod.IsInputMethodEnabled="False" MaxLength="3" HorizontalAlignment="Left" Margin="330,217,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Height="28"/>
+        <ComboBox SelectedIndex="0" x:Name="dvijeniye_Copy" HorizontalAlignment="Left" Margin="549,323,0,0" VerticalAlignment="Top" Width="142" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock Text="&lt; 3 эпизодов"/>
+            <TextBlock Text="&gt;= 3 эпизода"/>
+
         </ComboBox>
+        <ComboBox SelectedIndex="0" x:Name="Breath_movement_Copy" HorizontalAlignment="Left" Margin="549,378,0,0" VerticalAlignment="Top" Width="142">
+            <TextBlock Text="&lt; 30 сек"/>
+            <TextBlock Text="&gt;= 30 сек"/>
+
+        </ComboBox>
+        <ComboBox x:Name="dvijeniye" HorizontalAlignment="Left" Margin="330,323,0,0" VerticalAlignment="Top" Width="142" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0">
+            <TextBlock Text="да"/>
+            <TextBlock Text="нет"/>
+        </ComboBox>
+        <ComboBox x:Name="Breath_movement" HorizontalAlignment="Left" Margin="330,378,0,0" VerticalAlignment="Top" Width="142" SelectionChanged="ComboBox_SelectionChanged_1" SelectedIndex="0">
+            <TextBlock Text="да"/>
+            <TextBlock Text="нет"/>
+        </ComboBox>
+
 
 
     </Grid>
