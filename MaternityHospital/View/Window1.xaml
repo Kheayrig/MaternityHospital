@@ -5,29 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital"
         mc:Ignorable="d"
-        Title="общие сведения" Height="450" Width="800">
-    <Grid Margin="0,0,3,-6">
+        Title="общие сведения" Height="500" Width="800">
+    <Grid Margin="0,0,3,-26">
         <ComboBox SelectedIndex="2" x:Name="plod" HorizontalAlignment="Left" Margin="330,32,0,0" VerticalAlignment="Top" Width="142">
             <TextBlock Text="двойня"/>
             <TextBlock Text="тройня"/>
             <TextBlock Text="один"/>
         </ComboBox>
-        <ComboBox SelectedIndex="1" HorizontalAlignment="Left" Margin="330,73,0,0" VerticalAlignment="Top" Width="142">
+        <ComboBox x:Name="position" SelectedIndex="1" HorizontalAlignment="Left" Margin="330,73,0,0" VerticalAlignment="Top" Width="142">
             <TextBlock Text="косое"/>
             <TextBlock Text="продольное"/>
             <TextBlock Text="поперечное"/>
         </ComboBox>
-        <ComboBox SelectedIndex="1" HorizontalAlignment="Left" Margin="330,119,0,0" VerticalAlignment="Top" Width="142">
+        <ComboBox x:Name="predlejanie" SelectedIndex="1" HorizontalAlignment="Left" Margin="330,119,0,0" VerticalAlignment="Top" Width="142">
             <TextBlock Text="тазовое"/>
             <TextBlock Text="головное"/>
         </ComboBox>
-        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="330,276,0,0" VerticalAlignment="Top" Width="142">
+        <ComboBox x:Name="ritm" SelectedIndex="0" HorizontalAlignment="Left" Margin="330,276,0,0" VerticalAlignment="Top" Width="142">
             <TextBlock Text="синусовый"/>
             <TextBlock Text="брадикардия"/>
             <TextBlock Text="тахикардия"/>
-            <TextBlock Text="..."/>
+            <TextBlock Text="экстрасистолия"/>
+            <TextBlock Text="пароксизмальная тахикардия"/>
+            <TextBlock Text="нарушение ритма (бигемения)"/>
         </ComboBox>
-        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="330,166,0,0" VerticalAlignment="Top" Width="142">
+        <ComboBox x:Name="heartbeat" SelectedIndex="0" HorizontalAlignment="Left" Margin="330,166,0,0" VerticalAlignment="Top" Width="142">
             <TextBlock Text="да"/>
             <TextBlock Text="нет"/>
         </ComboBox>
@@ -58,6 +60,17 @@
             <TextBlock Text="да"/>
             <TextBlock Text="нет"/>
         </ComboBox>
+        <Button Content="Отмена" HorizontalAlignment="Left" Margin="192,445,0,0" VerticalAlignment="Top" Click="Button_Click" Height="29" Width="193"/>
+        <Button Content="Дальше" HorizontalAlignment="Left" Margin="421,446,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="30" Width="201" Click="Button_Click_1">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.655"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
 
 
 

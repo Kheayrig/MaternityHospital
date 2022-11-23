@@ -5,8 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital.View"
         mc:Ignorable="d"
-        Title="Window2" Height="450" Width="800">
+        Title="фетометрия" Height="550" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="371*"/>
+            <ColumnDefinition Width="368*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Бипариетальный размер " Grid.Column="1" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" Width="351" Height="51" FontSize="24"/>
+        <Label Content="Длина бедренной кости" Grid.Column="1" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="351" AutomationProperties.Name="Длина бедренной кости" Height="54" FontSize="24"/>
+        <Label Content="Окружность живота" Grid.Column="1" HorizontalAlignment="Center" Margin="0,246,0,0" VerticalAlignment="Top" Width="351" Height="53" FontSize="24"/>
+        <Label Content="Масса" Grid.Column="1" HorizontalAlignment="Center" Margin="0,342,0,0" VerticalAlignment="Top" Width="351" Height="46" FontSize="24"/>
+        <TextBox x:Name="BR" InputMethod.IsInputMethodEnabled="False" MaxLength="4" Grid.Column="2" HorizontalAlignment="Left" Margin="56,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="51" FontSize="24"/>
+        <TextBox x:Name="DBK" InputMethod.IsInputMethodEnabled="False" MaxLength="4" Grid.Column="2" HorizontalAlignment="Left" Margin="56,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="54" FontSize="24"/>
+        <TextBox x:Name="OJ"  InputMethod.IsInputMethodEnabled="False" MaxLength="4" Grid.Column="2" HorizontalAlignment="Left" Margin="56,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="54" FontSize="24"/>
+        <TextBox x:Name="Mass" InputMethod.IsInputMethodEnabled="False" MaxLength="4" Grid.Column="2" HorizontalAlignment="Left" Margin="56,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="46" FontSize="24"/>
+        <Label Content="мм" Grid.Column="2" HorizontalAlignment="Left" Margin="176,44,0,0" VerticalAlignment="Top" Height="51" FontSize="24" Width="56"/>
+        <Label Content="мм" Grid.Column="2" HorizontalAlignment="Left" Margin="176,150,0,0" VerticalAlignment="Top" Height="54" FontSize="24" Width="56"/>
+        <Label Content="мм" Grid.Column="2" HorizontalAlignment="Left" Margin="176,245,0,0" VerticalAlignment="Top" Height="54" FontSize="24" Width="56"/>
+        <Label Content="г" Grid.Column="2" HorizontalAlignment="Left" Margin="176,342,0,0" VerticalAlignment="Top" Height="46" FontSize="24" Width="56"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="0" Margin="-16,474,0,0" VerticalAlignment="Top"/>
+        <Button Content="Отмена" HorizontalAlignment="Left" Margin="73,445,0,0" VerticalAlignment="Top" Click="Button_Click" Height="65" Width="254" Grid.Column="1" RenderTransformOrigin="0.5,0.5" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="720.173"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Дальше" HorizontalAlignment="Left" Margin="3,445,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="64" Width="264" Click="Button_Click_1" Grid.Column="2" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.662"/>
+                    <RotateTransform Angle="-0.449"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
     </Grid>
 </Window>

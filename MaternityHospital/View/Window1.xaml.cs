@@ -1,4 +1,5 @@
-﻿using MaternityHospital.View.Utils;
+﻿using MaternityHospital.View;
+using MaternityHospital.View.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace MaternityHospital
         {
             InitializeComponent();
             heartRate.PreviewTextInput += TextBoxFilters.LimitNumber;
+            WindowState = WindowState.Maximized;
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -53,6 +55,22 @@ namespace MaternityHospital
             {
                 Breath_movement_Copy.Visibility = Visibility.Visible;  //видно
             }
+        }
+
+        private void heartRate_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Close();
+            new Window2().Show();
         }
     }
 }

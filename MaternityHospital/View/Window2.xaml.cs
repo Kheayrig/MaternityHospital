@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaternityHospital.View.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,22 @@ namespace MaternityHospital.View
         public Window2()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
+            BR.PreviewTextInput += TextBoxFilters.LimitNumber;
+            DBK.PreviewTextInput += TextBoxFilters.LimitNumber;
+            OJ.PreviewTextInput += TextBoxFilters.LimitNumber;
+            Mass.PreviewTextInput += TextBoxFilters.LimitNumber;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Close();
+            new Window2().Show();
         }
     }
 }
