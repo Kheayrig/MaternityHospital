@@ -49,7 +49,7 @@
         <Label Content="ритм&#xD;&#xA;" HorizontalAlignment="Left" Margin="383,124,0,0" VerticalAlignment="Top" Width="120" Height="28"/>
         <Label Content="дыхательное движение&#xD;&#xA;" HorizontalAlignment="Left" Margin="383,325,0,0" VerticalAlignment="Top" Width="148" Height="43"/>
         <Label Content="серцебиение&#xD;&#xA;" HorizontalAlignment="Left" Margin="41,325,0,0" VerticalAlignment="Top" Width="120" Height="43"/>
-        <TextBox InputMethod.IsInputMethodEnabled="False" MaxLength="3" PreviewTextInput="limitnumber" HorizontalAlignment="Left" Margin="375,70,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" Height="22"/>
+        <TextBox x:Name="heartRate" InputMethod.IsInputMethodEnabled="False" MaxLength="3" HorizontalAlignment="Left" Margin="375,70,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" Height="22"/>
         <ComboBox x:Name="plod_Copy" HorizontalAlignment="Left" Margin="190,70,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged_1" Visibility="Hidden">
             <TextBlock Text="двойня"/>
             <TextBlock Text="тройня"/>

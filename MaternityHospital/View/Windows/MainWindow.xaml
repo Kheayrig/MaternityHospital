@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:MaternityHospital"
         mc:Ignorable="d"
         Title="Главное окно" 
-        Height="450" Width="800" Loaded="Window_Loaded">
+        Height="450" Width="800" 
+        Loaded="Window_Loaded">
     <Grid>
         <DataGrid x:Name="PatientsDataGrid" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="364,0,0,0" AutoGenerateColumns="False">
             <DataGrid.Columns>
@@ -14,5 +15,8 @@
                 <DataGridTextColumn Width="150" Binding="{Binding BirthDate}" Header="Дата рождения"/>
             </DataGrid.Columns>
         </DataGrid>
+        <TextBox HorizontalAlignment="Left" Margin="10,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" Height="21"/>
+        <Label x:Name="searchLabel" Content="Поиск:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="createPatientButton" Content="Добавить новую пациентку" HorizontalAlignment="Left" Margin="14,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.432,0.598" Height="33" Width="162" Click="createPatientButton_Click"/>
     </Grid>
 </Window>

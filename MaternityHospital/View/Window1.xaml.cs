@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaternityHospital.View.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace MaternityHospital
         public Window1()
         {
             InitializeComponent();
+            heartRate.PreviewTextInput += TextBoxFilters.LimitNumber;
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -41,12 +43,6 @@ namespace MaternityHospital
             {
                 plod_Copy.Visibility = Visibility.Visible;  //видно
             }
-        }
-
-        public void limitnumber(object sender, TextCompositionEventArgs e)
-        {
-            Regex re = new Regex("[^0-9]+");
-            e.Handled = re.IsMatch(e.Text);
         }
     }
 }
