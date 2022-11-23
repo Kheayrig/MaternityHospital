@@ -12,10 +12,14 @@ namespace MaternityHospital.DB
         public int Id { get; set; }
         public string? FIO { get; set; }
         public DateTime BirthDate { get; set; }
-        public Patient(string? fIO, DateTime birthDate)
+        public int passportSeria { get; set; }
+        public int passportNumber { get; set; }
+        public Patient(string? fIO, DateTime birthDate, int passportSeria, int passportNumber)
         {
             FIO = fIO;
             BirthDate = birthDate;
+            this.passportSeria = passportSeria;
+            this.passportNumber = passportNumber;
         }
         public override string ToString()
         {

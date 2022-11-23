@@ -11,7 +11,7 @@ using System.Windows.Documents;
 
 namespace MaternityHospital.DB.Repositories
 {
-    public static class Patients
+    public static class PatientsRepository
     {
         public static void Add(Patient patient)
         {
