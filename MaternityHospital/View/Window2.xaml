@@ -48,7 +48,7 @@
         <Button Content="Отмена" Grid.Column="0" Grid.Row="4" Margin="0,0,150,0" HorizontalAlignment="Right" VerticalAlignment="Center" Click="Button_Click" Height="65" Width="254" FontSize="24">
             
         </Button>
-        <Button Content="Дальше" Grid.Column="1" Grid.Row="4" Margin="100,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"  Height="64" Width="264" Click="Button_Click_1" FontSize="24">
+        <Button Content="Дальше" Grid.Column="1" Grid.Row="4" Margin="100,0,0,0" HorizontalAlignment="Center"  VerticalAlignment="Center"  Height="64" Width="264" Click="Button_Click_1" FontSize="24">
             
         </Button>
 

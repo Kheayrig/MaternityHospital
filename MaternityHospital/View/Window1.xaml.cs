@@ -31,7 +31,7 @@ namespace MaternityHospital
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (dvijeniye == null) return;
+            if (dvijeniye == null || dvijeniye_Copy == null) return;
             var selectedItem = (TextBlock)dvijeniye.SelectedItem;
             if (selectedItem.Text == "нет")
             {
@@ -45,7 +45,7 @@ namespace MaternityHospital
 
         private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            if (Breath_movement == null) return;
+            if (Breath_movement == null || Breath_movement_Copy == null) return;
             var selectedItem = (TextBlock)Breath_movement.SelectedItem;
             if (selectedItem.Text == "нет")
             {
