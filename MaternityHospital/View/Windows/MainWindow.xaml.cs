@@ -40,7 +40,6 @@ namespace MaternityHospital
             {
                 _data = new BindingList<Patient>();
                 // загружаем данные из БД
-                db.Database.EnsureCreated();
                 _data = PatientsRepository.GetAllTableView();
                 db.Patients.Load();
                 _data = db.Patients.Local.ToBindingList();

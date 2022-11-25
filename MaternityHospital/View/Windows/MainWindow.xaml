@@ -12,7 +12,7 @@
         <DataGrid x:Name="PatientsDataGrid" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="364,0,0,0" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="*" Binding="{Binding FIO}" Header="ФИО"/>
-                <DataGridTextColumn Width="150" Binding="{Binding BirthDate}" Header="Дата рождения"/>
+                <DataGridTextColumn Width="150" Binding="{Binding Birthday}" Header="Дата рождения"/>
             </DataGrid.Columns>
         </DataGrid>
         <TextBox HorizontalAlignment="Left" Margin="10,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" Height="21"/>

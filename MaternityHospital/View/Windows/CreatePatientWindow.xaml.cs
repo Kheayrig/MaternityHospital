@@ -39,8 +39,9 @@ namespace MaternityHospital.View.Windows
             string fio = fioTextBox.Text;
             int passportSeria = int.Parse(passportSeriaTextBox.Text);
             int passportNumber = int.Parse(passportNumberTextBox.Text);
+            int snils = 231231;
             DateTime birthday = birthdayDatePicker.SelectedDate.Value;
-            var patient = new Patient(fio, birthday, passportSeria, passportNumber);
+            Patient patient = new Patient(fio, birthday, passportSeria, passportNumber, snils, DateTime.Now);
             //PatientsRepository.Add(patient);
             MessageBox.Show(patient.ToString());
         }
