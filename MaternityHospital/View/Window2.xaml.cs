@@ -24,10 +24,10 @@ namespace MaternityHospital.View
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
-            BR.PreviewTextInput += TextBoxFilters.LimitNumber;
-            DBK.PreviewTextInput += TextBoxFilters.LimitNumber;
-            OJ.PreviewTextInput += TextBoxFilters.LimitNumber;
-            Mass.PreviewTextInput += TextBoxFilters.LimitNumber;
+            BR.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            DBK.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            OJ.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            Mass.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

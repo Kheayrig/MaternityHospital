@@ -25,7 +25,7 @@ namespace MaternityHospital
         public Window1()
         {
             InitializeComponent();
-            heartRate.PreviewTextInput += TextBoxFilters.LimitNumber;
+            heartRate.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             WindowState = WindowState.Maximized;
         }
 

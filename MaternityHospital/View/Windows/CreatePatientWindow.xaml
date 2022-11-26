@@ -5,18 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital.View.Windows"
         mc:Ignorable="d"
-        Title="CreatePatient" Height="295" Width="475">
+        ResizeMode="NoResize"
+        Title="Добавить пациентку" Height="380" Width="500">
     <Grid>
-        <Label x:Name="FIOlabel" Content="Фамилия Имя Отчество" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="fioTextBox" HorizontalAlignment="Left" Margin="186,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" Height="22"/>
-        <Label x:Name="FIOlabel_Copy" Content="Серия паспорта" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="FIOlabel_Copy1" Content="Номер паспорта" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="FIOlabel_Copy2" Content="Дата рождения" HorizontalAlignment="Left" Margin="10,143,0,0" VerticalAlignment="Top"/>
-        <TextBox InputMethod.IsInputMethodEnabled="False" MaxLength="4" x:Name="passportSeriaTextBox" HorizontalAlignment="Left" Margin="186,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Height="22"/>
-        <TextBox InputMethod.IsInputMethodEnabled="False" MaxLength="6" x:Name="passportNumberTextBox" HorizontalAlignment="Left" Margin="186,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Height="22"/>
-        <DatePicker x:Name="birthdayDatePicker" HorizontalAlignment="Left" Margin="186,145,0,0" VerticalAlignment="Top" FirstDayOfWeek="Monday"/>
-        <Button x:Name="OK" Content="OK" HorizontalAlignment="Left" Margin="80,217,0,0" VerticalAlignment="Top" Height="23" Width="107" Click="OK_Click"/>
-        <Button x:Name="Cancel" HorizontalAlignment="Left" Margin="259,217,0,0" VerticalAlignment="Top" Height="23" Width="107" Click="Cancel_Click" Content="Отмена"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="FIOlabel" Grid.Row="0" Content="Фамилия Имя Отчество:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" Width="150"/>
+        <TextBox x:Name="fioTextBox" Grid.Row="0" InputMethod.IsInputMethodEnabled="False" VerticalAlignment="Center" Width="253" Height="22" HorizontalAlignment="Left" Margin="160,0,0,0"/>
+
+        <Label x:Name="passportSeriaLabel" Grid.Row="1" Content="Серия паспорта:" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" Margin="10,0,0,0"/>
+        <TextBox x:Name="passportSeriaTextBox" Grid.Row="1" InputMethod.IsInputMethodEnabled="False" MaxLength="4" Width="86" Height="22" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="110,0,0,0"/>
+
+        <Label x:Name="passportNumberLabel"  Grid.Row="1" Content="Номер паспорта:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="210,0,0,0"/>
+        <TextBox x:Name="passportNumberTextBox" Grid.Row="1" InputMethod.IsInputMethodEnabled="False" MaxLength="6" HorizontalAlignment="Left" VerticalAlignment="Center" Width="97" Height="22" Margin="320,0,20,0"/>
+
+        <Label x:Name="snilsLabel"  Grid.Row="2" Content="СНИЛС:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <TextBox x:Name="snilsTextBox" Grid.Row="2" InputMethod.IsInputMethodEnabled="False" MaxLength="11" HorizontalAlignment="Right" VerticalAlignment="Center" Width="160" Height="22" Margin="10,0,0,0"/>
+
+        <Label x:Name="BirthdayLabel" Grid.Row="3" Content="Дата рождения:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <DatePicker x:Name="birthdayDatePicker" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FirstDayOfWeek="Monday" Margin="10,0,0,0"/>
+
+        <Label x:Name="AddressLabel" Grid.Row="4" Content="Адрес:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <TextBox x:Name="AddressTextBox" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Width="392" Height="22" Margin="88,0,0,0" Grid.ColumnSpan="2"/>
+
+        <Label x:Name="LastPeriodLabel" Grid.Row="5" Content="Дата последних месячных:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <DatePicker x:Name="LastPeriodDatePicker" Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Center" FirstDayOfWeek="Monday" Margin="10,0,0,0"/>
+
+        <Label x:Name="FirstScanDateLabel" Grid.Row="6" Content="Дата сканирования:" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <DatePicker x:Name="FirstScanDatePicker" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center" FirstDayOfWeek="Monday" Margin="135,0,0,0"/>
+
+
+        <Button x:Name="OK" Content="OK" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Center" Height="23" Width="108" Click="OK_Click" Grid.ColumnSpan="2" Margin="80,0,0,0"/>
+        <Button x:Name="Cancel" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center" Height="23" Width="106" Click="Cancel_Click" Content="Отмена" Margin="0,0,80,0"/>
+        <CheckBox x:Name="DysmenorrheaCheckBox" Content="Дисменорея" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="6" VerticalAlignment="Center"/>
 
     </Grid>
 </Window>

@@ -9,14 +9,23 @@
         Height="450" Width="800" 
         Loaded="Window_Loaded">
     <Grid>
-        <DataGrid x:Name="PatientsDataGrid" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="364,0,0,0" AutoGenerateColumns="False">
+        <DataGrid x:Name="PatientsDataGrid" d:ItemsSource="{d:SampleData ItemCount=3}" AutoGenerateColumns="False" Margin="0,92,0,0" SelectionMode="Single">
+            <DataGrid.ItemContainerStyle>
+                <Style TargetType="DataGridRow">
+                    <EventSetter Event="KeyDown" Handler="PatientsDataGrid_KeyDown"/>
+                </Style>
+            </DataGrid.ItemContainerStyle>
             <DataGrid.Columns>
                 <DataGridTextColumn Width="*" Binding="{Binding FIO}" Header="ФИО"/>
                 <DataGridTextColumn Width="150" Binding="{Binding Birthday}" Header="Дата рождения"/>
+                <DataGridTextColumn Width="150" Binding="{Binding PregnancyDuration}" Header="Срок беременности"/>
+                <DataGridCheckBoxColumn Width="150" Binding="{Binding Scan}" Header="УЗИ"/>
+                <DataGridCheckBoxColumn Width="150" Binding="{Binding DPM}" Header="ДПМ"/>
+                <DataGridTextColumn Width="150" Binding="{Binding Doctor}" Header="Обследовал доктор"/>
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox HorizontalAlignment="Left" Margin="10,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" Height="21"/>
-        <Label x:Name="searchLabel" Content="Поиск:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="createPatientButton" Content="Добавить новую пациентку" HorizontalAlignment="Left" Margin="14,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.432,0.598" Height="33" Width="162" Click="createPatientButton_Click"/>
+        <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="414" Height="30" TextChanged="TextBox_TextChanged"/>
+        <Label x:Name="searchLabel" Content="Поиск:" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="createPatientButton" Content="Добавить новую пациентку" HorizontalAlignment="Left" Margin="506,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.432,0.598" Height="33" Width="162" Click="createPatientButton_Click"/>
     </Grid>
 </Window>

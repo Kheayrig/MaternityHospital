@@ -1,4 +1,5 @@
 ﻿using MaternityHospital.DB;
+using MaternityHospital.DB.Models;
 using MaternityHospital.DB.Repositories;
 using MaternityHospital.View.Windows;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -36,22 +38,42 @@ namespace MaternityHospital
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            using(var db = new ApplicationContext())
-            {
-                _data = new BindingList<Patient>();
-                // загружаем данные из БД
-                _data = PatientsRepository.GetAllTableView();
-                db.Patients.Load();
-                _data = db.Patients.Local.ToBindingList();
-                PatientsDataGrid.ItemsSource = _data;
-            }
-            
-
+            RefreshData();
         }
 
         private void createPatientButton_Click(object sender, RoutedEventArgs e)
         {
-            new CreatePatientWindow().Show();
+            var win = new CreatePatientWindow(this);
+            if(win.ShowDialog() == true)
+            {
+                RefreshData();
+            }
+        }
+
+        void RefreshData()
+        {
+            _data = Patient.GetAllTableView();
+            PatientsDataGrid.ItemsSource = _data;
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (SearchTextBox.Text == "") RefreshData();
+            else
+            {
+                string pattern = $"^[А-Яа-я'\\s-]*({SearchTextBox.Text})+[А-Яа-я\\s'-]*$";
+                var filteredData = _data.Where(x => Regex.IsMatch(x.FIO, pattern));
+                PatientsDataGrid.ItemsSource = new BindingList<Patient>(filteredData.ToList());
+            }
+            
+        }
+
+        private void PatientsDataGrid_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                MessageBox.Show(PatientsDataGrid.SelectedItem.ToString());
+            }
         }
     }
 }

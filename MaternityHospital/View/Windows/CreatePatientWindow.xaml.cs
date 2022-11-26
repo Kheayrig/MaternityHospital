@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MaternityHospital.View.Utils;
+using MaternityHospital.DB.Models;
+using MaternityHospital.Services;
 
 namespace MaternityHospital.View.Windows
 {
@@ -22,11 +24,14 @@ namespace MaternityHospital.View.Windows
     /// </summary>
     public partial class CreatePatientWindow : Window
     {
-        public CreatePatientWindow()
+        MainWindow _mainWindow;
+        public CreatePatientWindow(MainWindow mainWindow)
         {
+            _mainWindow = mainWindow;
             InitializeComponent();
-            passportNumberTextBox.PreviewTextInput += TextBoxFilters.LimitNumber;
-            passportSeriaTextBox.PreviewTextInput += TextBoxFilters.LimitNumber;
+            passportNumberTextBox.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            passportSeriaTextBox.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            fioTextBox.PreviewTextInput += TextBoxFilters.FilterRusLettersSpaceDashApostrophe;
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
@@ -36,14 +41,19 @@ namespace MaternityHospital.View.Windows
 
         private void OK_Click(object sender, RoutedEventArgs e)
         {
-            string fio = fioTextBox.Text;
+            string fio = fioTextBox.Text.Trim();
             int passportSeria = int.Parse(passportSeriaTextBox.Text);
             int passportNumber = int.Parse(passportNumberTextBox.Text);
-            int snils = 231231;
+            long snils = long.Parse(snilsTextBox.Text);
+            string doctor = Settings.GetCurrentDoctor();
+            string address = AddressTextBox.Text;
+            DateTime? lastPeriodDate = LastPeriodDatePicker.SelectedDate;
             DateTime birthday = birthdayDatePicker.SelectedDate.Value;
-            Patient patient = new Patient(fio, birthday, passportSeria, passportNumber, snils, DateTime.Now);
-            //PatientsRepository.Add(patient);
-            MessageBox.Show(patient.ToString());
+
+            Patient patient = new Patient(fio, birthday, passportSeria, passportNumber, snils, DateTime.Now, doctor, address, lastPeriodDate);
+            patient.Add();
+            DialogResult = true;
+            Close();
         }
     }
 }
