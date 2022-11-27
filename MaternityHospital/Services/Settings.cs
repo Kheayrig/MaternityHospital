@@ -13,7 +13,7 @@ namespace MaternityHospital.Services
     {
         public static string GetCurrentDoctor()
         {
-            return ConfigurationManager.AppSettings["CurrentDoctor"] ?? "";
+            return ConfigurationManager.AppSettings["CurrentDoctor"] ?? "???";
         }
         public static void SetCurrentDoctor(Doctor doctor)
         {

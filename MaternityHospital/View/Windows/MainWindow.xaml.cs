@@ -1,6 +1,7 @@
 ﻿using MaternityHospital.DB;
 using MaternityHospital.DB.Models;
 using MaternityHospital.DB.Repositories;
+using MaternityHospital.Services;
 using MaternityHospital.View.Windows;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -32,13 +33,15 @@ namespace MaternityHospital
         public MainWindow()
         {
             InitializeComponent();
-            WindowState = WindowState.Maximized;
+            WindowState = WindowState.Maximized; 
+            currentDoctor.Content = Settings.GetCurrentDoctor();
             new Window1().Show();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             RefreshData();
+            currentDoctorLabel.Margin = new Thickness(0, 0, currentDoctor.ActualWidth + 10, 0);
         }
 
         private void createPatientButton_Click(object sender, RoutedEventArgs e)
