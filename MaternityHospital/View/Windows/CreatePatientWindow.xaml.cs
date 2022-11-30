@@ -24,10 +24,8 @@ namespace MaternityHospital.View.Windows
     /// </summary>
     public partial class CreatePatientWindow : Window
     {
-        MainWindow _mainWindow;
-        public CreatePatientWindow(MainWindow mainWindow)
+        public CreatePatientWindow()
         {
-            _mainWindow = mainWindow;
             InitializeComponent();
             passportNumberTextBox.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             passportSeriaTextBox.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;

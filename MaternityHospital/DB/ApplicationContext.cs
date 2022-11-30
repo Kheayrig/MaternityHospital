@@ -13,8 +13,10 @@ namespace MaternityHospital.DB
     internal class ApplicationContext : DbContext
     {
         readonly string _connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
+
         public DbSet<Patient> Patients { get; set; } = null!;
         public ApplicationContext() => Database.EnsureCreated();
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite(_connectionString);

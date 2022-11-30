@@ -75,7 +75,7 @@
 
         </ComboBox>
 
-        <Label Grid.Column="0" Grid.Row="7" Content="дыхательное движение&#xD;&#xA;" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Center" Width="320" Height="43" FontSize="24"/>
+        <Label Grid.Column="0" Grid.Row="7" Content="дыхательное движение&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Center" Width="320" Height="43" FontSize="24"/>
         <ComboBox Grid.Column="1" Grid.Row="7" x:Name="Breath_movement" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="150" SelectionChanged="ComboBox_SelectionChanged_1" SelectedIndex="0" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
             <TextBlock Text="да"/>
             <TextBlock Text="нет"/>
