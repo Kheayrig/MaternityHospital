@@ -46,7 +46,7 @@ namespace MaternityHospital
 
         private void createPatientButton_Click(object sender, RoutedEventArgs e)
         {
-            var win = new CreatePatientWindow(this);
+            var win = new CreatePatientWindow();
             if(win.ShowDialog() == true)
             {
                 RefreshData();
