@@ -40,5 +40,10 @@ namespace MaternityHospital.View
             Close();
             new Window2().Show();
         }
+
+        private void Mass_TextChanged()
+        {
+
+        }
     }
 }
