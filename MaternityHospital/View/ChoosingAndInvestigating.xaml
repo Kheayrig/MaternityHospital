@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital.View"
         mc:Ignorable="d"
-        Title="ChoosingAndInvestigating" Height="450" Width="800">
+        Title="ChoosingAndInvestigating" Height="550" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Выбрете иследование" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="42" Width="266"  FontSize="24"/>
+        <Button Content="трансабдоминальное" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="37" Width="269"  FontSize="24"/>
+        <Button Content="транслабиальное" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="37" Width="268"  FontSize="24"/>
+        <Button Content="транперинеальное" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Height="37" Width="266"  FontSize="24"/>
+        <Button Content="назад" HorizontalAlignment="Left" Margin="47,29,0,0" Grid.Row="5" VerticalAlignment="Top" Height="37" Width="142"  FontSize="24"/>
+        <Button Content="далее" HorizontalAlignment="Left" Margin="605,29,0,0" Grid.Row="5" VerticalAlignment="Top" Height="37" Width="142"  FontSize="24"/>
     </Grid>
 </Window>
