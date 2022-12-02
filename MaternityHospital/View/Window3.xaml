@@ -60,14 +60,12 @@
 
         <Button Content="Назад" HorizontalAlignment="Left" Grid.Row="11" VerticalAlignment="Top" Height="50" Width="140" FontSize="24" Margin="10,5,0,0"/>
         <Button Grid.Column="2" Content="Далее" HorizontalAlignment="Center" Grid.Row="11" VerticalAlignment="Center" Height="50" Width="140" FontSize="24"/>
-        <Button Content="Скелет" HorizontalAlignment="Left" Margin="64,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="37" Width="142"  FontSize="24" Grid.Column="2"/>
-        <Button Content="Пуповина" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Center" Height="37" Width="142"  FontSize="24" Margin="11,0,0,0"/>
+        <Button Content="Скелет" HorizontalAlignment="Left" Margin="80,0,0,0" Grid.Row="2" VerticalAlignment="Center" Height="37" Width="142"  FontSize="24" Grid.Column="2"/>
+        <Button Content="Пуповина" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Height="37" Width="142"  FontSize="24" Margin="80,0,0,0" Grid.Column="2"/>
         <Button Content="Брюшная полость" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="37" Width="220"  FontSize="24"/>
         <Button Content="Грудная полость" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="2" VerticalAlignment="Center" Height="37" Width="220"  FontSize="24"/>
         <Button Content="Сердце и крупные сосуды" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="37" Width="310" FontSize="24" Grid.ColumnSpan="2"/>
-        <Button Content="ЦНС" HorizontalAlignment="Left" Margin="64,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="37" Width="142" FontSize="24" Grid.Column="2"/>
-        <Button Grid.Column="2" Content="Лицо" HorizontalAlignment="Left" Margin="64,0,0,0" Grid.Row="2" VerticalAlignment="Center" Height="37" Width="142" FontSize="24"/>
-        <Button Grid.Column="2" Content="Шея" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="37" Width="142" FontSize="24"/>
+        <Button Content="ЦНС. Лицо. Шея" HorizontalAlignment="Left" Margin="215,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="37" Width="273" FontSize="24" Grid.Column="1" Grid.ColumnSpan="2"/>
         <Label Content="Степень зрелости" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="8" VerticalAlignment="Center" Height="37" Width="220" FontSize="24"/>
         <ComboBox Margin="38,17,68,17"  SelectedIndex="0" Grid.Row="8" Grid.Column="1">
             <TextBlock Text="1"/>

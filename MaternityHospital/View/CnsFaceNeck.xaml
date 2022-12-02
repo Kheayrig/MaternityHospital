@@ -1,0 +1,63 @@
+﻿<Window x:Class="MaternityHospital.View.CnsFaceNeck"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaternityHospital.View"
+        mc:Ignorable="d"
+        Title="CnsFaceNeck" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Боковые желудочки" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top"  FontSize="24" Width="268" Margin="22,5,0,0" Grid.RowSpan="2"/>
+        <ComboBox Grid.ColumnSpan="2" Margin="265,10,374,1" Grid.Row="2">
+
+        </ComboBox>
+        <Label Content="Полость прозрачной перегородки" HorizontalAlignment="Left" Margin="22,4,0,0" Grid.Row="3" VerticalAlignment="Top"  FontSize="24" Grid.ColumnSpan="2" Width="425" Grid.RowSpan="2"/>
+        <ComboBox Margin="25,8,166,43" Grid.RowSpan="2" Grid.Row="3" Grid.Column="1">
+
+        </ComboBox>
+        <Label Content="III желудочек" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="22,7,0,0" Grid.RowSpan="2"/>
+        <ComboBox Grid.ColumnSpan="2" Margin="214,10,374,0" Grid.Row="4">
+
+        </ComboBox>
+        <Label Content="IV желудочек" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" FontSize="24" Margin="22,4,0,0" Grid.RowSpan="2"/>
+        <ComboBox Grid.ColumnSpan="2" Margin="214,10,374,0" Grid.Row="5">
+
+        </ComboBox>
+        <Label Content="Таламус" HorizontalAlignment="Left" Margin="22,43,0,0" Grid.Row="5" VerticalAlignment="Top" FontSize="24" Grid.RowSpan="2"/>
+        <ComboBox Grid.ColumnSpan="2" Margin="214,10,374,1" Grid.Row="6">
+
+        </ComboBox>
+        <Label Content="Мозжечок" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="7" VerticalAlignment="Top" FontSize="24"/>
+        <ComboBox Grid.ColumnSpan="2" Margin="214,10,374,1" Grid.Row="7">
+
+        </ComboBox>
+        <Label Content="Большая цистерна" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Top" FontSize="24" Margin="22,42,0,0" Grid.RowSpan="2"/>
+        <ComboBox Grid.ColumnSpan="2" Margin="242,10,374,3" Grid.Row="8">
+
+        </ComboBox>
+        <Label Content="Лицо" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="1" VerticalAlignment="Center" FontSize="24"/>
+        <ComboBox Grid.ColumnSpan="2" Margin="214,10,374,1" Grid.Row="1">
+
+        </ComboBox>
+        <Button Grid.Column="1" Content="далее" HorizontalAlignment="Left" Margin="278,0,0,0" Grid.Row="9" VerticalAlignment="Center" Height="37" Width="100" FontSize="24"/>
+        <Button Content="назад" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="10" VerticalAlignment="Center" FontSize="24" Height="37" Width="111"/>
+
+    </Grid>
+</Window>
