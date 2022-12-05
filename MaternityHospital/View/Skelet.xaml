@@ -1,0 +1,34 @@
+﻿<Window x:Class="MaternityHospital.View.Skelet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaternityHospital.View"
+        mc:Ignorable="d"
+        Title="Skelet" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Label Content="Позвоночник" HorizontalAlignment="Left" Margin="40,47,0,0" VerticalAlignment="Top"  FontSize="24" Grid.RowSpan="2"/>
+        <Label Content="Большеберцовые кости" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top"  FontSize="24" Margin="40,45,0,0" Grid.RowSpan="2"/>
+        <Label Content="Малоберцовые кости" HorizontalAlignment="Left" Margin="40,0,0,0" Grid.Row="3" VerticalAlignment="Top"  FontSize="24"/>
+        <Label Content="Локтевые кости" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top"  FontSize="24" Margin="40,47,0,0" Grid.RowSpan="2"/>
+        <Label Content="Лучевые кости" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top"  FontSize="24" Margin="40,46,0,0" Grid.RowSpan="2"/>
+        <Label Content="Кисти" HorizontalAlignment="Left" Margin="40,48,0,0" Grid.Row="5" VerticalAlignment="Top"  FontSize="24" Grid.RowSpan="2"/>
+        <Label Content="Стопы" HorizontalAlignment="Left" Margin="37,47,0,0" Grid.Row="6" VerticalAlignment="Top" FontSize="24" Grid.RowSpan="2"/>
+    </Grid>
+</Window>

@@ -35,10 +35,13 @@
         </ComboBox>
         <Label Content="Желочный пузырь " HorizontalAlignment="Left" Margin="22,49,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="24" Grid.RowSpan="2"/>
         <ComboBox Margin="248,8,23,13" Grid.Row="3">
-
+            <TextBlock Text="расположен типично"/>
+            <TextBlock Text="медиальнее пупочной вены"/>
         </ComboBox>
         <ComboBox Margin="0,6,249,14" Grid.Row="3" Grid.Column="1">
-
+            <TextBlock Text="без особенностей"/>
+            <TextBlock Text="с неоднородным содержанием"/>
+            <TextBlock Text="с неоднородным гиперэхогенным содержимым"/>
         </ComboBox>
         <Label Content="Селезенка" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="4" VerticalAlignment="Top" FontSize="24"/>
         <ComboBox Grid.ColumnSpan="2" Margin="349,8,249,10" Grid.Row="4">

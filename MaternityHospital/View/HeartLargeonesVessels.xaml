@@ -47,7 +47,8 @@
         </ComboBox>
         <Label Content="Аорта(восходящая и низжодящая)" HorizontalAlignment="Left" Margin="40,6,0,0" Grid.Row="5" VerticalAlignment="Top" FontSize="24" Grid.ColumnSpan="2"/>
         <ComboBox Margin="150,8,150,3" Grid.Row="5" Grid.Column="1">
-
+            <TextBlock Text="левая"/>
+            <TextBlock Text="правая"/>
         </ComboBox>
         <ComboBox Margin="34,8,266,3" Grid.Row="5" Grid.Column="1">
 
@@ -68,38 +69,47 @@
         </ComboBox>
         <Label Content="Артериальный поток" HorizontalAlignment="Left" Margin="40,1,0,0" Grid.Row="8" VerticalAlignment="Top" FontSize="24"/>
         <ComboBox Margin="287,9,351,2" Grid.Row="8" Grid.ColumnSpan="2">
-
+            <TextBlock Text="от левой легочной артерии"/>
+            <TextBlock Text="от правой легочной артерии"/>
         </ComboBox>
         <ComboBox Margin="84,10,216,2" Grid.Row="8" Grid.Column="1">
-
+            <TextBlock Text="расположен обычно"/>
+            <TextBlock Text="расположен необычно"/>
         </ComboBox>
 
         <Label Content="ВПВ" HorizontalAlignment="Left" Margin="40,49,0,0" Grid.Row="8" VerticalAlignment="Top" FontSize="24" Grid.RowSpan="2"/>
         <ComboBox Margin="180,8,120,3" Grid.Row="9">
-
+            <TextBlock Text="справа от аорты"/>
+            <TextBlock Text="слева от легочного ствола"/>
         </ComboBox>
         <ComboBox Margin="324,6,376,1" Grid.Row="9" Grid.ColumnSpan="2">
-
+            <TextBlock Text="в правое предсердие"/>
+            <TextBlock Text="в левое предсердие"/>
         </ComboBox>
 
 
         <Label Content="НВП" HorizontalAlignment="Left" Margin="40,0,0,0" Grid.Row="10" VerticalAlignment="Center" FontSize="24"/>
         <ComboBox Margin="84,10,216,1" Grid.Row="10" Grid.Column="1">
-
+            <TextBlock Text="визуализируется"/>
+            <TextBlock Text="прерванная"/>
         </ComboBox>
         <ComboBox Margin="180,10,120,0" Grid.Row="10">
-
+            <TextBlock Text="недилатирована"/>
+            <TextBlock Text="дилатирована"/>
         </ComboBox>
         <ComboBox Margin="324,10,376,3" Grid.Row="10" Grid.ColumnSpan="2">
-
+            <TextBlock Text="в правом предсердие"/>
+            <TextBlock Text=" "/>
         </ComboBox>
 
         <Label Content="Непарная вена" HorizontalAlignment="Left" Grid.Row="10" VerticalAlignment="Top" FontSize="24" Margin="40,46,0,0" Grid.RowSpan="2"/>
         <ComboBox Margin="234,6,4,5" Grid.Row="11">
-
+            <TextBlock Text="визуализируется"/>
+            <TextBlock Text="прерванная"/>
         </ComboBox>
         <ComboBox Margin="24,4,276,3" Grid.Row="11" Grid.Column="1">
-
+            <TextBlock Text="недилатирована"/>
+            <TextBlock Text="дилатирована"/>
         </ComboBox>
 
         <Label Content="Легочные вены" HorizontalAlignment="Left" Margin="40,49,0,0" Grid.Row="11" VerticalAlignment="Top" FontSize="24" Grid.RowSpan="2"/>

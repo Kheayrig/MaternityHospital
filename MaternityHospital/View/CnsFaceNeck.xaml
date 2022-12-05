@@ -30,7 +30,21 @@
         </ComboBox>
         <Label Content="Полость прозрачной перегородки" HorizontalAlignment="Left" Margin="22,4,0,0" Grid.Row="3" VerticalAlignment="Top"  FontSize="24" Grid.ColumnSpan="2" Width="425" Grid.RowSpan="2"/>
         <ComboBox Margin="25,8,166,43" Grid.RowSpan="2" Grid.Row="3" Grid.Column="1">
-
+            <TextBlock Text="норма"/>
+            <TextBlock Text="3мм"/>
+            <TextBlock Text="4мм"/>
+            <TextBlock Text="5мм"/>
+            <TextBlock Text="6мм"/>
+            <TextBlock Text="7мм"/>
+            <TextBlock Text="8мм"/>
+            <TextBlock Text="9мм"/>
+            <TextBlock Text="10мм"/>
+            <TextBlock Text="11м"/>
+            <TextBlock Text="12мм"/>
+            <TextBlock Text="13мм"/>
+            <TextBlock Text="14мм"/>
+            <TextBlock Text="15мм"/>
+            <TextBlock Text="не визуализируется"/>
         </ComboBox>
         <Label Content="III желудочек" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="22,7,0,0" Grid.RowSpan="2"/>
         <ComboBox Grid.ColumnSpan="2" Margin="214,10,374,0" Grid.Row="4">
@@ -42,12 +56,13 @@
         </ComboBox>
         <Label Content="Таламус" HorizontalAlignment="Left" Margin="22,43,0,0" Grid.Row="5" VerticalAlignment="Top" FontSize="24" Grid.RowSpan="2"/>
         <ComboBox Grid.ColumnSpan="2" Margin="214,10,374,1" Grid.Row="6">
-
+            <TextBlock Text="разделенный"/>
+            <TextBlock Text="неразделенный"/>
         </ComboBox>
         <Label Content="Мозжечок" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="7" VerticalAlignment="Top" FontSize="24"/>
-        <ComboBox Grid.ColumnSpan="2" Margin="214,10,374,1" Grid.Row="7">
-
-        </ComboBox>
+          
+        
+        
         <Label Content="Большая цистерна" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Top" FontSize="24" Margin="22,42,0,0" Grid.RowSpan="2"/>
         <ComboBox Grid.ColumnSpan="2" Margin="242,10,374,3" Grid.Row="8">
 
