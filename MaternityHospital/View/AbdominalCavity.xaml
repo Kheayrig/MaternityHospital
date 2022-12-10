@@ -26,11 +26,11 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Label Content="Передняя брюшная стенка" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24"/>
-        <ComboBox Grid.ColumnSpan="2" Margin="349,10,249,10" Grid.Row="1">
+        <ComboBox Grid.ColumnSpan="2" x:Name="PerBrStenka" Margin="349,10,249,10" Grid.Row="1">
 
         </ComboBox>
         <Label Content="Печень" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="2" VerticalAlignment="Center" FontSize="24"/>
-        <ComboBox Grid.ColumnSpan="2" Margin="349,10,249,10" Grid.Row="2">
+        <ComboBox Grid.ColumnSpan="2" x:Name="Pechen" Margin="349,10,249,10" Grid.Row="2">
 
         </ComboBox>
         <Label Content="Желочный пузырь " HorizontalAlignment="Left" Margin="22,49,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="24" Grid.RowSpan="2"/>

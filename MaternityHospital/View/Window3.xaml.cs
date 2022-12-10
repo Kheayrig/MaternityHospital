@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaternityHospital.View.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace MaternityHospital.View
         public Window3()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
+            vish.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -33,5 +36,7 @@ namespace MaternityHospital.View
         {
 
         }
+
+       
     }
 }
