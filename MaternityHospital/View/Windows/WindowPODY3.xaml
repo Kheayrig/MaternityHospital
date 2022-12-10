@@ -65,13 +65,13 @@
         </ComboBox>
 
 
-        <ComboBox Grid.Column="1" Grid.Row="3" x:Name="dvijeniye" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="150" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10,24,0,0">
+        <ComboBox Grid.Column="1" Grid.Row="3" x:Name="dvijeniye" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="150" SelectedIndex="0" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10,24,0,0">
             <TextBlock Text="да"/>
             <TextBlock Text="нет"/>
         </ComboBox>
         <Label Content="Движение" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="37" Width="138" FontSize="24"/>
         <Label Grid.Column="2" Content="Дыхательное движение" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="37" Width="290" FontSize="24" Grid.ColumnSpan="2"/>
-        <ComboBox Grid.Column="3" Grid.Row="3" x:Name="Breath_movement" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" SelectionChanged="ComboBox_SelectionChanged_1" SelectedIndex="0" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="100,24,0,0">
+        <ComboBox Grid.Column="3" Grid.Row="3" x:Name="Breath_movement" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" SelectedIndex="0" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="100,24,0,0">
             <TextBlock Text="да"/>
             <TextBlock Text="нет"/>
         </ComboBox>
@@ -89,7 +89,7 @@
 
         <Label Content="БПР " Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Width="72" Height="51" FontSize="24" Margin="10,0,0,0"/>
         <WrapPanel Margin="67,15,10,11" Grid.Row="5">
-            <TextBox TextWrapping="Wrap" Text="" Width="61" Height="45" TextChanged="TextBox_TextChanged"/>
+            <TextBox TextWrapping="Wrap" Text="" Width="61" Height="45"/>
             <Label Content="мм" Width="62"  FontSize="24"/>
         </WrapPanel>
 

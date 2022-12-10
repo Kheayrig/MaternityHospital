@@ -40,15 +40,12 @@ namespace MaternityHospital.View.Windows
         private void OK_Click(object sender, RoutedEventArgs e)
         {
             string fio = fioTextBox.Text.Trim();
-            int passportSeria = int.Parse(passportSeriaTextBox.Text);
-            int passportNumber = int.Parse(passportNumberTextBox.Text);
-            long snils = long.Parse(snilsTextBox.Text);
             string doctor = Settings.GetCurrentDoctor();
             string address = AddressTextBox.Text;
             DateTime? lastPeriodDate = LastPeriodDatePicker.SelectedDate;
             DateTime birthday = birthdayDatePicker.SelectedDate.Value;
 
-            Patient patient = new Patient(fio, birthday, passportSeria, passportNumber, snils, DateTime.Now, doctor, address, lastPeriodDate);
+            Patient patient = new Patient(fio, birthday, DateTime.Now, doctor, address, lastPeriodDate);
             patient.Add();
             DialogResult = true;
             Close();

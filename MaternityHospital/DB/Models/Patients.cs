@@ -13,9 +13,6 @@ namespace MaternityHospital.DB.Repositories
         public int Id { get; set; }
         public string FIO { get; set; }
         public DateTime Birthday { get; set; }
-        public int PassportSeria { get; set; }
-        public int PassportNumber { get; set; }
-        public long Snils { get; set; }
         public string? Address { get; set; }
         public DateTime FirstScanDate { get; set; }
         public bool Dysmenorrhea { get; set; }
@@ -37,14 +34,11 @@ namespace MaternityHospital.DB.Repositories
         }
         #endregion
         #region Constructors
-        public Patient(string FIO, DateTime birthday, int passportSeria, int passportNumber, long snils,
-             DateTime firstScanDate, string Doctor, string? address = null, DateTime? lastPeriodDate = null)
+        public Patient(string FIO, DateTime birthday, DateTime firstScanDate, string Doctor, 
+            string? address = null, DateTime? lastPeriodDate = null)
         {
             this.FIO = FIO;
             Birthday = birthday;
-            PassportSeria = passportSeria;
-            PassportNumber = passportNumber;
-            Snils = snils;
             FirstScanDate = firstScanDate;
             Address = address;
             LastPeriodDate = lastPeriodDate;
@@ -112,13 +106,5 @@ namespace MaternityHospital.DB.Repositories
             }
         }
         #endregion
-    }
-    public class PatientConfiguration : IEntityTypeConfiguration<Patient>
-    {
-        public void Configure(EntityTypeBuilder<Patient> builder)
-        {
-            builder.HasAlternateKey(u => new { u.PassportNumber, u.PassportSeria });
-            builder.HasAlternateKey(u => u.Snils);
-        }
     }
 }

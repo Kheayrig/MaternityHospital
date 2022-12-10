@@ -23,9 +23,5 @@ namespace MaternityHospital.DB
             optionsBuilder.LogTo(Console.WriteLine, LogLevel.Information);
             optionsBuilder.LogTo(message => System.Diagnostics.Debug.WriteLine(message), LogLevel.Debug);
         }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.ApplyConfiguration(new PatientConfiguration());
-        }
     }
 }
