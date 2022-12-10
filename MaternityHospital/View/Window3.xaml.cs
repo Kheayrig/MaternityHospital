@@ -27,16 +27,48 @@ namespace MaternityHospital.View
             vish.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
 
+        private void dalee(object sender, RoutedEventArgs e)
+        {
+            Close();
+            new Window2().Show();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void nazad(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
 
-       
+        private void Cns(object sender, RoutedEventArgs e)
+        {
+            new CnsFaceNeck().Show();
+        }
+
+        private void Heart(object sender, RoutedEventArgs e)
+        {
+            new HeartLargeonesVessels().Show();
+        }
+
+        private void Chest(object sender, RoutedEventArgs e)
+        {
+            new ChestCavity().Show();
+        }
+
+        private void Skelet(object sender, RoutedEventArgs e)
+        {
+            new Skelet().Show();
+        }
+
+        private void Abdominal(object sender, RoutedEventArgs e)
+        {
+            new AbdominalCavity().Show();
+        }
+
+        private void Pypovina(object sender, RoutedEventArgs e)
+        {
+            new pypovina().Show();
+        }
+
+     
     }
 }

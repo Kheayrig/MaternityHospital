@@ -38,7 +38,7 @@ namespace MaternityHospital.View
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Close();
-            new Window2().Show();
+            new Window3().Show();
         }
 
         private void Mass_TextChanged()
