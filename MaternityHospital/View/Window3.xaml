@@ -74,7 +74,7 @@
         </ComboBox>
 
         <Label Grid.Column="2" Content="ВИЖ" HorizontalAlignment="Left" Margin="10,17,0,0" Grid.Row="6" VerticalAlignment="Top" Height="37" Width="100" FontSize="24" />
-        <TextBox Grid.Column="2"  x:Name="vish" HorizontalAlignment="Left" Margin="110,0,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="61" Height="37" TextChanged="vish_TextChanged"/>
+        <TextBox Grid.Column="2"  x:Name="vish" HorizontalAlignment="Left" Margin="110,0,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="61" Height="37"/>
 
 
 
