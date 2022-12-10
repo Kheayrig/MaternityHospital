@@ -27,8 +27,6 @@ namespace MaternityHospital.View.Windows
         public CreatePatientWindow()
         {
             InitializeComponent();
-            passportNumberTextBox.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
-            passportSeriaTextBox.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             fioTextBox.PreviewTextInput += TextBoxFilters.FilterRusLettersSpaceDashApostrophe;
         }
 
