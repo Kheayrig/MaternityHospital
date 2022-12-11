@@ -44,7 +44,7 @@
             <TextBox TextWrapping="Wrap" Text="" Width="180" Height="34" FontSize="24"/>
         </WrapPanel>
         <WrapPanel Grid.Column="1" Grid.Row="3" Margin="39,10,10,10">
-            <TextBox TextWrapping="Wrap" Text="" Width="180" Height="34" FontSize="24"/>
+            <TextBox TextWrapping="Wrap" Text="" Width="151" Height="34" FontSize="24"/>
         </WrapPanel>
         <WrapPanel Grid.Column="1" Grid.Row="4" Margin="39,10,10,10">
             <TextBox TextWrapping="Wrap" Text="" Width="151" Height="34" FontSize="24"/>

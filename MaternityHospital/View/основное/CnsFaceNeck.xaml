@@ -25,11 +25,11 @@
         </Grid.RowDefinitions>
 
         <Label Content="Боковые желудочки" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top"  FontSize="24" Width="268" Margin="22,5,0,0" Grid.RowSpan="2"/>
-        <ComboBox Grid.ColumnSpan="2" Margin="265,10,374,1" Grid.Row="2">
+        <ComboBox Grid.ColumnSpan="2" x:Name="BokZhelydochki" Margin="265,10,374,1" Grid.Row="2">
 
         </ComboBox>
         <Label Content="Полость прозрачной перегородки" HorizontalAlignment="Left" Margin="22,4,0,0" Grid.Row="3" VerticalAlignment="Top"  FontSize="24" Grid.ColumnSpan="2" Width="425" Grid.RowSpan="2"/>
-        <ComboBox Margin="25,8,166,43" Grid.RowSpan="2" Grid.Row="3" Grid.Column="1">
+        <ComboBox Margin="25,8,166,43" Grid.RowSpan="2"  x:Name="PPPeregorodki" Grid.Row="3" Grid.Column="1">
             <TextBlock Text="норма"/>
             <TextBlock Text="3мм"/>
             <TextBlock Text="4мм"/>
@@ -47,15 +47,15 @@
             <TextBlock Text="не визуализируется"/>
         </ComboBox>
         <Label Content="III желудочек" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="22,7,0,0" Grid.RowSpan="2"/>
-        <ComboBox Grid.ColumnSpan="2" Margin="214,10,374,0" Grid.Row="4">
+        <ComboBox Grid.ColumnSpan="2" Margin="214,10,374,0" x:Name="TZhelydochek" Grid.Row="4">
 
         </ComboBox>
         <Label Content="IV желудочек" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" FontSize="24" Margin="22,4,0,0" Grid.RowSpan="2"/>
-        <ComboBox Grid.ColumnSpan="2" Margin="214,10,374,0" Grid.Row="5">
+        <ComboBox Grid.ColumnSpan="2" Margin="214,10,374,0" x:Name="CHZhelydochek" Grid.Row="5">
 
         </ComboBox>
         <Label Content="Таламус" HorizontalAlignment="Left" Margin="22,43,0,0" Grid.Row="5" VerticalAlignment="Top" FontSize="24" Grid.RowSpan="2"/>
-        <ComboBox Grid.ColumnSpan="2" Margin="214,10,374,1" Grid.Row="6">
+        <ComboBox Grid.ColumnSpan="2" Margin="214,10,374,1"  x:Name="Talamys" Grid.Row="6">
             <TextBlock Text="разделенный"/>
             <TextBlock Text="неразделенный"/>
         </ComboBox>
@@ -64,11 +64,11 @@
         
         
         <Label Content="Большая цистерна" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Top" FontSize="24" Margin="22,42,0,0" Grid.RowSpan="2"/>
-        <ComboBox Grid.ColumnSpan="2" Margin="242,10,374,3" Grid.Row="8">
+        <ComboBox Grid.ColumnSpan="2" Margin="242,10,374,3" x:Name="BCisterna"  Grid.Row="8">
 
         </ComboBox>
         <Label Content="Лицо" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="1" VerticalAlignment="Center" FontSize="24"/>
-        <ComboBox Grid.ColumnSpan="2" Margin="214,10,374,1" Grid.Row="1">
+        <ComboBox Grid.ColumnSpan="2" x:Name="Lico" Margin="214,10,374,1" Grid.Row="1">
 
         </ComboBox>
         <Button Grid.Column="1" Content="далее" HorizontalAlignment="Left" Margin="278,0,0,0" Grid.Row="9" VerticalAlignment="Center" Height="37" Width="100" FontSize="24"/>
