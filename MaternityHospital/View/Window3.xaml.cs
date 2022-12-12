@@ -1,4 +1,5 @@
 ﻿using MaternityHospital.View.Utils;
+using MaternityHospital.View.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,12 +32,13 @@ namespace MaternityHospital.View
         private void dalee(object sender, RoutedEventArgs e)
         {
             Close();
-            new Window2().Show();
+            new WindowPODY3().Show();
         }
 
         private void nazad(object sender, RoutedEventArgs e)
         {
             Close();
+            new Window2().Show();
         }
 
         private void Cns(object sender, RoutedEventArgs e)

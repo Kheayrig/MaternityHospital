@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaternityHospital.View.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,15 @@ namespace MaternityHospital.View.Windows
         public WindowPODY3()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
+            VIZH.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            heartRate.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            BPR.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            DB.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            OZH.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            Massa.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+
+
         }
 
         private void Mass_TextChanged(object sender, TextChangedEventArgs e)
@@ -32,6 +42,28 @@ namespace MaternityHospital.View.Windows
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Dopplerometria(object sender, RoutedEventArgs e)
+        {
+            new dopplerometria().Show();
+        }
+
+        private void Translabialnoe(object sender, RoutedEventArgs e)
+        {
+            new translabialnoe().Show();
+        }
+
+        private void Transperenialnoe(object sender, RoutedEventArgs e)
+        {
+            new transperinealnoe().Show();
+        }
+
+        private void nazad(object sender, RoutedEventArgs e)
+        {
+            Close();
+            new Window3().Show();
+            
         }
     }
 }

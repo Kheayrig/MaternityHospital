@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaternityHospital.View.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,10 @@ namespace MaternityHospital.View
         public translabialnoe()
         {
             InitializeComponent();
+            DlinaCHeKanala.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            RastoaniePD.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            RastoanieHSD.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+
         }
     }
 }

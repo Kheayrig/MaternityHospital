@@ -33,6 +33,7 @@ namespace MaternityHospital.View
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Close();
+            new Window1().Show();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

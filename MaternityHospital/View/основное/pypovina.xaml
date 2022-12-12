@@ -22,23 +22,23 @@
         </Grid.RowDefinitions>
         <Label Content="Пупочные артерии" HorizontalAlignment="Left" Margin="26,0,0,0" Grid.Row="1" VerticalAlignment="Center" FontSize="24"/>
         <Label Content="Пупочная вена" HorizontalAlignment="Left" Margin="26,0,0,0" Grid.Row="2" VerticalAlignment="Center" FontSize="24"/>
-        <ComboBox Margin="235,10,0,10"  x:Name="PypochnVena1" Grid.Row="2">
+        <ComboBox Margin="235,10,0,10"  x:Name="PypochnVena1" FontSize="20" SelectedIndex="0" Grid.Row="2">
             <TextBlock Text="левая"/>
             <TextBlock Text="правая"/>
         </ComboBox>
-        <ComboBox Margin="28,10,214,10" x:Name="PypochnVena2" Grid.Row="2" Grid.Column="1">
+        <ComboBox Margin="28,10,214,10" x:Name="PypochnVena2" FontSize="20" SelectedIndex="0" Grid.Row="2" Grid.Column="1">
             <TextBlock Text="в портальный синус"/>
             <TextBlock Text="в нижнюю полую вену"/>
             <TextBlock Text="в правое предсердие"/>
         </ComboBox>
-        <ComboBox Margin="213,10,32,10" x:Name="PypochnVena3" Grid.Row="2" Grid.Column="1">
+        <ComboBox Margin="213,10,32,10" x:Name="PypochnVena3" SelectedIndex="0" FontSize="20" Grid.Row="2" Grid.Column="1">
             <TextBlock Text="не расширена"/>
             <TextBlock Text="внуутрибрюшная дилатация"/>
             <TextBlock Text="внутриамниональная дилатация"/>
         </ComboBox>
         <Label Content="Сосуды пуповины" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" FontSize="24" Margin="26,0,0,0"/>
         <Label Content="Прикрепление" HorizontalAlignment="Left" Margin="26,0,0,0" Grid.Row="4" VerticalAlignment="Center" FontSize="24"/>
-        <ComboBox Grid.ColumnSpan="2" x:Name="Precreplenie" Margin="235,13,367,13" Grid.Row="4">
+        <ComboBox Grid.ColumnSpan="2" x:Name="Precreplenie" SelectedIndex="0" Margin="235,13,367,13" FontSize="20" Grid.Row="4">
             <TextBlock Text="центральное"/>
             <TextBlock Text="боковое"/>
             <TextBlock Text="краевое"/>

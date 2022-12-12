@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaternityHospital.View.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,19 @@ namespace MaternityHospital.View
         public dopplerometria()
         {
             InitializeComponent();
+            ArterPypoviny1.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            ArterPypoviny2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            ArterPypoviny3.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            CMozg1.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            CMozg2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            CMozg3.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            MCA1.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            MCA2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            MCA3.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            DiagKonyga.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+
+
+
         }
     }
 }

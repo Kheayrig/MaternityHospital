@@ -58,8 +58,8 @@
 
         </ComboBox>
 
-        <Button Content="Назад" HorizontalAlignment="Left" Grid.Row="11" VerticalAlignment="Top" Height="50" Width="140" FontSize="24" Margin="10,5,0,0" Click="nazad"/>
-        <Button Grid.Column="2" Content="Далее" HorizontalAlignment="Center" Grid.Row="11" VerticalAlignment="Center" Height="50" Width="140" FontSize="24" Click="dalee"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Grid.Row="10" VerticalAlignment="Center" Height="50" Width="140" FontSize="24" Margin="13,0,0,0" Click="nazad"/>
+        <Button Grid.Column="2" Content="Далее" HorizontalAlignment="Left" Grid.Row="10" VerticalAlignment="Center" Height="50" Width="140" FontSize="24" Click="dalee" Margin="110,0,0,0"/>
         <Button Content="Скелет" HorizontalAlignment="Left" Margin="215,0,0,0" Grid.Row="2" VerticalAlignment="Center" Height="37" Width="142"  FontSize="24" Grid.Column="1" Grid.ColumnSpan="2" Click="Skelet"/>
         <Button Content="Пуповина" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Height="37" Width="142"  FontSize="24" Margin="215,0,0,0" Grid.Column="1" Grid.ColumnSpan="2" Click="Pypovina"/>
         <Button Content="Брюшная полость" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="37" Width="220"  FontSize="24" Click="Abdominal"/>
