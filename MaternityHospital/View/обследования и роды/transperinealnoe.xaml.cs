@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaternityHospital.View.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,13 +16,17 @@ using System.Windows.Shapes;
 namespace MaternityHospital.View
 {
     /// <summary>
-    /// Логика взаимодействия для dopplerometria.xaml
+    /// Логика взаимодействия для transperinealnoe.xaml
     /// </summary>
-    public partial class dopplerometria : Window
+    public partial class transperinealnoe : Window
     {
-        public dopplerometria()
+        public transperinealnoe()
         {
             InitializeComponent();
+            RaskrMatochnogoZeva.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            YgolMLA.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            RastoanieHPD.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+
         }
     }
 }

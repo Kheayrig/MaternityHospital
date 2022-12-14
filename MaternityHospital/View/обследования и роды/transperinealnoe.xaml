@@ -22,18 +22,18 @@
         </Grid.RowDefinitions>
         <Label Content="Раскрытие маточного зева" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="37" Width="337"  FontSize="24"/>
         <WrapPanel Grid.Column="1" Grid.Row="1" Margin="43,10,21,25">
-            <TextBox TextWrapping="Wrap" Text="" Width="168" Height="52"/>
+            <TextBox TextWrapping="Wrap" Text="" x:Name="RaskrMatochnogoZeva" Width="168" Height="37"/>
             <Label Content="мм" Width="168"  FontSize="24"/>
         </WrapPanel>
         <Label Content="Расстояние 'головка-промежность' HPD" HorizontalAlignment="Left" Margin="10,14,0,0" Grid.Row="3" VerticalAlignment="Top"  FontSize="24" Height="37" Grid.ColumnSpan="2" Width="471"/>
         <WrapPanel Grid.Column="1" Grid.Row="3" Margin="73,10,21,22">
-            <TextBox TextWrapping="Wrap" Text="" Width="153" Height="66" FontSize="24"/>
+            <TextBox TextWrapping="Wrap" Text=""  x:Name="RastoanieHPD" Width="153" Height="40" FontSize="24"/>
             <Label Content="гр" Width="153" FontSize="24" />
         </WrapPanel>
 
         <Label Content="Угол средней линии (MLA)" HorizontalAlignment="Left" Margin="10,21,0,0" Grid.Row="2" VerticalAlignment="Top"  FontSize="24"/>
         <WrapPanel Grid.Column="1" Grid.Row="2" Margin="43,10,21,23">
-            <TextBox TextWrapping="Wrap" Text="" Width="168" Height="54" FontSize="24"/>
+            <TextBox TextWrapping="Wrap" Text="" Width="168" x:Name="YgolMLA" Height="39" FontSize="24"/>
             <Label Content="мм" Width="168" FontSize="24"/>
 
         </WrapPanel>

@@ -76,12 +76,12 @@
             <TextBlock Text="нет"/>
         </ComboBox>
         <Label Content="Позиция" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="37" Width="125" FontSize="24"/>
-        <ComboBox Margin="10,17,40,17" SelectedIndex="0" Grid.Row="4" Grid.Column="1"   Height="30" Width="150">
+        <ComboBox Margin="10,17,40,17" SelectedIndex="0" Grid.Row="4" Grid.Column="1"  x:Name="Pozicia"  Height="30" Width="150">
             <TextBlock Text="первая"/>
             <TextBlock Text="вторая"/>
         </ComboBox>
         <Label Grid.Column="2" Content="Вид" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="37" Width="60" FontSize="24"/>
-        <ComboBox Margin="10,24,40,17" SelectedIndex="0" Grid.Row="4" Grid.Column="3"   Height="30" Width="150">
+        <ComboBox Margin="10,24,40,17" SelectedIndex="0" Grid.Row="4" Grid.Column="3"  x:Name="Vid"  Height="30" Width="150">
             <TextBlock Text="задний"/>
             <TextBlock Text="передний"/>
         </ComboBox>
@@ -89,30 +89,30 @@
 
         <Label Content="БПР " Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Width="72" Height="51" FontSize="24" Margin="10,0,0,0"/>
         <WrapPanel Margin="67,15,10,11" Grid.Row="5">
-            <TextBox TextWrapping="Wrap" Text="" Width="61" Height="45"/>
+            <TextBox TextWrapping="Wrap"  x:Name="BPR" Text="" Width="61" Height="45"/>
             <Label Content="мм" Width="62"  FontSize="24"/>
         </WrapPanel>
 
         <Label Content="ДБ" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="78" AutomationProperties.Name="Длина бедренной кости" Height="54" FontSize="24" Margin="22,11,0,0"/>
         <WrapPanel Grid.Column="1" Grid.Row="5" Margin="61,15,10,11">
-            <TextBox TextWrapping="Wrap" Text="" Width="64" Height="45"/>
+            <TextBox TextWrapping="Wrap" Text=""  x:Name="DB" Width="64" Height="45"/>
             <Label Content="мм" Width="65"  FontSize="24"/>
         </WrapPanel>
 
         <Label Content="ОЖ" Grid.Column="2" Grid.Row="5" HorizontalAlignment="Right"  VerticalAlignment="Top" Width="82" Height="53" FontSize="24" Margin="0,12,108,0"/>
         <WrapPanel Grid.Column="2" Grid.Row="5" Margin="61,15,10,11">
-            <TextBox TextWrapping="Wrap" Text="" Width="64" Height="45"/>
+            <TextBox TextWrapping="Wrap" Text=""  x:Name="OZH" Width="64" Height="45"/>
             <Label Content="мм" Width="65" FontSize="24" />
         </WrapPanel>
 
         <Label Content="Масса" Grid.Column="3" Grid.Row="5" HorizontalAlignment="Right"  VerticalAlignment="Top" Width="85" Height="46" FontSize="24" Margin="0,15,105,0"/>
         <WrapPanel Grid.Column="3" Grid.Row="5" Margin="95,15,10,11">
-            <TextBox TextWrapping="Wrap" Text="T" Width="47" Height="45"/>
+            <TextBox TextWrapping="Wrap" Text=""  x:Name="Massa" Width="47" Height="45"/>
             <Label Content="мм" Width="48"  FontSize="24"/>
         </WrapPanel>
         
         <Label Content="Плацента" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="6" VerticalAlignment="Center" Height="37" Width="142"  FontSize="24"/>
-        <ComboBox Grid.Row="6" SelectedIndex="6" x:Name="плацента" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="160" Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="158,17,0,0" Grid.ColumnSpan="2">
+        <ComboBox Grid.Row="6" SelectedIndex="6" x:Name="Placenta" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="160" Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="158,17,0,0" Grid.ColumnSpan="2">
             <TextBlock Text="на передней стенке"/>
             <TextBlock Text="на задней стенке"/>
             <TextBlock Text="в дне"/>
@@ -123,20 +123,20 @@
         </ComboBox>
 
         <Label Content="Количество вод" HorizontalAlignment="Left" Margin="130,0,0,0" Grid.Row="6" VerticalAlignment="Center" Height="37" Width="220"  FontSize="24" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <ComboBox Grid.Column="2" SelectedIndex="0" Margin="139,19,148,14" Grid.Row="6" Grid.ColumnSpan="2">
+        <ComboBox Grid.Column="2" SelectedIndex="0"  x:Name="KolVod" Margin="139,19,148,14" Grid.Row="6" Grid.ColumnSpan="2">
             <TextBlock Text="нормальное"/>
             <TextBlock Text="увеличенное"/>
             <TextBlock Text="уменьшенное"/>
 
         </ComboBox>
         <Label Grid.Column="3" Content="ВИЖ" HorizontalAlignment="Left" Margin="60,18,0,0" Grid.Row="6" VerticalAlignment="Top" Height="37" Width="66" FontSize="24" />
-        <TextBox Grid.Column="3" HorizontalAlignment="Left" Margin="126,19,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="61" Height="37"/>
+        <TextBox Grid.Column="3" HorizontalAlignment="Left"  x:Name="VIZH" Margin="126,19,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="61" Height="37"/>
 
         <Button Grid.Column="3" Content="далее" HorizontalAlignment="Left" Margin="75,0,0,0" Grid.Row="10" VerticalAlignment="Center" Height="37" Width="100" FontSize="24"/>
-        <Button Content="Допплерометрия" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="7" VerticalAlignment="Center" Height="37" Width="229" FontSize="24" Grid.ColumnSpan="2"/>
-        <Button Content="Транслабиальное исследование" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="8" VerticalAlignment="Center" Height="37" Width="374" FontSize="24" Grid.ColumnSpan="2"/>
-        <Button Content="Трансперинеальное исследование" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="9" VerticalAlignment="Center" FontSize="24" Height="37" Width="398" Grid.ColumnSpan="3"/>
-        <Button Content="назад" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="10" VerticalAlignment="Center" FontSize="24" Height="37" Width="111"/>
+        <Button Content="Допплерометрия" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="7" VerticalAlignment="Center" Height="37" Width="229" FontSize="24" Grid.ColumnSpan="2" Click="Dopplerometria"/>
+        <Button Content="Транслабиальное исследование" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="8" VerticalAlignment="Center" Height="37" Width="374" FontSize="24" Grid.ColumnSpan="2" Click="Translabialnoe"/>
+        <Button Content="Трансперинеальное исследование" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="9" VerticalAlignment="Center" FontSize="24" Height="37" Width="398" Grid.ColumnSpan="3" Click="Transperenialnoe"/>
+        <Button Content="назад" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="10" VerticalAlignment="Center" FontSize="24" Height="37" Width="111" Click="nazad"/>
 
 
 
