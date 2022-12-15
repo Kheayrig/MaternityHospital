@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MaternityHospital.DB.Models;
 using MaternityHospital.DB.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -14,6 +15,7 @@ namespace MaternityHospital.DB
     {
         readonly string _connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
 
+        public DbSet<Doctor> Doctors { get; set; } = null!;
         public DbSet<Patient> Patients { get; set; } = null!;
         public ApplicationContext() => Database.EnsureCreated();
 

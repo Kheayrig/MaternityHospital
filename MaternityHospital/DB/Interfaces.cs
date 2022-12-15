@@ -14,4 +14,13 @@ namespace MaternityHospital.DB
         void Update();
         void Delete();
     }
+    public interface IViewModel
+    {
+        void SendToDB();
+        void GetFromDB();
+    }
+    public interface IPregnancyCalculator
+    {
+        double Calculate();
+    }
 }
