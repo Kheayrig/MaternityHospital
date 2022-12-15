@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Navigation;
 
-namespace MaternityHospital.DB
+namespace MaternityHospital.Services
 {
     public interface IRepository<T>
     {
@@ -14,7 +14,7 @@ namespace MaternityHospital.DB
         void Update();
         void Delete();
     }
-    public interface IViewModel
+    public interface IViewRepository
     {
         void SendToDB();
         void GetFromDB();
