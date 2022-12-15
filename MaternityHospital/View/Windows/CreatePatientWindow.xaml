@@ -5,36 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital.View.Windows"
         mc:Ignorable="d"
-        ResizeMode="NoResize"
-        Title="Добавить пациентку" Height="380" Width="500">
-    <Grid>
+        Title="Добавить пациентку" Height="450" Width="800" MinHeight="400" MinWidth="600">
+    <Grid Margin="15,10,5,5">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Label x:Name="FIOlabel" Grid.Row="0" Content="Фамилия Имя Отчество:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" Width="150"/>
-        <TextBox x:Name="fioTextBox" Grid.Row="0" InputMethod.IsInputMethodEnabled="False" VerticalAlignment="Center" Width="253" Height="22" HorizontalAlignment="Left" Margin="160,0,0,0"/>
 
-        <Label x:Name="BirthdayLabel" Grid.Row="1" Content="Дата рождения:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-        <DatePicker x:Name="birthdayDatePicker" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FirstDayOfWeek="Monday" Margin="10,0,0,0"/>
+        <WrapPanel Margin="0,5,0,5" Grid.Row="0" VerticalAlignment="Center">
+            <Label Margin="0,0,5,0" x:Name="FIOlabel" Content="Фамилия Имя Отчество:"/>
+            <TextBox x:Name="fioTextBox" InputMethod.IsInputMethodEnabled="False" Width="390"/>
+            <Label x:Name="fioWarning" Content="!!!" Foreground="Red" Visibility="Hidden"/>
+        </WrapPanel>
 
-        <Label x:Name="AddressLabel" Grid.Row="2" Content="Адрес:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-        <TextBox x:Name="AddressTextBox" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="392" Height="22" Margin="88,0,0,0" Grid.ColumnSpan="2"/>
+        <WrapPanel Margin="0,5,0,5" Grid.Row="1" VerticalAlignment="Center">
+            <Label Margin="0,0,5,0" x:Name="BirthdayLabel" Content="Дата рождения:"/>
+            <DatePicker x:Name="birthdayDatePicker" FirstDayOfWeek="Monday"/>
+            <Label x:Name="birthdayWarning" Content="!!!" Foreground="Red" Visibility="Hidden"/>
+        </WrapPanel>
 
-        <Label x:Name="LastPeriodLabel" Grid.Row="3" Content="Дата последних месячных:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-        <DatePicker x:Name="LastPeriodDatePicker" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" FirstDayOfWeek="Monday" Margin="10,0,0,0"/>
+        <WrapPanel Margin="0,5,0,5" Grid.Row="2" VerticalAlignment="Center">
+            <Label Margin="0,0,5,0" x:Name="AddressLabel" Content="Адрес:"/>
+            <TextBox x:Name="AddressTextBox" Width="390"/>
+        </WrapPanel>
 
-        <Label x:Name="FirstScanDateLabel" Grid.Row="4" Content="Дата сканирования:" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
-        <DatePicker x:Name="FirstScanDatePicker" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center" FirstDayOfWeek="Monday" Margin="135,0,0,0"/>
+        <WrapPanel Margin="0,5,0,5" Grid.Row="3" VerticalAlignment="Center">
+            <Label Margin="0,0,5,0" x:Name="LastPeriodLabel" Content="Дата последних месячных:"/>
+            <DatePicker x:Name="LastPeriodDatePicker" FirstDayOfWeek="Monday" SelectedDateChanged="SelectedDateChanged"/>
+        </WrapPanel>
 
+        <WrapPanel Margin="0,5,0,5" Grid.Row="4" VerticalAlignment="Center">
+            <Label Margin="0,0,5,0" x:Name="FirstScanDateLabel" Content="Дата сканирования:"/>
+            <DatePicker x:Name="FirstScanDatePicker" FirstDayOfWeek="Monday"/>
+        </WrapPanel>
+        <CheckBox Grid.Row="4" Margin="0,5,25,5" x:Name="DysmenorrheaCheckBox" Content="Дисменорея" IsChecked="True" HorizontalAlignment="Right" VerticalAlignment="Center"/>
 
-        <Button x:Name="OK" Content="OK" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Height="23" Width="108" Click="OK_Click" Grid.ColumnSpan="2" Margin="80,0,0,0"/>
-        <Button x:Name="Cancel" Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Center" Height="23" Width="106" Click="Cancel_Click" Content="Отмена" Margin="0,0,80,0"/>
-        <CheckBox x:Name="DysmenorrheaCheckBox" Content="Дисменорея" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="6" VerticalAlignment="Center"/>
+        <Label x:Name="WarningLabel" Margin="20,5,0,5" Content="Заполните пустые поля, отмеченные '!!!'" Foreground="Red" Visibility="Hidden" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        
+        <Button Width="140" Margin="20,5,0,5" x:Name="OK" Content="OK" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Center" Click="OK_Click"/>
+        <Button Width="140" Margin="0,5,20,5" x:Name="Cancel" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center" Click="Cancel_Click" Content="Отмена"/>
 
     </Grid>
 </Window>

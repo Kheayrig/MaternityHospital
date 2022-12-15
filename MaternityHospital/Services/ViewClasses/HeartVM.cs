@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MaternityHospital.Services
+namespace MaternityHospital.Services.ViewModel
 {
-    class Heart
+    public class HeartVM: IViewRepository
     {
         public string KamSerdca { get; set; }
         public string MPP { get; set; }
@@ -29,5 +29,15 @@ namespace MaternityHospital.Services
         public string NeparVena2 { get; set; } = "недилатирована";
         public string LegVeny { get; set; }
         public string Gidroperekard { get; set; }
+
+        public void GetFromDB()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SendToDB()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

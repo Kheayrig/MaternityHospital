@@ -1,25 +1,13 @@
-﻿using MaternityHospital.DB;
-using MaternityHospital.DB.Models;
-using MaternityHospital.DB.Repositories;
-using MaternityHospital.Services;
+﻿using MaternityHospital.DB.Repositories;
 using MaternityHospital.View.Windows;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+using MaternityHospital.Services;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Collections.Generic;
 
 namespace MaternityHospital
 {
@@ -33,15 +21,15 @@ namespace MaternityHospital
         public MainWindow()
         {
             InitializeComponent();
+            AppSettings.SetAppSettings();
             WindowState = WindowState.Maximized; 
-            currentDoctor.Content = Settings.GetCurrentDoctor();
-            new Window1().Show();
+            FontSize = AppSettings.CurrentFontSize;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            PatientsDataGrid.Columns[2].Header = "Срок беременности\n(в неделях)";
             RefreshData();
-            currentDoctorLabel.Margin = new Thickness(0, 0, currentDoctor.ActualWidth + 10, 0);
         }
 
         private void createPatientButton_Click(object sender, RoutedEventArgs e)
@@ -57,6 +45,13 @@ namespace MaternityHospital
         {
             _data = Patient.GetAllTableView();
             PatientsDataGrid.ItemsSource = _data;
+            if (AppSettings.CurrentDoctor == "???")
+            {
+                var win = new ChangeDoctor();
+                win.Owner = this;
+                win.ShowDialog();
+            }
+            currentDoctor.Content = AppSettings.CurrentDoctor;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -64,8 +59,8 @@ namespace MaternityHospital
             if (SearchTextBox.Text == "") RefreshData();
             else
             {
-                string pattern = $"^[А-Яа-я'\\s-]*({SearchTextBox.Text})+[А-Яа-я\\s'-]*$";
-                var filteredData = _data.Where(x => Regex.IsMatch(x.FIO, pattern));
+                string pattern = $"^[А-Яа-я'\\s-]*({SearchTextBox.Text.ToLower()})+[А-Яа-я\\s'-]*$";
+                var filteredData = _data.Where(x => Regex.IsMatch(x.FIO.ToLower(), pattern));
                 PatientsDataGrid.ItemsSource = new BindingList<Patient>(filteredData.ToList());
             }
             
@@ -76,6 +71,21 @@ namespace MaternityHospital
             if (e.Key == Key.Enter)
             {
                 MessageBox.Show(PatientsDataGrid.SelectedItem.ToString());
+                AppSettings.currentPatient = new CurrentPatient((Patient)PatientsDataGrid.SelectedItem);
+            }
+        }
+        void PatientsDataGrid_DoubleClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(PatientsDataGrid.SelectedItem.ToString());
+            AppSettings.currentPatient = new CurrentPatient((Patient)PatientsDataGrid.SelectedItem);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var win = new ChangeDoctor();
+            if (win.ShowDialog() == true)
+            {
+                RefreshData();
             }
         }
     }

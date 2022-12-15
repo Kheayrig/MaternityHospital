@@ -1,9 +1,11 @@
 ﻿using MaternityHospital.DB.Models;
+using MaternityHospital.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 
 namespace MaternityHospital.DB.Repositories
@@ -19,7 +21,6 @@ namespace MaternityHospital.DB.Repositories
         public string Doctor { get; set; } = "Карпов А Ю ";
         public bool Scan { get; set; } = false;
         public bool DPM { get; set; } = false;
-
         private DateTime? _lastPeriodDate;
         #region Properties
         public DateTime? LastPeriodDate
@@ -32,9 +33,12 @@ namespace MaternityHospital.DB.Repositories
                 _lastPeriodDate = value;
             }
         }
+        public double PregnancyDuration { get; set; }
+        [NotMapped]
+        private IPregnancyCalculator _pregnancyCalculator;
         #endregion
         #region Constructors
-        public Patient(string FIO, DateTime birthday, DateTime firstScanDate, string Doctor, 
+        public Patient(string FIO, DateTime birthday, DateTime firstScanDate, string doctor,
             string? address = null, DateTime? lastPeriodDate = null)
         {
             this.FIO = FIO;
@@ -42,7 +46,21 @@ namespace MaternityHospital.DB.Repositories
             FirstScanDate = firstScanDate;
             Address = address;
             LastPeriodDate = lastPeriodDate;
-            //Doctor = GetCurrentDoctor();
+            Doctor = doctor;
+            _pregnancyCalculator = new PregnancyCalculator(LastPeriodDate, FirstScanDate, PregnancyDuration);
+            PregnancyDuration = _pregnancyCalculator.Calculate();
+        }
+        public Patient(string FIO, DateTime birthday, DateTime firstScanDate, string doctor, IPregnancyCalculator? pregnancyCalculator,
+            string? address = null, DateTime? lastPeriodDate = null)
+        {
+            this.FIO = FIO;
+            Birthday = birthday;
+            FirstScanDate = firstScanDate;
+            Address = address;
+            LastPeriodDate = lastPeriodDate;
+            Doctor = doctor;
+            _pregnancyCalculator = pregnancyCalculator ?? new PregnancyCalculator(LastPeriodDate, FirstScanDate, PregnancyDuration);
+            PregnancyDuration = _pregnancyCalculator.Calculate();
         }
         #endregion
         #region Methods

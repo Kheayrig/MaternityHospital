@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MaternityHospital.Services
 {
-    class Window1
+    class Window1: IViewRepository
     {
         public string plod { get; set; } = "один";
         public string position { get; set; } = "продольное";
@@ -19,7 +19,14 @@ namespace MaternityHospital.Services
         public string Breath_movement { get; set; } = "да";
         public string Breath_movement_Copy { get; set; } = "&lt; 30 сек";
 
+        public void GetFromDB()
+        {
+            
+        }
 
-
+        public void SendToDB()
+        {
+            
+        }
     }
 }
