@@ -20,6 +20,11 @@ namespace MaternityHospital.View.Utils
             Regex re = new Regex("[^0-9]+");
             e.Handled = re.IsMatch(e.Text);
         }
+        internal static void FilterOnlyDoubleNumber(object sender, TextCompositionEventArgs e)
+        {
+            Regex re = new Regex("[^0-9.]+");
+            e.Handled = re.IsMatch(e.Text);
+        }
         /// <summary>
         /// тавить в TextBox в событие PreviewTextInput, чтобы установить ввод только русских букв(А-я), тире(-), апострофа(') и пробела
         /// </summary>

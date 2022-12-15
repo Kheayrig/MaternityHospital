@@ -89,26 +89,26 @@
 
         <Label Content="БПР " Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Width="72" Height="51" FontSize="24" Margin="10,0,0,0"/>
         <WrapPanel Margin="67,15,10,11" Grid.Row="5">
-            <TextBox TextWrapping="Wrap"  x:Name="BPR" Text="" Width="61" Height="45"/>
+            <TextBox TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="2" x:Name="BPR" Text="" Width="61" Height="45"/>
             <Label Content="мм" Width="62"  FontSize="24"/>
         </WrapPanel>
 
         <Label Content="ДБ" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="78" AutomationProperties.Name="Длина бедренной кости" Height="54" FontSize="24" Margin="22,11,0,0"/>
         <WrapPanel Grid.Column="1" Grid.Row="5" Margin="61,15,10,11">
-            <TextBox TextWrapping="Wrap" Text=""  x:Name="DB" Width="64" Height="45"/>
+            <TextBox TextWrapping="Wrap"  InputMethod.IsInputMethodEnabled="False" MaxLength="3" Text=""  x:Name="DB" Width="64" Height="45"/>
             <Label Content="мм" Width="65"  FontSize="24"/>
         </WrapPanel>
 
         <Label Content="ОЖ" Grid.Column="2" Grid.Row="5" HorizontalAlignment="Right"  VerticalAlignment="Top" Width="82" Height="53" FontSize="24" Margin="0,12,108,0"/>
         <WrapPanel Grid.Column="2" Grid.Row="5" Margin="61,15,10,11">
-            <TextBox TextWrapping="Wrap" Text=""  x:Name="OZH" Width="64" Height="45"/>
+            <TextBox TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="3" Text=""  x:Name="OZH" Width="64" Height="45"/>
             <Label Content="мм" Width="65" FontSize="24" />
         </WrapPanel>
 
         <Label Content="Масса" Grid.Column="3" Grid.Row="5" HorizontalAlignment="Right"  VerticalAlignment="Top" Width="85" Height="46" FontSize="24" Margin="0,15,105,0"/>
         <WrapPanel Grid.Column="3" Grid.Row="5" Margin="95,15,10,11">
-            <TextBox TextWrapping="Wrap" Text=""  x:Name="Massa" Width="47" Height="45"/>
-            <Label Content="мм" Width="48"  FontSize="24"/>
+            <TextBox TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="4" Text=""  x:Name="Massa" Width="47" Height="45"/>
+            <Label Content="г" Width="48"  FontSize="24"/>
         </WrapPanel>
         
         <Label Content="Плацента" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="6" VerticalAlignment="Center" Height="37" Width="142"  FontSize="24"/>
@@ -130,7 +130,7 @@
 
         </ComboBox>
         <Label Grid.Column="3" Content="ВИЖ" HorizontalAlignment="Left" Margin="60,18,0,0" Grid.Row="6" VerticalAlignment="Top" Height="37" Width="66" FontSize="24" />
-        <TextBox Grid.Column="3" HorizontalAlignment="Left"  x:Name="VIZH" Margin="126,19,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="61" Height="37"/>
+        <TextBox Grid.Column="3" InputMethod.IsInputMethodEnabled="False" MaxLength="3" HorizontalAlignment="Left"  x:Name="VIZH" Margin="126,19,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="61" Height="37"/>
 
         <Button Grid.Column="3" Content="далее" HorizontalAlignment="Left" Margin="75,0,0,0" Grid.Row="10" VerticalAlignment="Center" Height="37" Width="100" FontSize="24"/>
         <Button Content="Допплерометрия" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="7" VerticalAlignment="Center" Height="37" Width="229" FontSize="24" Grid.ColumnSpan="2" Click="Dopplerometria"/>

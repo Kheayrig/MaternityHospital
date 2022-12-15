@@ -35,7 +35,7 @@
         <Button Grid.Column="3" Content="далее" HorizontalAlignment="Left" Margin="70,10,0,0" Grid.Row="7" VerticalAlignment="Top" Height="37" Width="100" FontSize="24"/>
         <Button Content="назад" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="10" VerticalAlignment="Center" FontSize="24" Height="37" Width="111"/>
         <WrapPanel Grid.Column="1" Grid.Row="2" Margin="39,10,10,10">
-            <TextBox TextWrapping="Wrap" x:Name="ArterPypoviny1" Text="" Width="151" Height="34"  FontSize="24" />
+            <TextBox TextWrapping="Wrap"  InputMethod.IsInputMethodEnabled="False" MaxLength="4" x:Name="ArterPypoviny1" Text="" Width="151" Height="34"  FontSize="24" />
         </WrapPanel>
         <WrapPanel Grid.Column="2" Grid.Row="2" Margin="10,10,10,10">
             <TextBox TextWrapping="Wrap" Text="" x:Name="ArterPypoviny2" Width="180" Height="34" FontSize="24" />

@@ -70,16 +70,20 @@ namespace MaternityHospital
         {
             if (e.Key == Key.Enter)
             {
-                MessageBox.Show(PatientsDataGrid.SelectedItem.ToString());
-                AppSettings.currentPatient = new CurrentPatient((Patient)PatientsDataGrid.SelectedItem);
+                ToNextWindow();
             }
         }
         void PatientsDataGrid_DoubleClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(PatientsDataGrid.SelectedItem.ToString());
-            AppSettings.currentPatient = new CurrentPatient((Patient)PatientsDataGrid.SelectedItem);
+            ToNextWindow();
+            
         }
 
+        private void ToNextWindow()
+        {
+            AppSettings.currentPatient = new CurrentPatient((Patient)PatientsDataGrid.SelectedItem);
+            new Window1().ShowDialog();
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var win = new ChangeDoctor();
