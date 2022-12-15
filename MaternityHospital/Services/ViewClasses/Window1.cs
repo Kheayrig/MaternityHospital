@@ -1,5 +1,4 @@
-﻿using MaternityHospital.DB;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MaternityHospital.Services
 {
-    class Window1: IViewModel
+    class Window1: IViewRepository
     {
         public string plod { get; set; } = "один";
         public string position { get; set; } = "продольное";

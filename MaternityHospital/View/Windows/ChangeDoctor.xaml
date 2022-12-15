@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital.View.Windows"
         mc:Ignorable="d"
-        Title="Изменить доктора" Height="450" Width="800"
+        Title="Изменить врача" Height="450" Width="800"
         Loaded="Window_Loaded"
         Closing="Close"
         WindowStartupLocation="CenterScreen">

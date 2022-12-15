@@ -17,9 +17,9 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" Content="Сменить доктора" Width="auto" HorizontalAlignment="Left" Height="auto" Click="Button_Click"/>
+        <Button Grid.Row="0" Content="Сменить врача" Width="auto" HorizontalAlignment="Left" Height="auto" Click="Button_Click"/>
         <WrapPanel Grid.Row="0" HorizontalAlignment="Right">
-            <Label x:Name="currentDoctorLabel" Content="Текущий доктор: "/>
+            <Label x:Name="currentDoctorLabel" Content="Текущий врач: "/>
             <Label x:Name="currentDoctor" Content="???" Width="auto"/>
         </WrapPanel>
 

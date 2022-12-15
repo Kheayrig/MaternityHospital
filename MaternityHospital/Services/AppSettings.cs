@@ -1,5 +1,4 @@
-﻿using MaternityHospital.DB;
-using MaternityHospital.DB.Models;
+﻿using MaternityHospital.DB.Models;
 using MaternityHospital.Services.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -13,6 +12,7 @@ namespace MaternityHospital.Services
 {
     internal static class AppSettings
     {
+        public static CurrentPatient currentPatient { get; set; }
         private static int _currentFontSize;
         public static int CurrentFontSize
         {
@@ -42,7 +42,7 @@ namespace MaternityHospital.Services
             }
         }
 
-        public static List<IViewModel> WindowsList { get; set; } = new List<IViewModel>();
+        public static List<IViewRepository> DefaultWindowsList { get; set; } = new List<IViewRepository>();
 
         public static void SetCurrentDoctor(Doctor doctor)
         {
@@ -58,7 +58,7 @@ namespace MaternityHospital.Services
 
         private static void SetWindows()
         {
-            var list = new List<IViewModel>();
+            var list = new List<IViewRepository>();
             list.Add(new HeartVM());
         }
     }

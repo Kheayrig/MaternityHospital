@@ -1,5 +1,4 @@
-﻿using MaternityHospital.DB;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MaternityHospital.Services.ViewModel
 {
-    public class HeartVM: IViewModel
+    public class HeartVM: IViewRepository
     {
         public string KamSerdca { get; set; }
         public string MPP { get; set; }

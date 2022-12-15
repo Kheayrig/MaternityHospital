@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital.View.Windows"
         mc:Ignorable="d"
-        Title="Добавить доктора" 
+        Title="Добавить врача" 
         MinHeight="260" MinWidth="530" 
         Height="260" Width="530">
     <Grid Margin="5,10,5,5">

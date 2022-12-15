@@ -8,7 +8,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Collections.Generic;
-using MaternityHospital.DB;
 
 namespace MaternityHospital
 {
@@ -18,7 +17,6 @@ namespace MaternityHospital
     public partial class MainWindow : Window
     {
         private BindingList<Patient> _data = new BindingList<Patient>();
-        public List<IViewModel> windows = AppSettings.WindowsList;
 
         public MainWindow()
         {
@@ -30,6 +28,7 @@ namespace MaternityHospital
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            PatientsDataGrid.Columns[2].Header = "Срок беременности\n(в неделях)";
             RefreshData();
         }
 
@@ -72,11 +71,13 @@ namespace MaternityHospital
             if (e.Key == Key.Enter)
             {
                 MessageBox.Show(PatientsDataGrid.SelectedItem.ToString());
+                AppSettings.currentPatient = new CurrentPatient((Patient)PatientsDataGrid.SelectedItem);
             }
         }
         void PatientsDataGrid_DoubleClick(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(PatientsDataGrid.SelectedItem.ToString());
+            AppSettings.currentPatient = new CurrentPatient((Patient)PatientsDataGrid.SelectedItem);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
