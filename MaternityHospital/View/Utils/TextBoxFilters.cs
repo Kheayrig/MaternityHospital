@@ -30,5 +30,10 @@ namespace MaternityHospital.View.Utils
             Regex re = new Regex("[^А-Яа-я\\s'-]+");
             e.Handled = re.IsMatch(e.Text);
         }
+        internal static void FilterFIOShortForm(object sender, TextCompositionEventArgs e)
+        {
+            Regex re = new Regex("[^А-Яа-я.\\s'-]+");
+            e.Handled = re.IsMatch(e.Text);
+        }
     }
 }
