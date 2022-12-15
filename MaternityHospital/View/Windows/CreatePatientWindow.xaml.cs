@@ -38,7 +38,7 @@ namespace MaternityHospital.View.Windows
         private void OK_Click(object sender, RoutedEventArgs e)
         {
             string fio = fioTextBox.Text.Trim();
-            string doctor = Settings.GetCurrentDoctor();
+            string doctor = AppSettings.CurrentDoctor;
             string address = AddressTextBox.Text;
             DateTime? lastPeriodDate = LastPeriodDatePicker.SelectedDate;
             DateTime birthday = birthdayDatePicker.SelectedDate.Value;

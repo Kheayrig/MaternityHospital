@@ -4,44 +4,55 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital"
+        xmlns:s="clr-namespace:MaternityHospital.Services"
         mc:Ignorable="d"
         Title="Главное окно" 
         Height="450" Width="900" 
+        MinHeight="500" MinWidth="800"
         Loaded="Window_Loaded">
-    <Grid>
+    <Grid Margin="5,10,5,5">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" Content="Сменить доктора" Width="120" HorizontalAlignment="Left" Height="25"/>
-        <Label Grid.Row="0" x:Name="currentDoctorLabel" Content="Текущий доктор:" HorizontalAlignment="Right" Margin="0,0,30,0"/>
-        <Label Grid.Row="0" x:Name="currentDoctor" Content="???" HorizontalAlignment="Right"/>
+        <Button Grid.Row="0" Content="Сменить доктора" Width="auto" HorizontalAlignment="Left" Height="auto" Click="Button_Click"/>
+        <WrapPanel Grid.Row="0" HorizontalAlignment="Right">
+            <Label x:Name="currentDoctorLabel" Content="Текущий доктор: "/>
+            <Label x:Name="currentDoctor" Content="???" Width="auto"/>
+        </WrapPanel>
 
+        <WrapPanel Grid.Row="1" VerticalAlignment="Center" Margin="0,5,0,5" >
+            <Label Margin="0,0,10,0" x:Name="searchLabel" Content="Поиск:" HorizontalAlignment="Left"/>
+            <TextBox Margin="0,0,10,0" x:Name="SearchTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Width="414" Height="30" TextChanged="TextBox_TextChanged"/>
+            <Label Margin="0,0,10,0" x:Name="orLabel" Content="или" HorizontalAlignment="Center"/>
+            <Button Margin="0,0,10,0" x:Name="createPatientButton" Content="Добавить новую пациентку" HorizontalAlignment="Right" Height="auto" Width="auto" Click="createPatientButton_Click"/>
 
-        <Label Grid.Row="1" x:Name="searchLabel" Content="Поиск:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14"/>
-        <TextBox Grid.Row="1" x:Name="SearchTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="414" Height="30" TextChanged="TextBox_TextChanged" Margin="0,0,0,5"/>
-        <Label Grid.Row="1" x:Name="orLabel" Content="или" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,0,0,0"/>
-        <Button Grid.Row="1" x:Name="createPatientButton" Content="Добавить новую пациентку" HorizontalAlignment="Right" VerticalAlignment="Center" Height="33" Width="162" Click="createPatientButton_Click"/>
+        </WrapPanel>
 
+        
         <DataGrid CanUserAddRows="False" CanUserDeleteRows="False" Grid.Row="2" x:Name="PatientsDataGrid" SelectionUnit="FullRow" d:ItemsSource="{d:SampleData ItemCount=3}" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.ItemContainerStyle>
                 <Style TargetType="DataGridRow">
                     <EventSetter Event="KeyDown" Handler="PatientsDataGrid_KeyDown"/>
+                    <EventSetter Event="MouseDoubleClick" Handler="PatientsDataGrid_DoubleClick"/>
                 </Style>
             </DataGrid.ItemContainerStyle>
 
             <DataGrid.Columns>
                 <DataGridTextColumn Width="*" Binding="{Binding FIO}" Header="ФИО"/>
-                <DataGridTextColumn Width="150" Binding="{Binding Birthday}" Header="Дата рождения"/>
-                <DataGridTextColumn Width="150" Binding="{Binding PregnancyDuration}" Header="Срок беременности"/>
-                <DataGridCheckBoxColumn Width="150" Binding="{Binding Scan}" Header="УЗИ"/>
-                <DataGridCheckBoxColumn Width="150" Binding="{Binding DPM}" Header="ДПМ"/>
-                <DataGridTextColumn Width="150" Binding="{Binding Doctor}" Header="Обследовал доктор"/>
+                <DataGridTextColumn Width="auto" Binding="{Binding Birthday}" Header="Дата рождения"/>
+                <DataGridTextColumn Width="auto" Binding="{Binding PregnancyDuration}" Header="Срок беременности"/>
+                <DataGridCheckBoxColumn Width="auto" Binding="{Binding Scan}" Header="УЗИ"/>
+                <DataGridCheckBoxColumn Width="auto" Binding="{Binding DPM}" Header="ДПМ"/>
+                <DataGridTextColumn Width="auto" Binding="{Binding Doctor}" Header="Обследовал доктор"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label Grid.Row="3" Content="Нажмите Enter на выделенной строке, чтобы выбрать пациентку"/>
-        <Label Grid.Row="3" HorizontalAlignment="Right" Content="Нажмите Space на выделенной строке, чтобы отредактировать данные пациентки"/>
+        <WrapPanel Margin="0,2,0,2" Grid.Row="3" HorizontalAlignment="Left">
+            <Label FontSize="16" Content="Нажмите Enter(или дважды кликните мышкой) на выделенной строке, чтобы выбрать врача | "/>
+            <Label FontSize="16" Content="Нажмите Space на выделенной строке, чтобы отредактировать данные пациентки"/>
+        </WrapPanel>
+        
     </Grid>
 </Window>
