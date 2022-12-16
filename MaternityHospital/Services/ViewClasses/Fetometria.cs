@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MaternityHospital.Services
 {
-    class Window2
+    class Fetometria
     {
         public int  BR { get; set; }
         public int DBK { get; set; }

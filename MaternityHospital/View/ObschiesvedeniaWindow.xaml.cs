@@ -1,4 +1,5 @@
-﻿using MaternityHospital.View;
+﻿using MaternityHospital.Services;
+using MaternityHospital.View;
 using MaternityHospital.View.Utils;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,7 @@ namespace MaternityHospital
             InitializeComponent();
             heartRate.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             WindowState = WindowState.Maximized;
+            FontSize = AppSettings.CurrentFontSize;
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

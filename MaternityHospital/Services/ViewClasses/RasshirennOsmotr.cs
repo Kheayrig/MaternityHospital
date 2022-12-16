@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MaternityHospital.Services
 {
-    class Window3
+    class RasshirennOsmotr
     {
         public string placenta { get; set; } = "перекрывает внутренний зев";
         public string PPoverxnost { get; set; } = "нормальная";

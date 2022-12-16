@@ -25,7 +25,7 @@
 
         <WrapPanel Grid.Row="1" VerticalAlignment="Center" Margin="0,5,0,5" >
             <Label Margin="0,0,10,0" x:Name="searchLabel" Content="Поиск:" HorizontalAlignment="Left"/>
-            <TextBox Margin="0,0,10,0" x:Name="SearchTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Width="414" Height="30" TextChanged="TextBox_TextChanged"/>
+            <TextBox Margin="0,0,10,0" x:Name="SearchTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Width="414" TextChanged="TextBox_TextChanged"/>
             <Label Margin="0,0,10,0" x:Name="orLabel" Content="или" HorizontalAlignment="Center"/>
             <Button Margin="0,0,10,0" x:Name="createPatientButton" Content="Добавить новую пациентку" HorizontalAlignment="Right" Height="auto" Width="auto" Click="createPatientButton_Click"/>
 
@@ -50,8 +50,8 @@
             </DataGrid.Columns>
         </DataGrid>
         <WrapPanel Margin="0,2,0,2" Grid.Row="3" HorizontalAlignment="Left">
-            <Label FontSize="16" Content="Нажмите Enter(или дважды кликните мышкой) на выделенной строке, чтобы выбрать врача | "/>
-            <Label FontSize="16" Content="Нажмите Space на выделенной строке, чтобы отредактировать данные пациентки"/>
+            <Label FontSize="16" Content="Нажмите Enter(или дважды кликните мышкой) на выделенной строке, чтобы выбрать врача  | "/>
+            <Label FontSize="16" Content="Нажмите Space (пробел) на выделенной строке, чтобы отредактировать данные пациентки"/>
         </WrapPanel>
         
     </Grid>

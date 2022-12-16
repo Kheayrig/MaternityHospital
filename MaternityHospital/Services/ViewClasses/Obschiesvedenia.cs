@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MaternityHospital.Services
 {
-    class Window1: IViewRepository
+    class Obschiesvedenia: IViewRepository
     {
         public string plod { get; set; } = "один";
         public string position { get; set; } = "продольное";

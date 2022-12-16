@@ -26,7 +26,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Плацента" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="5" VerticalAlignment="Center" Height="37" Width="142"  FontSize="24"/>
+        <Label Content="Плацента" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="5" VerticalAlignment="Center" Height="37" Width="142" />
         <ComboBox Grid.Column="1" Grid.Row="5"  SelectedIndex="6" x:Name="placenta" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="160" Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="38,0,0,0">
             <TextBlock Text="на передней стенке"/>
             <TextBlock Text="на задней стенке"/>
@@ -36,13 +36,13 @@
             <TextBlock Text="не доходит до внутреннего зева"/>
             <TextBlock Text="перекрывает внутренний зев"/>
         </ComboBox>
-        <Label Content="плодовая плацентарная поверхность" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="9" VerticalAlignment="Center" Height="37" Width="440" FontSize="24" Grid.ColumnSpan="2" />
+        <Label Content="плодовая плацентарная поверхность" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="9" VerticalAlignment="Center" Height="37" Width="440"  Grid.ColumnSpan="2" />
         <ComboBox Grid.Column="1" SelectedIndex="0"  Grid.ColumnSpan="2" Margin="215,15,158,17" Grid.Row="9" x:Name="PPoverxnost" Width="160" Height="40">
             <TextBlock Text="нормальная"/>
             <TextBlock Text="измененная"/>
         </ComboBox>
 
-        <Label Content="Структура" HorizontalAlignment="Left"  Margin="11,0,0,0" Grid.Row="7" VerticalAlignment="Center" Height="37" Width="142" FontSize="24"/>
+        <Label Content="Структура" HorizontalAlignment="Left"  Margin="11,0,0,0" Grid.Row="7" VerticalAlignment="Center" Height="37" Width="142" />
         <ComboBox Margin="38,17,68,17"  SelectedIndex="0"  x:Name="stryctyra" Grid.Row="7" Grid.Column="1">
             <TextBlock Text="однородная"/>
             <TextBlock Text="неоднородная"/>
@@ -50,7 +50,7 @@
             <TextBlock Text="с очаговыми изменениями"/>
         </ComboBox>
 
-        <Label Content="Количество вод" HorizontalAlignment="Left"  Margin="11,0,0,0" Grid.Row="6" VerticalAlignment="Center" Height="37" Width="220"  FontSize="24"/>
+        <Label Content="Количество вод" HorizontalAlignment="Left"  Margin="11,0,0,0" Grid.Row="6" VerticalAlignment="Center" Height="37" Width="220"  />
         <ComboBox Grid.Column="1" SelectedIndex="0"  x:Name="kolVod" Margin="38,17,68,17" Grid.Row="6">
             <TextBlock Text="нормальное"/>
             <TextBlock Text="увеличенное"/>
@@ -58,23 +58,23 @@
 
         </ComboBox>
 
-        <Button Content="Назад" HorizontalAlignment="Left" Grid.Row="10" VerticalAlignment="Center" Height="50" Width="140" FontSize="24" Margin="13,0,0,0" Click="nazad"/>
-        <Button Grid.Column="2" Content="Далее" HorizontalAlignment="Left" Grid.Row="10" VerticalAlignment="Center" Height="50" Width="140" FontSize="24" Click="dalee" Margin="110,0,0,0"/>
-        <Button Content="Скелет" HorizontalAlignment="Left" Margin="215,0,0,0" Grid.Row="2" VerticalAlignment="Center" Height="37" Width="142"  FontSize="24" Grid.Column="1" Grid.ColumnSpan="2" Click="Skelet"/>
-        <Button Content="Пуповина" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Height="37" Width="142"  FontSize="24" Margin="215,0,0,0" Grid.Column="1" Grid.ColumnSpan="2" Click="Pypovina"/>
-        <Button Content="Брюшная полость" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="37" Width="220"  FontSize="24" Click="Abdominal"/>
-        <Button Content="Грудная полость" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="2" VerticalAlignment="Center" Height="37" Width="220"  FontSize="24" Click="Chest"/>
-        <Button Content="Сердце и крупные сосуды" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="37" Width="310" FontSize="24" Grid.ColumnSpan="2" Click="Heart"/>
-        <Button Content="ЦНС. Лицо. Шея" HorizontalAlignment="Left" Margin="215,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="37" Width="273" FontSize="24" Grid.Column="1" Grid.ColumnSpan="2" Click="Cns"/>
-        <Label Content="Степень зрелости" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="8" VerticalAlignment="Center" Height="37" Width="220" FontSize="24"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Grid.Row="10" VerticalAlignment="Center" Height="50" Width="140"  Margin="13,0,0,0" Click="nazad"/>
+        <Button Grid.Column="2" Content="Далее" HorizontalAlignment="Left" Grid.Row="10" VerticalAlignment="Center" Height="50" Width="140"  Click="dalee" Margin="110,0,0,0"/>
+        <Button Content="Скелет" HorizontalAlignment="Left" Margin="215,0,0,0" Grid.Row="2" VerticalAlignment="Center" Height="37" Width="142"   Grid.Column="1" Grid.ColumnSpan="2" Click="Skelet"/>
+        <Button Content="Пуповина" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Height="37" Width="142"   Margin="215,0,0,0" Grid.Column="1" Grid.ColumnSpan="2" Click="Pypovina"/>
+        <Button Content="Брюшная полость" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="37" Width="220"   Click="Abdominal"/>
+        <Button Content="Грудная полость" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="2" VerticalAlignment="Center" Height="37" Width="220"   Click="Chest"/>
+        <Button Content="Сердце и крупные сосуды" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="37" Width="310"  Grid.ColumnSpan="2" Click="Heart"/>
+        <Button Content="ЦНС. Лицо. Шея" HorizontalAlignment="Left" Margin="215,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="37" Width="273"  Grid.Column="1" Grid.ColumnSpan="2" Click="Cns"/>
+        <Label Content="Степень зрелости" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="8" VerticalAlignment="Center" Height="37" Width="220" />
         <ComboBox Margin="38,17,68,17"  SelectedIndex="0"  x:Name="StepenZrelosti" Grid.Row="8" Grid.Column="1">
             <TextBlock Text="1"/>
             <TextBlock Text="2"/>
             <TextBlock Text="3"/>
         </ComboBox>
 
-        <Label Grid.Column="2" Content="ВИЖ" HorizontalAlignment="Left" Margin="10,17,0,0" Grid.Row="6" VerticalAlignment="Top" Height="37" Width="100" FontSize="24" />
-        <TextBox Grid.Column="2"  x:Name="vish" HorizontalAlignment="Left" Margin="110,0,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="61" Height="37"/>
+        <Label Grid.Column="2" Content="ВИЖ" HorizontalAlignment="Left" Margin="10,17,0,0" Grid.Row="6" VerticalAlignment="Top" Height="37" Width="100"  />
+        <TextBox Grid.Column="2"  x:Name="vish" InputMethod.IsInputMethodEnabled="False" MaxLength="4" HorizontalAlignment="Left" Margin="110,0,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="61" Height="37"/>
 
 
 

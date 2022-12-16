@@ -1,4 +1,5 @@
-﻿using MaternityHospital.View.Utils;
+﻿using MaternityHospital.Services;
+using MaternityHospital.View.Utils;
 using MaternityHospital.View.Windows;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,7 @@ namespace MaternityHospital.View
             InitializeComponent();
             WindowState = WindowState.Maximized;
             vish.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            FontSize = AppSettings.CurrentFontSize;
         }
 
 
