@@ -9,39 +9,62 @@ namespace MaternityHospital.Services
 {
     public class PregnancyCalculator : IPregnancyCalculator
     {
-        protected int PregnancyDuration { get; }
+        protected int PregnancyDurationWeek { get; set; }
+        protected int PregnancyDurationDay { get; set; }
         protected DateTime? LastPeriodDate { get; }
         protected DateTime FirstScanDate { get; }
 
-        public PregnancyCalculator(DateTime? lastPeriodDate, DateTime firstScanDate, int pregnancyDuration = 0)
+        public PregnancyCalculator(DateTime? lastPeriodDate, DateTime firstScanDate, int pregnancyDurationWeek = 0, int pregnancyDurationDay = 0)
         {
             LastPeriodDate = lastPeriodDate;
             FirstScanDate = firstScanDate;
-            PregnancyDuration = pregnancyDuration;
+            PregnancyDurationWeek = pregnancyDurationWeek;
+            PregnancyDurationDay= pregnancyDurationDay;
         }
 
-        public int Calculate()
+        private int ScanCalculate(bool isWeek = true)
         {
-            if(LastPeriodDate == null)
-            {
-                return ScanCalculate();
-            }
-            return PeriodCalculate();
+            int actual = (DateTime.Now - FirstScanDate).Days + PregnancyDurationDay;
+            if (isWeek) actual = actual / 7 + PregnancyDurationWeek;
+            return actual;
+
         }
-        private int ScanCalculate()
+        private int PeriodCalculate(bool isWeek = true)
         {
-            return (DateTime.Now - FirstScanDate).Days/7 + PregnancyDuration;
-        }
-        private int PeriodCalculate()
-        {
-            return (DateTime.Now - LastPeriodDate).Value.Days/7 + PregnancyDuration;
+            int actual = (DateTime.Now - LastPeriodDate).Value.Days + PregnancyDurationDay;
+            if (isWeek) actual = actual / 7 + PregnancyDurationWeek;
+            return actual;
         }
         public int GetTrimester()
         {
-            if (PregnancyDuration < 18) return 1;
-            else if (PregnancyDuration < 30) return 2;
-            else if (PregnancyDuration < 35) return 3;
-            else return 4;
+            if (PregnancyDurationWeek < 18) return 1;
+            if (PregnancyDurationWeek < 30) return 2;
+            if (PregnancyDurationWeek < 35) return 3;
+            return 4;
+        }
+
+        public int GetPregnancyDurationWeek()
+        {
+            int duration;
+            if (LastPeriodDate == null)
+            {
+                duration = ScanCalculate(true);
+            }
+            else duration = PeriodCalculate(true);
+            PregnancyDurationWeek = duration;
+            return duration;
+        }
+
+        public int GetPregnancyDurationDay()
+        {
+            int duration;
+            if (LastPeriodDate == null)
+            {
+                duration = ScanCalculate(false);
+            }
+            else duration = PeriodCalculate(false);
+            PregnancyDurationDay = duration;
+            return duration;
         }
     }
 }

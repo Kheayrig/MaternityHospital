@@ -21,7 +21,8 @@ namespace MaternityHospital.Services
     }
     public interface IPregnancyCalculator
     {
-        int Calculate();
+        int GetPregnancyDurationWeek();
+        int GetPregnancyDurationDay();
         int GetTrimester();
     }
 }

@@ -50,6 +50,10 @@ namespace MaternityHospital.DB.Models
             var filePC = $"{Environment.CurrentDirectory}/data/{ConfigurationManager.AppSettings["PercentileCorridorsFileName"]}";
             using (var sr = new StreamReader(filePC))
             {
+                while (!sr.EndOfStream)
+                {
+
+                }
                 values = sr.ReadLine().Split(',');
             }
             using (var db = new TemplateApplicationContext())

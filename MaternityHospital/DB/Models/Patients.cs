@@ -22,6 +22,8 @@ namespace MaternityHospital.DB.Repositories
         public bool Scan { get; set; } = false;
         public bool DPM { get; set; } = false;
         private DateTime? _lastPeriodDate;
+        public int PregnancyDurationWeek { get; set; }
+        public int PregnancyDurationDay { get; set; }
         [NotMapped]
         private IPregnancyCalculator _pregnancyCalculator;
         [NotMapped]
@@ -37,7 +39,6 @@ namespace MaternityHospital.DB.Repositories
                 _lastPeriodDate = value;
             }
         }
-        public int PregnancyDuration { get; set; }
         #endregion
         #region Constructors
         public Patient(string FIO, DateTime birthday, DateTime firstScanDate, string doctor,
@@ -49,8 +50,9 @@ namespace MaternityHospital.DB.Repositories
             Address = address;
             LastPeriodDate = lastPeriodDate;
             Doctor = doctor;
-            _pregnancyCalculator = new PregnancyCalculator(LastPeriodDate, FirstScanDate, PregnancyDuration);
-            PregnancyDuration = _pregnancyCalculator.Calculate();
+            _pregnancyCalculator = new PregnancyCalculator(LastPeriodDate, FirstScanDate, PregnancyDurationWeek, PregnancyDurationDay);
+            PregnancyDurationWeek = _pregnancyCalculator.GetPregnancyDurationWeek();
+            PregnancyDurationDay = _pregnancyCalculator.GetPregnancyDurationDay();
             Trimester = _pregnancyCalculator.GetTrimester();
         }
         public Patient(string FIO, DateTime birthday, DateTime firstScanDate, string doctor, IPregnancyCalculator? pregnancyCalculator,
@@ -62,8 +64,9 @@ namespace MaternityHospital.DB.Repositories
             Address = address;
             LastPeriodDate = lastPeriodDate;
             Doctor = doctor;
-            _pregnancyCalculator = pregnancyCalculator ?? new PregnancyCalculator(LastPeriodDate, FirstScanDate, PregnancyDuration);
-            PregnancyDuration = _pregnancyCalculator.Calculate();
+            _pregnancyCalculator = pregnancyCalculator ?? new PregnancyCalculator(LastPeriodDate, FirstScanDate, PregnancyDurationWeek, PregnancyDurationDay);
+            PregnancyDurationWeek = _pregnancyCalculator.GetPregnancyDurationWeek();
+            PregnancyDurationDay = _pregnancyCalculator.GetPregnancyDurationDay();
             Trimester = _pregnancyCalculator.GetTrimester();
         }
         #endregion

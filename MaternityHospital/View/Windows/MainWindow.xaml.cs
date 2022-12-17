@@ -82,6 +82,7 @@ namespace MaternityHospital
         private void ToNextWindow()
         {
             AppSettings.currentPatient = new CurrentPatient((Patient)PatientsDataGrid.SelectedItem);
+            MessageBox.Show(AppSettings.currentPatient.Patient.Trimester.ToString());
             new Window1().ShowDialog();
         }
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -8,7 +8,7 @@ namespace MaternityHospital.Services
 {
     internal static class AppSettings
     {
-        public static CurrentPatient currentPatient { get; set; }
+        public static CurrentPatient currentPatient { get; set; } = null;
         private static int _currentFontSize;
         public static int CurrentFontSize
         {

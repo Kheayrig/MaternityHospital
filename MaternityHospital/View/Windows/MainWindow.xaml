@@ -43,7 +43,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Width="*" Binding="{Binding FIO}" Header="ФИО"/>
                 <DataGridTextColumn Width="auto" Binding="{Binding Birthday}" Header="Дата рождения"/>
-                <DataGridTextColumn Width="auto" Binding="{Binding PregnancyDuration}" Header="Срок беременности"/>
+                <DataGridTextColumn Width="auto" Binding="{Binding PregnancyDurationWeek}" Header="Срок беременности"/>
                 <DataGridCheckBoxColumn Width="auto" Binding="{Binding Scan}" Header="УЗИ"/>
                 <DataGridCheckBoxColumn Width="auto" Binding="{Binding DPM}" Header="ДПМ"/>
                 <DataGridTextColumn Width="auto" Binding="{Binding Doctor}" Header="Обследовал доктор"/>
