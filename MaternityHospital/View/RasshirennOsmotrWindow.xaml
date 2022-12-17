@@ -36,8 +36,8 @@
             <TextBlock Text="не доходит до внутреннего зева"/>
             <TextBlock Text="перекрывает внутренний зев"/>
         </ComboBox>
-        <Label Content="плодовая плацентарная поверхность" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="9" VerticalAlignment="Center" Height="37" Width="440"  Grid.ColumnSpan="2" />
-        <ComboBox Grid.Column="1" SelectedIndex="0"  Grid.ColumnSpan="2" Margin="215,15,158,17" Grid.Row="9" x:Name="PPoverxnost" Width="160" Height="40">
+        <Label Content="плодовая плацентарная поверхность" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="9" VerticalAlignment="Center" Height="37" Width="256"  Grid.ColumnSpan="2" />
+        <ComboBox Grid.Column="1" SelectedIndex="0" Margin="38,18,68,14" Grid.Row="9" x:Name="PPoverxnost" Width="160" Height="40">
             <TextBlock Text="нормальная"/>
             <TextBlock Text="измененная"/>
         </ComboBox>

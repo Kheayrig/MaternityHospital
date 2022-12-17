@@ -29,101 +29,101 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Content="Камеры сердца" HorizontalAlignment="Left" Margin="40,49,0,0" VerticalAlignment="Top" FontSize="24" Grid.RowSpan="2"/>
-        <ComboBox Margin="235,4,4,7" SelectedIndex="0"  x:Name="KamSerdca" Grid.Row="1">
-
+        <Label Content="Камеры сердца" HorizontalAlignment="Left" Margin="40,49,0,0" VerticalAlignment="Top"  Grid.RowSpan="2"/>
+        <ComboBox Margin="235,4,0,7" SelectedIndex="0"  x:Name="KamSerdca" Grid.Row="1">
+            <TextBlock Text="не увеличины"/>
+            <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <Label Content="МПП" HorizontalAlignment="Left" Margin="40,46,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24" Grid.RowSpan="2"/>
-        <ComboBox Margin="235,6,4,5" SelectedIndex="0"  x:Name="MPP" Grid.Row="2">
-
+        <Label Content="МПП" HorizontalAlignment="Left" Margin="40,46,0,0" Grid.Row="1" VerticalAlignment="Top"  Grid.RowSpan="2"/>
+        <ComboBox Margin="235,6,0,5" SelectedIndex="0"  x:Name="MPP" Grid.Row="2">
+            <TextBlock Text="без особенностей"/>
+            <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <Label Content="МЖП" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" FontSize="24" Margin="40,0,0,0"/>
-        <ComboBox Margin="231,7,8,4" SelectedIndex="0" x:Name="MZHP" Grid.Row="3">
-
+        <Label Content="МЖП" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center"  Margin="40,0,0,0"/>
+        <ComboBox Margin="231,7,0,4" SelectedIndex="0" x:Name="MZHP" Grid.Row="3">
+            <TextBlock Text="без особенностей"/>
+            <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <Label Content="Магистральные артерии" HorizontalAlignment="Left" Margin="40,1,0,0" Grid.Row="4" VerticalAlignment="Top" FontSize="24"/>
-        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0" x:Name="MagArterii" Margin="343,5,296,6" Grid.Row="4">
-
+        <Label Content="Магистральные артерии" HorizontalAlignment="Left" Margin="40,1,0,0" Grid.Row="4" VerticalAlignment="Top"/>
+        <ComboBox SelectedIndex="0" x:Name="MagArterii" Margin="231,6,0,5" Grid.Row="4">
+            <TextBlock Text="нормальное положение"/>
+            <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <Label Content="Аорта(восходящая и низжодящая)" HorizontalAlignment="Left" Margin="40,6,0,0" Grid.Row="5" VerticalAlignment="Top" FontSize="24" Grid.ColumnSpan="2"/>
-        <ComboBox Margin="150,8,150,3" Grid.Row="5" SelectedIndex="0"  x:Name="Aorta1" Grid.Column="1">
+        <Label Content="Аорта(восходящая и низжодящая)" HorizontalAlignment="Left" Margin="40,6,0,0" Grid.Row="5" VerticalAlignment="Top"  Grid.ColumnSpan="2"/>
+        <ComboBox Margin="368,6,332,5" Grid.Row="5" SelectedIndex="0"  x:Name="Aorta1" Grid.ColumnSpan="2">
             <TextBlock Text="левая"/>
             <TextBlock Text="правая"/>
         </ComboBox>
-        <ComboBox Margin="34,8,266,3" Grid.Row="5" SelectedIndex="0"  x:Name="Aorta2" Grid.Column="1">
+        <ComboBox Margin="245,6,55,5" Grid.Row="5" SelectedIndex="0"  x:Name="Aorta2"/>
+        <ComboBox Margin="75,6,231,5" Grid.Row="5"  SelectedIndex="0" x:Name="Aorta3" Grid.Column="1">
 
         </ComboBox>
-        <ComboBox Margin="273,6,27,1" Grid.Row="5"  SelectedIndex="0" x:Name="Aorta3" Grid.Column="1">
-
-        </ComboBox>
-        <Label Content="Легочный ствол" HorizontalAlignment="Left" Margin="40,0,0,0" Grid.Row="6" VerticalAlignment="Center" FontSize="24"/>
-        <ComboBox Grid.ColumnSpan="2" Margin="268,7,371,4" SelectedIndex="0"  x:Name="LegStvol1" Grid.Row="6">
-
-        </ComboBox>
-        <ComboBox Margin="55,10,245,2" Grid.Row="6" SelectedIndex="0" x:Name="LegStvol2" Grid.Column="1">
-
-        </ComboBox>
-        <Label Content="Легочные артерии" HorizontalAlignment="Left" Margin="40,0,0,0" Grid.Row="7" VerticalAlignment="Center" FontSize="24"/>
-        <ComboBox Grid.ColumnSpan="2" Margin="268,10,371,1" SelectedIndex="0" x:Name="LegArterii" Grid.Row="7">
-
-        </ComboBox>
-        <Label Content="Артериальный поток" HorizontalAlignment="Left" Margin="40,1,0,0" Grid.Row="8" VerticalAlignment="Top" FontSize="24"/>
-        <ComboBox Margin="287,9,351,2" Grid.Row="8" SelectedIndex="0"  x:Name="ArterPotok1" Grid.ColumnSpan="2">
+        <Label Content="Легочный ствол" HorizontalAlignment="Left" Margin="40,0,0,0" Grid.Row="6" VerticalAlignment="Center" />
+        <ComboBox Margin="154,6,59,5" SelectedIndex="0"  x:Name="LegStvol1" Grid.Row="6"/>
+        <!--<ComboBox Margin="329,6,371,6" Grid.Row="6" SelectedIndex="0" x:Name="LegStvol2" Grid.ColumnSpan="2"/>-->
+        <Label Content="Легочные артерии" HorizontalAlignment="Left" Margin="40,0,0,0" Grid.Row="7" VerticalAlignment="Center" />
+        <ComboBox Margin="180,6,59,5" SelectedIndex="0" x:Name="LegArterii" Grid.Row="7"/>
+        <Label Content="Артериальный поток" HorizontalAlignment="Left" Margin="40,1,0,0" Grid.Row="8" VerticalAlignment="Top" />
+        <ComboBox Margin="171,6,30,5" Grid.Row="8" SelectedIndex="0"  x:Name="ArterPotok1">
             <TextBlock Text="от левой легочной артерии"/>
             <TextBlock Text="от правой легочной артерии"/>
         </ComboBox>
-        <ComboBox Margin="84,10,216,2" Grid.Row="8" SelectedIndex="0" x:Name="ArterPotok2" Grid.Column="1">
+        <ComboBox Margin="399,7,231,5" Grid.Row="8" SelectedIndex="0" x:Name="ArterPotok2" Grid.ColumnSpan="2">
             <TextBlock Text="расположен обычно"/>
             <TextBlock Text="расположен необычно"/>
         </ComboBox>
 
-        <Label Content="ВПВ" HorizontalAlignment="Left" Margin="40,49,0,0" Grid.Row="8" VerticalAlignment="Top" FontSize="24" Grid.RowSpan="2"/>
-        <ComboBox Margin="180,8,120,3"  x:Name="VPV1" SelectedIndex="0" Grid.Row="9">
+        <Label Content="ВПВ" HorizontalAlignment="Left" Margin="40,49,0,0" Grid.Row="8" VerticalAlignment="Top"  Grid.RowSpan="2"/>
+        <ComboBox Margin="180,8,88,3"  x:Name="VPV1" SelectedIndex="0" Grid.Row="9">
             <TextBlock Text="справа от аорты"/>
             <TextBlock Text="слева от легочного ствола"/>
         </ComboBox>
-        <ComboBox Margin="324,6,376,1" Grid.Row="9" SelectedIndex="0" x:Name="VPV2" Grid.ColumnSpan="2">
+        <ComboBox Margin="324,6,326,1" Grid.Row="9" SelectedIndex="0" x:Name="VPV2" Grid.ColumnSpan="2">
             <TextBlock Text="в правое предсердие"/>
             <TextBlock Text="в левое предсердие"/>
         </ComboBox>
 
 
-        <Label Content="НВП" HorizontalAlignment="Left" Margin="40,0,0,0" Grid.Row="10" VerticalAlignment="Center" FontSize="24"/>
+        <Label Content="НВП" HorizontalAlignment="Left" Margin="40,0,0,0" Grid.Row="10" VerticalAlignment="Center" />
         <ComboBox Margin="84,10,216,1" Grid.Row="10" SelectedIndex="0" x:Name="NVP3" Grid.Column="1">
             <TextBlock Text="визуализируется"/>
             <TextBlock Text="прерванная"/>
         </ComboBox>
-        <ComboBox Margin="180,10,120,0"  x:Name="NVP1" SelectedIndex="0" Grid.Row="10">
+        <ComboBox Margin="180,10,88,0"  x:Name="NVP1" SelectedIndex="0" Grid.Row="10">
             <TextBlock Text="недилатирована"/>
             <TextBlock Text="дилатирована"/>
         </ComboBox>
-        <ComboBox Margin="324,10,376,3" Grid.Row="10" SelectedIndex="0" x:Name="NVP2" Grid.ColumnSpan="2">
+        <ComboBox Margin="324,10,326,3" Grid.Row="10" SelectedIndex="0" x:Name="NVP2" Grid.ColumnSpan="2">
             <TextBlock Text="в правом предсердие"/>
             <TextBlock Text=" "/>
         </ComboBox>
 
-        <Label Content="Непарная вена" HorizontalAlignment="Left" Grid.Row="10" VerticalAlignment="Top" FontSize="24" Margin="40,46,0,0" Grid.RowSpan="2"/>
+        <Label Content="Непарная вена" HorizontalAlignment="Left" Grid.Row="10" VerticalAlignment="Top"  Margin="40,46,0,0" Grid.RowSpan="2"/>
         <ComboBox Margin="234,6,4,5" x:Name="NeparVena1" SelectedIndex="0" Grid.Row="11">
             <TextBlock Text="визуализируется"/>
             <TextBlock Text="прерванная"/>
         </ComboBox>
-        <ComboBox Margin="24,4,276,3" Grid.Row="11" SelectedIndex="0"  x:Name="NeparVena2" Grid.Column="1">
+        <ComboBox Margin="24,4,216,3" Grid.Row="11" SelectedIndex="0"  x:Name="NeparVena2" Grid.Column="1">
             <TextBlock Text="недилатирована"/>
             <TextBlock Text="дилатирована"/>
         </ComboBox>
 
-        <Label Content="Легочные вены" HorizontalAlignment="Left" Margin="40,49,0,0" Grid.Row="11" VerticalAlignment="Top" FontSize="24" Grid.RowSpan="2"/>
-        <ComboBox Margin="235,5,4,6" x:Name="LegVeny" SelectedIndex="0" Grid.Row="12">
+        <Label Content="Легочные вены" HorizontalAlignment="Left" Margin="40,49,0,0" Grid.Row="11" VerticalAlignment="Top"  Grid.RowSpan="2"/>
+        <ComboBox Margin="235,5,0,6" x:Name="LegVeny" SelectedIndex="0" Grid.Row="12">
+            <TextBlock Text="без особенностей"/>
+            <TextBlock Text="см.дополнительно"/>
+        </ComboBox>
+        <Label Content="Гидроперекард" HorizontalAlignment="Left" Margin="43,2,0,0" Grid.Row="13" VerticalAlignment="Top"/>
+        <ComboBox Margin="235,7,0,10"  x:Name="Gidroperekard" SelectedIndex="0" Grid.Row="13">
 
         </ComboBox>
-        <Label Content="Гидроперекард" HorizontalAlignment="Left" Margin="43,2,0,0" Grid.Row="13" VerticalAlignment="Top" FontSize="24"/>
-        <ComboBox Margin="235,7,0,0"  x:Name="Gidroperekard" SelectedIndex="0" Grid.Row="13">
-
+        <Label Content="Кардиоторакальное отношение" HorizontalAlignment="Left" Margin="40,7,0,0" Grid.Row="14" VerticalAlignment="Top" Width="190"/>
+        <ComboBox Margin="235,7,0,10"  x:Name="Kardiootnochenia" SelectedIndex="0" Grid.Row="14">
+            <TextBlock Text="норма"/>
+            <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <Label Content="Кардиоторакальное отношение" HorizontalAlignment="Left" Margin="44,49,0,0" Grid.Row="13" VerticalAlignment="Top" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2" Width="374"/>
-       
-        <Button Grid.Column="1" Content="далее" HorizontalAlignment="Left" Margin="290,2,0,0" Grid.Row="15" VerticalAlignment="Top" Height="37" Width="100" FontSize="24"/>
-        <Button Content="назад" HorizontalAlignment="Left" Margin="10,2,0,0" Grid.Row="15" VerticalAlignment="Top" FontSize="24" Height="37" Width="111"/>
+        <Button Grid.Column="1" Content="далее" HorizontalAlignment="Left" Margin="290,2,0,0" Grid.Row="15" VerticalAlignment="Top" Height="37" Width="100" />
+        <Button Content="назад" HorizontalAlignment="Left" Margin="10,2,0,0" Grid.Row="15" VerticalAlignment="Top" Height="37" Width="111"/>
 
     </Grid>
 </Window>

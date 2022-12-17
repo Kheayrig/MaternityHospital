@@ -27,7 +27,7 @@
         </Grid.ColumnDefinitions>
 
         <WrapPanel Grid.Row="0" VerticalAlignment="Center" Margin="0,10,0,10">
-            <Label Content="плод&#xD;&#xA;" Width="142" FontSize="20" Height="48"/>
+            <Label Content="плод" Width="142" Height="48"/>
             <ComboBox SelectedIndex="2" x:Name="plod" Width="187" Height="32">
                 <TextBlock Text="двойня"/>
                 <TextBlock Text="тройня"/>
@@ -36,7 +36,7 @@
         </WrapPanel>
 
         <WrapPanel Grid.Row="1" VerticalAlignment="Center" Margin="0,10,0,10">
-            <Label Content="положение" Width="142" FontSize="20"/>
+            <Label Content="положение" Width="142" />
             <ComboBox x:Name="position" SelectedIndex="1" Width="188">
                 <TextBlock Text="косое"/>
                 <TextBlock Text="продольное"/>
@@ -45,7 +45,7 @@
         </WrapPanel>
 
         <WrapPanel Grid.Row="2" VerticalAlignment="Center">
-            <Label Content="предлежание&#xD;&#xA;" Width="143" FontSize="20"/>
+            <Label Content="предлежание" Width="143"/>
             <ComboBox x:Name="predlejanie" SelectedIndex="1" MaxHeight="40" Width="187" Height="35" >
                 <TextBlock Text="тазовое"/>
                 <TextBlock Text="головное"/>
@@ -53,7 +53,7 @@
         </WrapPanel>
 
         <WrapPanel Grid.Row="3" VerticalAlignment="Center" Margin="0,10,0,10">
-            <Label Content="ритм&#xD;&#xA;" Width="142" FontSize="20"/>
+            <Label Content="ритм" Width="142" />
             <ComboBox x:Name="ritm" SelectedIndex="0" Width="188" Height="37">
                 <TextBlock Text="синусовый"/>
                 <TextBlock Text="брадикардия"/>
@@ -65,7 +65,7 @@
         </WrapPanel>
 
         <WrapPanel Grid.Row="4" VerticalAlignment="Center">
-            <Label Content="серцебиение&#xD;&#xA;" Width="141" FontSize="20" Height="53"/>
+            <Label Content="серцебиение" Width="141"  Height="53"/>
             <ComboBox x:Name="heartbeat" SelectedIndex="0" Width="189" Height="37">
                 <TextBlock Text="да"/>
                 <TextBlock Text="нет"/>
@@ -73,12 +73,12 @@
         </WrapPanel>
 
         <WrapPanel Grid.Row="5" VerticalAlignment="Center">
-            <Label Content="ЧСС&#xD;&#xA;" FontSize="20" Width="66" Height="51"/>
+            <Label Content="ЧСС"  Width="66" Height="51"/>
             <TextBox x:Name="heartRate" InputMethod.IsInputMethodEnabled="False" MaxLength="3" Text="" Width="150" Height="38"/>
         </WrapPanel>
 
         <WrapPanel Grid.Row="6" VerticalAlignment="Center" Margin="0,10,0,10">
-            <Label Content="движение&#xD;&#xA;" Width="128" FontSize="20" Height="48"/>
+            <Label Content="движение" Width="128"  Height="48"/>
             <ComboBox x:Name="dvijeniye" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0" Width="100" Height="40">
                 <TextBlock Text="да"/>
                 <TextBlock Text="нет"/>
@@ -90,7 +90,7 @@
         </WrapPanel>
 
         <WrapPanel Grid.Row="7" VerticalAlignment="Center" Margin="3,0,0,0" Height="43">
-            <Label Content="дыхательное движение&#xD;&#xA;" FontSize="20"/>
+            <Label Content="дыхательное движение" />
             <ComboBox x:Name="Breath_movement" SelectionChanged="ComboBox_SelectionChanged_1" SelectedIndex="0" Width="114" Height="37">
                 <TextBlock Text="да"/>
                 <TextBlock Text="нет"/>
@@ -110,21 +110,8 @@
         </WrapPanel>
 
         <Button Width="140" Margin="50,102,0,0" x:Name="Cancel" Content="Отмена" Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click"/>
-        <Button Width="140" Margin="0,102,52,0" x:Name="OK" Grid.Row="8" HorizontalAlignment="Right" VerticalAlignment="Top" Content="OK" Click="Button_Click_1" Grid.Column="1"/>
-        <WrapPanel Grid.Column="1" Grid.Row="1">
-            <Label Grid.Column="1" Content="Фио" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontSize="16" Height="47" Width="72"/>
-            <TextBox TextWrapping="Wrap" Text="TextBox" Width="357"/>
-        </WrapPanel>
-        <WrapPanel Grid.Column="1" Grid.Row="2">
-            <Label Grid.Column="1" Content="Адрес" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center" FontSize="16" Height="63" Width="117"/>
-            <TextBox TextWrapping="Wrap" Text="TextBox" Width="311" Height="53"/>
-
-        </WrapPanel>
-        <WrapPanel Grid.Column="1" Grid.Row="3" Margin="0,0,0,10">
-            <Label Grid.Column="1" Content="Дата последних месячных " HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" FontSize="16" Height="73" Width="217"/>
-            <TextBox TextWrapping="Wrap" Text="TextBox" Width="210" Height="58"/>
-        </WrapPanel>
-
+        <Button Width="140" Margin="0,102,52,0" x:Name="OK" Grid.Row="8" HorizontalAlignment="Right" VerticalAlignment="Top" Content="далее" Click="Button_Click_1" Grid.Column="1"/>
+        
 
     </Grid>
 </Window>

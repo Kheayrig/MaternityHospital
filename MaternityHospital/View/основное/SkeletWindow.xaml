@@ -23,16 +23,44 @@
             <RowDefinition Height="*"/>
 
         </Grid.RowDefinitions>
-        <Label Content="Позвоночник" HorizontalAlignment="Left" Margin="40,47,0,0" VerticalAlignment="Top"  FontSize="24" Grid.RowSpan="2"/>
-        <Label Content="Большеберцовые кости" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top"  FontSize="24" Margin="40,45,0,0" Grid.RowSpan="2"/>
-        <Label Content="Малоберцовые кости" HorizontalAlignment="Left" Margin="40,0,0,0" Grid.Row="3" VerticalAlignment="Top"  FontSize="24"/>
-        <Label Content="Локтевые кости" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top"  FontSize="24" Margin="40,47,0,0" Grid.RowSpan="2"/>
-        <Label Content="Лучевые кости" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top"  FontSize="24" Margin="40,46,0,0" Grid.RowSpan="2"/>
-        <Label Content="Кисти" HorizontalAlignment="Left" Margin="40,48,0,0" Grid.Row="5" VerticalAlignment="Top"  FontSize="24" Grid.RowSpan="2"/>
-        <Label Content="Стопы" HorizontalAlignment="Left" Margin="37,47,0,0" Grid.Row="6" VerticalAlignment="Top" FontSize="24" Grid.RowSpan="2"/>
+        <Label Content="Позвоночник" HorizontalAlignment="Left" Margin="40,47,0,0" VerticalAlignment="Top"   Grid.RowSpan="2"/>
+        <ComboBox Margin="200,12,35,8"  x:Name="Pozvonochnik"  SelectedIndex="0" Grid.Row="1">
+            <TextBlock Text="без дефектов"/>
+            <TextBlock Text="см. примечания"/>
+        </ComboBox>
+        <Label Content="Большеберцовые кости" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top"   Margin="40,45,0,0" Grid.RowSpan="2"/>
 
-        <Button Grid.Column="1" Content="далее" HorizontalAlignment="Left" Margin="290,0,0,0" Grid.Row="8" VerticalAlignment="Center" Height="37" Width="100" FontSize="24"/>
-        <Button Content="назад" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="8" VerticalAlignment="Center" FontSize="24" Height="37" Width="111"/>
+        <ComboBox Margin="200,10,35,10"  x:Name="BolBer"  SelectedIndex="0" Grid.Row="2">
+            <TextBlock Text="норма"/>
+            <TextBlock Text="см. примечания"/>
+        </ComboBox>
+        <Label Content="Малоберцовые кости" HorizontalAlignment="Left" Margin="40,0,0,0" Grid.Row="3" VerticalAlignment="Top"  />
+        <ComboBox Margin="200,10,35,10"  x:Name="MalBer"  SelectedIndex="0" Grid.Row="3">
+            <TextBlock Text="норма"/>
+            <TextBlock Text="см. примечания"/>
+        </ComboBox>
+        <Label Content="Локтевые кости" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top"  Margin="40,47,0,0" Grid.RowSpan="2"/>
+        <ComboBox Margin="200,10,35,10"  x:Name="LOktKosti"  SelectedIndex="0" Grid.Row="4">
+            <TextBlock Text="норма"/>
+            <TextBlock Text="см. примечания"/>
+        </ComboBox>
+        <Label Content="Лучевые кости" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top"   Margin="40,46,0,0" Grid.RowSpan="2"/>
+        <ComboBox Margin="200,8,35,10"  x:Name="LychevKost"  SelectedIndex="0" Grid.Row="5">
+            <TextBlock Text="норма"/>
+            <TextBlock Text="см. примечания"/>
+        </ComboBox>
+        <Label Content="Кисти" HorizontalAlignment="Left" Margin="40,48,0,0" Grid.Row="5" VerticalAlignment="Top"  Grid.RowSpan="2"/>
+        <ComboBox Margin="200,10,35,10"  x:Name="Kisti"  SelectedIndex="0" Grid.Row="6">
+            <TextBlock Text="норма"/>
+            <TextBlock Text="см. примечания"/>
+        </ComboBox>
+        <Label Content="Стопы" HorizontalAlignment="Left" Margin="37,47,0,0" Grid.Row="6" VerticalAlignment="Top"  Grid.RowSpan="2"/>
+        <ComboBox Margin="200,9,35,10"  x:Name="Stopi"  SelectedIndex="0" Grid.Row="7">
+            <TextBlock Text="норма"/>
+            <TextBlock Text="см. примечания"/>
+        </ComboBox>
+        <Button Grid.Column="1" Content="далее" HorizontalAlignment="Left" Margin="290,0,0,0" Grid.Row="8" VerticalAlignment="Center" Height="37" Width="100" />
+        <Button Content="назад" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="8" VerticalAlignment="Center"  Height="37" Width="111"/>
 
     </Grid>
 </Window>

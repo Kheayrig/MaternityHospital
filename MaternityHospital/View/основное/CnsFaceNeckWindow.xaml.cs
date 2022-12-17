@@ -23,5 +23,10 @@ namespace MaternityHospital.View
         {
             InitializeComponent();
         }
+
+        private void PPPeregorodki_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
