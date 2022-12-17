@@ -20,8 +20,8 @@
         <DataGrid Grid.Row="1" CanUserAddRows="False" CanUserDeleteRows="False" x:Name="DoctorsDataGrid" SelectionUnit="FullRow" d:ItemsSource="{d:SampleData ItemCount=3}" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.ItemContainerStyle>
                 <Style TargetType="{x:Type DataGridRow}">
-                    <EventSetter Event="UIElement.KeyDown" Handler="PatientsDataGrid_KeyDown"/>
-                    <EventSetter Event="Control.MouseDoubleClick" Handler="PatientsDataGrid_DoubleClick"/>
+                    <EventSetter Event="KeyDown" Handler="PatientsDataGrid_KeyDown"/>
+                    <EventSetter Event="MouseDoubleClick" Handler="PatientsDataGrid_DoubleClick"/>
                 </Style>
             </DataGrid.ItemContainerStyle>
 

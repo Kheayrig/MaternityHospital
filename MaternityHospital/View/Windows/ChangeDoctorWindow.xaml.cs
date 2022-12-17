@@ -55,6 +55,7 @@ namespace MaternityHospital.View.Windows
             {
                 var doctor = (Doctor)DoctorsDataGrid.SelectedItem;
                 AppSettings.CurrentDoctor = doctor.FIO;
+                Close();
             }
         }
         void PatientsDataGrid_DoubleClick(object sender, RoutedEventArgs e)

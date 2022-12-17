@@ -18,7 +18,7 @@ namespace MaternityHospital.DB.Repositories
         public string? Address { get; set; }
         public DateTime FirstScanDate { get; set; }
         public bool Dysmenorrhea { get; set; }
-        public string Doctor { get; set; } = "Карпов А Ю ";
+        public string Doctor { get; set; }
         public bool Scan { get; set; } = false;
         public bool DPM { get; set; } = false;
         private DateTime? _lastPeriodDate;
@@ -33,7 +33,7 @@ namespace MaternityHospital.DB.Repositories
                 _lastPeriodDate = value;
             }
         }
-        public double PregnancyDuration { get; set; }
+        public int PregnancyDuration { get; set; }
         [NotMapped]
         private IPregnancyCalculator _pregnancyCalculator;
         #endregion

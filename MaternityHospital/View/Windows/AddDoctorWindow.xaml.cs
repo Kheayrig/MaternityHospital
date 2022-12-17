@@ -41,6 +41,7 @@ namespace MaternityHospital.View.Windows
             else
             {
                 var doctor = new Doctor(doctorFIO);
+                
                 doctor.Add();
                 DialogResult = true;
                 Close();

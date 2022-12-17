@@ -21,6 +21,6 @@ namespace MaternityHospital.Services
     }
     public interface IPregnancyCalculator
     {
-        double Calculate();
+        int Calculate();
     }
 }
