@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaternityHospital.DB.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,6 +35,13 @@ namespace MaternityHospital.Services
         private int PeriodCalculate()
         {
             return (DateTime.Now - LastPeriodDate).Value.Days/7 + PregnancyDuration;
+        }
+        public int GetTrimester()
+        {
+            if (PregnancyDuration < 18) return 1;
+            else if (PregnancyDuration < 30) return 2;
+            else if (PregnancyDuration < 35) return 3;
+            else return 4;
         }
     }
 }

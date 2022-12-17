@@ -22,5 +22,6 @@ namespace MaternityHospital.Services
     public interface IPregnancyCalculator
     {
         int Calculate();
+        int GetTrimester();
     }
 }

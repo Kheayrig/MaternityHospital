@@ -22,6 +22,10 @@ namespace MaternityHospital.DB.Repositories
         public bool Scan { get; set; } = false;
         public bool DPM { get; set; } = false;
         private DateTime? _lastPeriodDate;
+        [NotMapped]
+        private IPregnancyCalculator _pregnancyCalculator;
+        [NotMapped]
+        public int Trimester { get; set; }
         #region Properties
         public DateTime? LastPeriodDate
         {
@@ -34,8 +38,6 @@ namespace MaternityHospital.DB.Repositories
             }
         }
         public int PregnancyDuration { get; set; }
-        [NotMapped]
-        private IPregnancyCalculator _pregnancyCalculator;
         #endregion
         #region Constructors
         public Patient(string FIO, DateTime birthday, DateTime firstScanDate, string doctor,
@@ -49,6 +51,7 @@ namespace MaternityHospital.DB.Repositories
             Doctor = doctor;
             _pregnancyCalculator = new PregnancyCalculator(LastPeriodDate, FirstScanDate, PregnancyDuration);
             PregnancyDuration = _pregnancyCalculator.Calculate();
+            Trimester = _pregnancyCalculator.GetTrimester();
         }
         public Patient(string FIO, DateTime birthday, DateTime firstScanDate, string doctor, IPregnancyCalculator? pregnancyCalculator,
             string? address = null, DateTime? lastPeriodDate = null)
@@ -61,6 +64,7 @@ namespace MaternityHospital.DB.Repositories
             Doctor = doctor;
             _pregnancyCalculator = pregnancyCalculator ?? new PregnancyCalculator(LastPeriodDate, FirstScanDate, PregnancyDuration);
             PregnancyDuration = _pregnancyCalculator.Calculate();
+            Trimester = _pregnancyCalculator.GetTrimester();
         }
         #endregion
         #region Methods

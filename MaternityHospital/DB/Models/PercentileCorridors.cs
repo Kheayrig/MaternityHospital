@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -46,10 +47,14 @@ namespace MaternityHospital.DB.Models
         internal static void AddDefault()
         {
             string[] values;
-            var dir = $"{Environment.CurrentDirectory}";
+            var filePC = $"{Environment.CurrentDirectory}/data/{ConfigurationManager.AppSettings["PercentileCorridorsFileName"]}";
+            using (var sr = new StreamReader(filePC))
+            {
+                values = sr.ReadLine().Split(',');
+            }
             using (var db = new TemplateApplicationContext())
             {
-                db.TemplateValues.Add(new PercentileCorridors(12,13,25,22,24,7,11,50,71,21,25));
+                db.TemplateValues.Add(new PercentileCorridors(12, 13, 25, 22, 24, 7, 11, 50, 71, 21, 25));
                 db.SaveChanges();
             }
         }
