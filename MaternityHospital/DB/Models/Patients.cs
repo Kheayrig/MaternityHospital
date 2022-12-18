@@ -78,14 +78,6 @@ namespace MaternityHospital.DB.Repositories
 
         #endregion
         #region DB methods
-        public static Patient GetById(int id)
-        {
-            using (var db = new ApplicationContext())
-            {
-                return db.Patients.FirstOrDefault(p => p.Id == id);
-            }
-        }
-
         public static List<Patient> GetAll()
         {
             using (var db = new ApplicationContext())

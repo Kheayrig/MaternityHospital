@@ -21,9 +21,8 @@ namespace MaternityHospital
         public MainWindow()
         {
             InitializeComponent();
-            AppSettings.SetAppSettings();
             WindowState = WindowState.Maximized; 
-            FontSize = AppSettings.CurrentFontSize;
+            FontSize = AppSettings.customSettings.CurrentFontSize;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -38,6 +37,7 @@ namespace MaternityHospital
             if(win.ShowDialog() == true)
             {
                 RefreshData();
+                new Examinations().ShowDialog();
             }
         }
 
@@ -45,13 +45,13 @@ namespace MaternityHospital
         {
             _data = Patient.GetAllTableView();
             PatientsDataGrid.ItemsSource = _data;
-            if (AppSettings.CurrentDoctor == "???")
+            if (AppSettings.customSettings.CurrentDoctor == "???")
             {
                 var win = new ChangeDoctor();
                 win.Owner = this;
                 win.ShowDialog();
             }
-            currentDoctor.Content = AppSettings.CurrentDoctor;
+            currentDoctor.Content = AppSettings.customSettings.CurrentDoctor;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -76,14 +76,12 @@ namespace MaternityHospital
         void PatientsDataGrid_DoubleClick(object sender, RoutedEventArgs e)
         {
             ToNextWindow();
-            
         }
 
         private void ToNextWindow()
         {
             AppSettings.currentPatient = new CurrentPatient((Patient)PatientsDataGrid.SelectedItem);
-            MessageBox.Show(AppSettings.currentPatient.Patient.Trimester.ToString());
-            new Window1().ShowDialog();
+            new Examinations().ShowDialog();
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {

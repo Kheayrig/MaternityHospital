@@ -138,7 +138,5 @@
         <Button Content="Трансперинеальное исследование" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="9" VerticalAlignment="Center" FontSize="24" Height="37" Width="398" Grid.ColumnSpan="3" Click="Transperenialnoe"/>
         <Button Content="назад" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="10" VerticalAlignment="Center" FontSize="24" Height="37" Width="111" Click="nazad"/>
 
-
-
     </Grid>
 </Window>

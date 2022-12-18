@@ -1,46 +1,17 @@
 ﻿using MaternityHospital.Services;
 using MaternityHospital.View.Utils;
-using MaternityHospital.View.Windows;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
-namespace MaternityHospital.View
+namespace MaternityHospital.View.UserControls
 {
-    /// <summary>
-    /// Логика взаимодействия для Window3.xaml
-    /// </summary>
-    public partial class Window3 : Window
+    public partial class RashirenniyOsmotr : UserControl
     {
-        public Window3()
+        public RashirenniyOsmotr()
         {
             InitializeComponent();
-            WindowState = WindowState.Maximized;
             vish.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
-            FontSize = AppSettings.CurrentFontSize;
-        }
-
-
-        private void dalee(object sender, RoutedEventArgs e)
-        {
-            Close();
-            new WindowPODY3().Show();
-        }
-
-        private void nazad(object sender, RoutedEventArgs e)
-        {
-            Close();
-            new Window2().Show();
+            FontSize = AppSettings.customSettings.CurrentFontSize;
         }
 
         private void Cns(object sender, RoutedEventArgs e)
@@ -72,7 +43,5 @@ namespace MaternityHospital.View
         {
             new pypovina().Show();
         }
-
-     
     }
 }

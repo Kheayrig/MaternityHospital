@@ -26,7 +26,7 @@ namespace MaternityHospital.View.Windows
         public AddDoctor()
         {
             InitializeComponent();
-            FontSize = AppSettings.CurrentFontSize;
+            FontSize = AppSettings.customSettings.CurrentFontSize;
             DoctorInfoTextBox.PreviewTextInput += TextBoxFilters.FilterFIOShortForm;
         }
 
