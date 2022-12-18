@@ -12,5 +12,8 @@ namespace MaternityHospital.Services
         public string PypochnVena2 { get; set; } = "в портальный синус";
         public string PypochnVena3 { get; set; } = "не расширена";
         public string Precreplenie { get; set; } = "центральное";
+        public string PypART { get; set; } = "две";
+        public string SosydPyp { get; set; } = "три";
+
     }
 }
