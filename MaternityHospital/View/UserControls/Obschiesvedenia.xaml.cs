@@ -41,5 +41,15 @@ namespace MaternityHospital.View.UserControls
                 Breath_movement_Copy.Visibility = Visibility.Visible;  //видно
             }
         }
+
+        private void OK_Click(object sender, RoutedEventArgs e)
+        {
+          Fetometria.IsSelected = true;
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -106,8 +106,8 @@
             </ComboBox>
         </WrapPanel>
 
-        <Button Width="140" Margin="100,10,0,10" x:Name="Cancel" Content="Отмена" Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Button_Click"/>
-        <Button Width="140" Margin="0,5,100,5" x:Name="OK" Grid.Row="8" HorizontalAlignment="Right" VerticalAlignment="Center" Content="OK" Click="Button_Click_1"/>
+        <Button Width="140" Margin="0,15,0,0" x:Name="Cancel" Content="Отмена" Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Cancel_Click"/>
+        <Button Width="149" x:Name="OK" Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Далее" Margin="0,15,0,0" Grid.Column="1" Click="OK_Click"/>
 
 
 

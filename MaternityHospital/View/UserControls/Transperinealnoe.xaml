@@ -19,25 +19,29 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Content="Раскрытие маточного зева" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="37" Width="337"  FontSize="24"/>
+        <Label Content="Раскрытие маточного зева" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="37" Width="337"  />
         <WrapPanel Grid.Column="1" Grid.Row="1" Margin="43,10,21,25">
             <TextBox TextWrapping="Wrap" Text="" x:Name="RaskrMatochnogoZeva" Width="168" Height="37"/>
-            <Label Content="мм" Width="168"  FontSize="24"/>
+            <Label Content="мм" Width="168" />
         </WrapPanel>
-        <Label Content="Расстояние 'головка-промежность' HPD" HorizontalAlignment="Left" Margin="10,14,0,0" Grid.Row="3" VerticalAlignment="Top"  FontSize="24" Height="37" Grid.ColumnSpan="2" Width="471"/>
-        <WrapPanel Grid.Column="1" Grid.Row="3" Margin="73,10,21,22">
-            <TextBox TextWrapping="Wrap" Text=""  x:Name="RastoanieHPD" Width="153" Height="40" FontSize="24"/>
-            <Label Content="гр" Width="153" FontSize="24" />
+        <Label Content="Расстояние 'головка-промежность' HPD" HorizontalAlignment="Center" Margin="0,14,0,0" Grid.Row="3" VerticalAlignment="Top"   Height="37" Width="327"/>
+        <WrapPanel Grid.Column="1" Grid.Row="3" Margin="43,10,10,22">
+            <TextBox TextWrapping="Wrap" Text=""  x:Name="RastoanieHPD" Width="164" Height="40"/>
+            <Label Content="гр" Width="153"  />
         </WrapPanel>
 
-        <Label Content="Угол средней линии (MLA)" HorizontalAlignment="Left" Margin="10,21,0,0" Grid.Row="2" VerticalAlignment="Top"  FontSize="24"/>
+        <Label Content="Угол средней линии (MLA)" HorizontalAlignment="Left" Margin="10,21,0,0" Grid.Row="2" VerticalAlignment="Top"  />
         <WrapPanel Grid.Column="1" Grid.Row="2" Margin="43,10,21,23">
-            <TextBox TextWrapping="Wrap" Text="" Width="168" x:Name="YgolMLA" Height="39" FontSize="24"/>
-            <Label Content="мм" Width="168" FontSize="24"/>
+            <TextBox TextWrapping="Wrap" Text="" Width="168" x:Name="YgolMLA" Height="39" />
+            <Label Content="мм" Width="168" />
 
         </WrapPanel>
 
-        <Label Content="Subcutaneus edema ()" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="37" Width="248" FontSize="24"/>
+        <Label Content="Subcutaneus edema ()" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="37" Width="248" />
+
+        <Button Width="127" Margin="10,22,0,0" x:Name="CancelTRans" Content="Назад" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button Width="127" x:Name="OKTrans" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Далее" Margin="263,22,0,0" Grid.Column="1"/>
+
 
     </Grid>
 </UserControl>

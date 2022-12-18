@@ -27,7 +27,7 @@
         </WrapPanel>
         <Label Content="плодные оболочки" HorizontalAlignment="Left" Margin="10,7,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="24" Height="37" Width="237"/>
         <Label Content="угол прогрессии (AoP)" HorizontalAlignment="Left" Margin="10,7,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="24" Height="47" Width="277"/>
-        <ComboBox Grid.Column="1" FontSize="20"  x:Name="PlodnyeObolochki" Margin="0,10,160,10" Grid.Row="2" SelectedIndex="0">
+        <ComboBox Grid.Column="1"   x:Name="PlodnyeObolochki" Margin="0,10,160,10" Grid.Row="2" SelectedIndex="0">
             <TextBlock Text="визуализируется"/>
         </ComboBox>
         <Label Content="расстояние прогрессии PD" HorizontalAlignment="Left" Margin="10,7,0,0" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Height="37" Width="319"/>
@@ -42,5 +42,9 @@
             <TextBox TextWrapping="Wrap" Text="" x:Name="RastoaniePD" Width="190" Height="34"  FontSize="24"/>
             <Label Content="мм" Width="190"  FontSize="24"/>
         </WrapPanel>
+        <Button Width="127" Margin="10,31,0,0" x:Name="CancelTRans" Content="Назад" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button Width="127" x:Name="OKTrans" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Далее" Margin="263,31,0,0" Grid.Column="1"/>
+
+
     </Grid>
 </UserControl>
