@@ -122,8 +122,5 @@
             <TextBlock Text="норма"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <Button Grid.Column="1" Content="далее" HorizontalAlignment="Left" Margin="290,2,0,0" Grid.Row="15" VerticalAlignment="Top" Height="37" Width="100" />
-        <Button Content="назад" HorizontalAlignment="Left" Margin="10,2,0,0" Grid.Row="15" VerticalAlignment="Top" Height="37" Width="111"/>
-
     </Grid>
 </Window>

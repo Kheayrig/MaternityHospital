@@ -59,8 +59,5 @@
             <TextBlock Text="норма"/>
             <TextBlock Text="см. примечания"/>
         </ComboBox>
-        <Button Grid.Column="1" Content="далее" HorizontalAlignment="Left" Margin="290,0,0,0" Grid.Row="8" VerticalAlignment="Center" Height="37" Width="100" />
-        <Button Content="назад" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="8" VerticalAlignment="Center"  Height="37" Width="111"/>
-
     </Grid>
 </Window>

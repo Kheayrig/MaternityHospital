@@ -30,7 +30,7 @@
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
         <Label Content="Полость прозрачной перегородки" HorizontalAlignment="Left" Margin="22,4,0,0" Grid.Row="3" VerticalAlignment="Top"   Grid.ColumnSpan="2" Width="425" Grid.RowSpan="2"/>
-        <ComboBox Margin="238,10,374,43" SelectedIndex="0"   x:Name="PPPeregorodki" Grid.Row="3" Grid.ColumnSpan="2" SelectionChanged="PPPeregorodki_SelectionChanged" Grid.RowSpan="2">
+        <ComboBox Margin="238,10,374,43" SelectedIndex="0"   x:Name="PPPeregorodki" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <TextBlock Text="норма"/>
             <TextBlock Text="3мм"/>
             <TextBlock Text="4мм"/>
@@ -76,8 +76,5 @@
             <TextBlock Text="визуализируется"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <Button Grid.Column="1" Content="далее" HorizontalAlignment="Left" Margin="278,0,0,0" Grid.Row="9" VerticalAlignment="Center" Height="37" Width="100"/>
-        <Button Content="назад" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="10" VerticalAlignment="Center"  Height="37" Width="111"/>
-
     </Grid>
 </Window>
