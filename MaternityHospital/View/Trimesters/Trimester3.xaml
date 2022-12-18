@@ -3,10 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:MaternityHospital.View.Trimesters"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             xmlns:local="clr-namespace:MaternityHospital.View.Trimesters" 
+             xmlns:vk="clr-namespace:MaternityHospital.View.UserControls"
+             mc:Ignorable="d">
+    <TabControl>
+        <TabItem>
+            <TabItem.Header>Общие сведения</TabItem.Header>
+            <TabItem.Content>
+                <vk:ObschieSvedenia/>
+            </TabItem.Content>
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>Фетометрия</TabItem.Header>
+            <TabItem.Content>
+                <vk:Fetometria/>
+            </TabItem.Content>
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>Расширенный осмотр</TabItem.Header>
+            <TabItem.Content>
+                <vk:RashirenniyOsmotr/>
+            </TabItem.Content>
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>Допплерометрия</TabItem.Header>
+            <TabItem.Content>
+                <vk:Doppleromitria/>
+            </TabItem.Content>
+        </TabItem>
+    </TabControl>
 </UserControl>

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using MaternityHospital.View.Windows;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace MaternityHospital.View.UserControls
@@ -12,7 +13,8 @@ namespace MaternityHospital.View.UserControls
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            var window = new ReportWindow();
+            window.ShowDialog();
         }
     }
 }

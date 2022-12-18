@@ -46,10 +46,6 @@
 
         </ComboBox>
         <ComboBox Margin="212,10,23,10" Grid.Row="5" SelectedIndex="0" x:Name="TOtnochenie2" Grid.Column="1">
-
         </ComboBox>
-        <Button Grid.Column="1" Content="далее" HorizontalAlignment="Left" Margin="290,10,0,0" Grid.Row="6" VerticalAlignment="Top" Height="37" Width="100" />
-        <Button Content="назад" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="6" VerticalAlignment="Top"  Height="37" Width="111"/>
-
     </Grid>
 </Window>

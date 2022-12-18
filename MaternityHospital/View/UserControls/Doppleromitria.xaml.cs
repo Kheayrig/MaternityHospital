@@ -1,26 +1,11 @@
 ﻿using MaternityHospital.View.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
-namespace MaternityHospital.View
+namespace MaternityHospital.View.UserControls
 {
-    /// <summary>
-    /// Логика взаимодействия для dopplerometria.xaml
-    /// </summary>
-    public partial class dopplerometria : Window
+    public partial class Doppleromitria : UserControl
     {
-        public dopplerometria()
+        public Doppleromitria()
         {
             InitializeComponent();
             ArterPypoviny1.PreviewTextInput += TextBoxFilters.FilterOnlyDoubleNumber;
@@ -33,9 +18,6 @@ namespace MaternityHospital.View
             MCA2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             MCA3.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             DiagKonyga.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
-
-
-
         }
     }
 }

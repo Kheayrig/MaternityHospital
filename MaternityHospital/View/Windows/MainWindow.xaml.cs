@@ -7,7 +7,6 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Collections.Generic;
 
 namespace MaternityHospital
 {
@@ -21,20 +20,21 @@ namespace MaternityHospital
         public MainWindow()
         {
             InitializeComponent();
-            WindowState = WindowState.Maximized; 
+            WindowState = WindowState.Maximized;
             FontSize = AppSettings.customSettings.CurrentFontSize;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            PatientsDataGrid.Columns[2].Header = "Срок беременности\n(в неделях)";
+            PatientsDataGrid.Columns[2].Header = "Срок беременности\n(недель)";
+            PatientsDataGrid.Columns[3].Header = "Срок беременности\n(дней)";
             RefreshData();
         }
 
         private void createPatientButton_Click(object sender, RoutedEventArgs e)
         {
             var win = new CreatePatientWindow();
-            if(win.ShowDialog() == true)
+            if (win.ShowDialog() == true)
             {
                 RefreshData();
                 new Examinations().ShowDialog();
@@ -63,7 +63,7 @@ namespace MaternityHospital
                 var filteredData = _data.Where(x => Regex.IsMatch(x.FIO.ToLower(), pattern));
                 PatientsDataGrid.ItemsSource = new BindingList<Patient>(filteredData.ToList());
             }
-            
+
         }
 
         private void PatientsDataGrid_KeyDown(object sender, KeyEventArgs e)
@@ -71,6 +71,14 @@ namespace MaternityHospital
             if (e.Key == Key.Enter)
             {
                 ToNextWindow();
+            }
+            else if (e.Key == Key.Space)
+            {
+                var win = new EditPatientWindow((Patient)PatientsDataGrid.SelectedItem);
+                if (win.ShowDialog() == true)
+                {
+                    RefreshData();
+                }
             }
         }
         void PatientsDataGrid_DoubleClick(object sender, RoutedEventArgs e)
@@ -80,7 +88,8 @@ namespace MaternityHospital
 
         private void ToNextWindow()
         {
-            AppSettings.currentPatient = new CurrentPatient((Patient)PatientsDataGrid.SelectedItem);
+            var patient = (Patient)PatientsDataGrid.SelectedItem;
+            AppSettings.currentPatient = new CurrentPatient(patient);
             new Examinations().ShowDialog();
         }
         private void Button_Click(object sender, RoutedEventArgs e)
