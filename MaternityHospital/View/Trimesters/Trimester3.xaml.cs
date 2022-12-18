@@ -10,23 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MaternityHospital.View
+namespace MaternityHospital.View.Trimesters
 {
     /// <summary>
-    /// Логика взаимодействия для CnsFaceNeck.xaml
+    /// Логика взаимодействия для Trimester3.xaml
     /// </summary>
-    public partial class CnsFaceNeck : Window
+    public partial class Trimester3 : UserControl
     {
-        public CnsFaceNeck()
+        public Trimester3()
         {
             InitializeComponent();
-        }
-
-        private void PPPeregorodki_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }

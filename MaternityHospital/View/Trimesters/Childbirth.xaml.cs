@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MaternityHospital.View
+namespace MaternityHospital.View.Trimesters
 {
     /// <summary>
-    /// Логика взаимодействия для ChoosingAndInvestigating.xaml
+    /// Логика взаимодействия для Childbirth.xaml
     /// </summary>
-    public partial class ChoosingAndInvestigating : Window
+    public partial class Childbirth : UserControl
     {
-        public ChoosingAndInvestigating()
+        public Childbirth()
         {
             InitializeComponent();
         }

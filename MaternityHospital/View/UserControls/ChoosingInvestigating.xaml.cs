@@ -12,21 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace MaternityHospital.View
+namespace MaternityHospital.View.UserControls
 {
     /// <summary>
-    /// Логика взаимодействия для CnsFaceNeck.xaml
+    /// Логика взаимодействия для ChoosingAndInvestigating.xaml
     /// </summary>
-    public partial class CnsFaceNeck : Window
+    public partial class ChoosingAndInvestigating : Window
     {
-        public CnsFaceNeck()
+        public ChoosingAndInvestigating()
         {
             InitializeComponent();
-        }
-
-        private void PPPeregorodki_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }

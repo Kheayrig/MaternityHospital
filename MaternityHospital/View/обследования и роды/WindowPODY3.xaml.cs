@@ -62,7 +62,7 @@ namespace MaternityHospital.View.Windows
         private void nazad(object sender, RoutedEventArgs e)
         {
             Close();
-            new Window3().Show();
+            /*new Window3().Show();*/
             
         }
     }

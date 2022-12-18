@@ -20,32 +20,36 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Content="Расположение сердца" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="1" VerticalAlignment="Center" FontSize="24"/>
-        <ComboBox Grid.ColumnSpan="2" Margin="303,10,194,10"  x:Name="PSerdca" Grid.Row="1">
-            
+        <Label Content="Расположение сердца" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="1" VerticalAlignment="Center" />
+        <ComboBox Grid.ColumnSpan="2" Margin="303,10,194,10" SelectedIndex="0" x:Name="PSerdca" Grid.Row="1">
+            <TextBlock Text="правильное"/>
+            <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <Label Content="Эхоструктура легких" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="2" VerticalAlignment="Center" FontSize="24"/>
-        <ComboBox Grid.ColumnSpan="2" Margin="303,10,194,10"  x:Name="ExoLegkix" Grid.Row="2">
+        <Label Content="Эхоструктура легких" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="2" VerticalAlignment="Center" />
+        <ComboBox Grid.ColumnSpan="2" Margin="303,10,194,10" SelectedIndex="0"  x:Name="ExoLegkix" Grid.Row="2">
+            <TextBlock Text="обычное"/>
+            <TextBlock Text="см.дополнительно"/>
+        </ComboBox>
+        <Label Content="Обьемные образования" HorizontalAlignment="Left" Margin="21,0,0,0" Grid.Row="3" VerticalAlignment="Center"/>
+        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0" Margin="303,10,194,10" x:Name="OObrazovanua" Grid.Row="3">
+            <TextBlock Text="нет"/>
+            <TextBlock Text="см.дополнительно"/> 
+        </ComboBox>
+
+        <Label Content="Гидроторакс" HorizontalAlignment="Left" Margin="21,0,0,0" Grid.Row="4" VerticalAlignment="Center" />
+        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0" Margin="303,10,194,10" x:Name="Gidrotoraks" Grid.Row="4">
+            <TextBlock Text="нет"/>
+            <TextBlock Text="см.дополнительно"/>
+        </ComboBox>
+        <Label Content="Торакоабдоминальное отношение" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="5" VerticalAlignment="Center"  Grid.ColumnSpan="2" Width="418"/>
+        <ComboBox Margin="30,10,205,10" Grid.Row="5" SelectedIndex="0" x:Name="TOtnochenie1" Grid.Column="1">
 
         </ComboBox>
-        <Label Content="Обьемные образования" HorizontalAlignment="Left" Margin="21,0,0,0" Grid.Row="3" VerticalAlignment="Center" FontSize="24"/>
-        <ComboBox Grid.ColumnSpan="2" Margin="303,10,194,10" x:Name="OObrazovanua" Grid.Row="3">
-            
-        </ComboBox>
-
-        <Label Content="Гидроторакс" HorizontalAlignment="Left" Margin="21,0,0,0" Grid.Row="4" VerticalAlignment="Center" FontSize="24"/>
-        <ComboBox Grid.ColumnSpan="2" Margin="303,10,194,10" x:Name="Gidrotoraks" Grid.Row="4">
+        <ComboBox Margin="212,10,23,10" Grid.Row="5" SelectedIndex="0" x:Name="TOtnochenie2" Grid.Column="1">
 
         </ComboBox>
-        <Label Content="Торакоабдоминальное отношение" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="5" VerticalAlignment="Center" FontSize="24" Grid.ColumnSpan="2" Width="418"/>
-        <ComboBox Margin="30,10,205,10" Grid.Row="5"  x:Name="TOtnochenie1" Grid.Column="1">
-
-        </ComboBox>
-        <ComboBox Margin="212,10,23,10" Grid.Row="5"  x:Name="TOtnochenie2" Grid.Column="1">
-
-        </ComboBox>
-        <Button Grid.Column="1" Content="далее" HorizontalAlignment="Left" Margin="290,10,0,0" Grid.Row="6" VerticalAlignment="Top" Height="37" Width="100" FontSize="24"/>
-        <Button Content="назад" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="6" VerticalAlignment="Top" FontSize="24" Height="37" Width="111"/>
+        <Button Grid.Column="1" Content="далее" HorizontalAlignment="Left" Margin="290,10,0,0" Grid.Row="6" VerticalAlignment="Top" Height="37" Width="100" />
+        <Button Content="назад" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="6" VerticalAlignment="Top"  Height="37" Width="111"/>
 
     </Grid>
 </Window>
