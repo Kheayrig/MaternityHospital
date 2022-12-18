@@ -10,6 +10,7 @@ namespace MaternityHospital.View.Windows
         {
             InitializeComponent();
             FontSize = AppSettings.customSettings.CurrentFontSize;
+            currentDoctor.Content = AppSettings.customSettings.CurrentDoctor;
             var trimester = AppSettings.currentPatient.Patient.Trimester;
             switch (trimester)
             {

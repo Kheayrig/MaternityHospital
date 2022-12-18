@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Windows;
 
 namespace MaternityHospital.DB.Repositories
 {
@@ -42,7 +43,7 @@ namespace MaternityHospital.DB.Repositories
         #endregion
         #region Constructors
         public Patient(string FIO, DateTime birthday, DateTime firstScanDate, string doctor,
-            string? address = null, DateTime? lastPeriodDate = null)
+            string? address = null, DateTime? lastPeriodDate = null, int pregnancyDurationWeek = 0, int pregnancyDurationDay = 0)
         {
             this.FIO = FIO;
             Birthday = birthday;
@@ -50,13 +51,15 @@ namespace MaternityHospital.DB.Repositories
             Address = address;
             LastPeriodDate = lastPeriodDate;
             Doctor = doctor;
-            _pregnancyCalculator = new PregnancyCalculator(LastPeriodDate, FirstScanDate, PregnancyDurationWeek, PregnancyDurationDay);
+            PregnancyDurationWeek = pregnancyDurationWeek;
+            PregnancyDurationDay = pregnancyDurationDay;
+            _pregnancyCalculator = new PregnancyCalculator(LastPeriodDate, PregnancyDurationWeek, PregnancyDurationDay);
             PregnancyDurationWeek = _pregnancyCalculator.GetPregnancyDurationWeek();
             PregnancyDurationDay = _pregnancyCalculator.GetPregnancyDurationDay();
             Trimester = _pregnancyCalculator.GetTrimester();
         }
         public Patient(string FIO, DateTime birthday, DateTime firstScanDate, string doctor, IPregnancyCalculator? pregnancyCalculator,
-            string? address = null, DateTime? lastPeriodDate = null)
+            string? address = null, DateTime? lastPeriodDate = null, int pregnancyDurationWeek = 0, int pregnancyDurationDay = 0)
         {
             this.FIO = FIO;
             Birthday = birthday;
@@ -64,7 +67,9 @@ namespace MaternityHospital.DB.Repositories
             Address = address;
             LastPeriodDate = lastPeriodDate;
             Doctor = doctor;
-            _pregnancyCalculator = pregnancyCalculator ?? new PregnancyCalculator(LastPeriodDate, FirstScanDate, PregnancyDurationWeek, PregnancyDurationDay);
+            PregnancyDurationWeek = pregnancyDurationWeek;
+            PregnancyDurationDay = pregnancyDurationDay;
+            _pregnancyCalculator = pregnancyCalculator ?? new PregnancyCalculator(LastPeriodDate, PregnancyDurationWeek, PregnancyDurationDay);
             PregnancyDurationWeek = _pregnancyCalculator.GetPregnancyDurationWeek();
             PregnancyDurationDay = _pregnancyCalculator.GetPregnancyDurationDay();
             Trimester = _pregnancyCalculator.GetTrimester();
@@ -92,7 +97,8 @@ namespace MaternityHospital.DB.Repositories
             using (var db = new ApplicationContext())
             {
                 db.Patients.Load();
-                return db.Patients.Local.ToBindingList();
+                var res = db.Patients.Local.ToBindingList();
+                return res;
             }
         }
 

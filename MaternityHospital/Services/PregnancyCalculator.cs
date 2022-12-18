@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace MaternityHospital.Services
 {
@@ -12,27 +13,28 @@ namespace MaternityHospital.Services
         protected int PregnancyDurationWeek { get; set; }
         protected int PregnancyDurationDay { get; set; }
         protected DateTime? LastPeriodDate { get; }
-        protected DateTime FirstScanDate { get; }
 
-        public PregnancyCalculator(DateTime? lastPeriodDate, DateTime firstScanDate, int pregnancyDurationWeek = 0, int pregnancyDurationDay = 0)
+        public PregnancyCalculator(DateTime? lastPeriodDate, int pregnancyDurationWeek = 0, int pregnancyDurationDay = 0)
         {
             LastPeriodDate = lastPeriodDate;
-            FirstScanDate = firstScanDate;
             PregnancyDurationWeek = pregnancyDurationWeek;
             PregnancyDurationDay= pregnancyDurationDay;
         }
 
         private int ScanCalculate(bool isWeek = true)
         {
-            int actual = (DateTime.Now - FirstScanDate).Days + PregnancyDurationDay;
-            if (isWeek) actual = actual / 7 + PregnancyDurationWeek;
+            int days = PregnancyDurationDay + PregnancyDurationWeek * 7;
+            var actual = DateTime.Now.AddDays(-days).Day;
+            if (isWeek) actual /= 7;
+            else actual %= 7;
             return actual;
 
         }
         private int PeriodCalculate(bool isWeek = true)
         {
-            int actual = (DateTime.Now - LastPeriodDate).Value.Days + PregnancyDurationDay;
-            if (isWeek) actual = actual / 7 + PregnancyDurationWeek;
+            int actual = (DateTime.Now - LastPeriodDate).Value.Days;
+            if (isWeek) actual = actual / 7;
+            else actual = actual % 7;
             return actual;
         }
         public int GetTrimester()
