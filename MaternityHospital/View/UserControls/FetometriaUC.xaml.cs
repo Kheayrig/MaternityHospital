@@ -7,7 +7,8 @@ namespace MaternityHospital.View.UserControls
 {
     public partial class FetometriaUC : UserControl
     {
-        private int _index = 1;
+        private int _index = 1; 
+        internal static bool IsSelected = false;
         public FetometriaUC()
         {
             InitializeComponent();
@@ -15,6 +16,7 @@ namespace MaternityHospital.View.UserControls
             DBK.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             OJ.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             Mass.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            FontSize = AppSettings.CustomSettings.CurrentFontSize;
             switch (AppSettings.CurrentPatient.Trimester)
             {
                 case 1:

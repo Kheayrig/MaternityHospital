@@ -1,4 +1,5 @@
-﻿using MaternityHospital.View.Utils;
+﻿using MaternityHospital.Services;
+using MaternityHospital.View.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,12 +16,9 @@ using System.Windows.Shapes;
 
 namespace MaternityHospital.View.UserControls
 {
-    /// <summary>
-    /// Логика взаимодействия для MalSroki.xaml
-    /// </summary>
-    public partial class MalSroki : Window
+    public partial class MalSrokiUC : UserControl
     {
-        public MalSroki()
+        public MalSrokiUC()
         {
             InitializeComponent();
             RazMatki1.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
@@ -38,6 +36,7 @@ namespace MaternityHospital.View.UserControls
 
             POvary2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             POvary3.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            FontSize = AppSettings.CustomSettings.CurrentFontSize;
         }
     }
 }

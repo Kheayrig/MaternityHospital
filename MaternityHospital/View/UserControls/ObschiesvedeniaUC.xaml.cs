@@ -10,7 +10,6 @@ namespace MaternityHospital.View.UserControls
 {
     public partial class ObschieSvedeniaUC : UserControl
     {
-        internal static bool IsSelected = false;
         private int _index = 0;
         private bool _selected1 = false;
         private bool _selected2 = false;
@@ -81,7 +80,7 @@ namespace MaternityHospital.View.UserControls
 
         private void OK_Click(object sender, RoutedEventArgs e)
         {
-          Fetometria.IsSelected = true;
+          FetometriaUC.IsSelected = true;
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)

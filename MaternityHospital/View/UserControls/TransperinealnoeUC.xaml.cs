@@ -14,6 +14,7 @@ namespace MaternityHospital.View.UserControls
             RaskrMatochnogoZeva.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             YgolMLA.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             RastoanieHPD.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            FontSize = AppSettings.CustomSettings.CurrentFontSize;
             switch (AppSettings.CurrentPatient.Trimester)
             {
                 case 1:
