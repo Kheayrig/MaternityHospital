@@ -3,6 +3,7 @@ using System.Security.AccessControl;
 using System.Windows;
 using System.Windows.Documents;
 using MaternityHospital.DB.Models;
+using MaternityHospital.DB.Models.ViewClasses;
 using MaternityHospital.Services;
 using MaternityHospital.View.Trimesters;
 
@@ -22,6 +23,7 @@ namespace MaternityHospital.View.Windows
             switch (trimester)
             {
                 case 1:
+                    list.Add(new MalSroki(AppSettings.CurrentVisit));
                     Tabs.Content = new Trimester1();
                     break;
                 case 2:

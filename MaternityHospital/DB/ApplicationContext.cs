@@ -2,6 +2,7 @@
 using System.Configuration;
 using MaternityHospital.DB.Models;
 using MaternityHospital.DB.Models.ExtraViewClasses;
+using MaternityHospital.DB.Models.ViewClasses;
 using MaternityHospital.DB.Repositories;
 using MaternityHospital.Services;
 using MaternityHospital.Services.ViewClasses;
@@ -24,6 +25,7 @@ namespace MaternityHospital.DB
         public DbSet<Dopplerometria> dopplerometria { get; set; } = null!;
         public DbSet<Translabialnoe> translabialnoe { get; set; } = null!;
         public DbSet<Transperinealnoe> transperinealnoe { get; set; } = null!;
+        public DbSet<MalSroki> malSroki { get; set; } = null!;
         public DbSet<Report> reports { get; set; } = null!;
 
         public DbSet<AbdominalCavity> abdominalCavity { get; set; } = null!;
@@ -59,6 +61,7 @@ namespace MaternityHospital.DB
         public DbSet<Dopplerometria> dopplerometria { get; set; } = null!;
         public DbSet<Translabialnoe> translabialnoe { get; set; } = null!;
         public DbSet<Transperinealnoe> transperinealnoe { get; set; } = null!;
+        public DbSet<MalSroki> malSroki { get; set; } = null!;
         public DbSet<Report> reports { get; set; } = null!;
 
         public DbSet<AbdominalCavity> abdominalCavity { get; set; } = null!;

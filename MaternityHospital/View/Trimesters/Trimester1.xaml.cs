@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using MaternityHospital.Services;
+using System.Windows.Controls;
 
 namespace MaternityHospital.View.Trimesters
 {
@@ -7,6 +8,7 @@ namespace MaternityHospital.View.Trimesters
         public Trimester1()
         {
             InitializeComponent();
+            FontSize = AppSettings.CustomSettings.CurrentFontSize;
         }
     }
 }

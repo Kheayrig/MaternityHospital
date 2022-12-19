@@ -23,7 +23,7 @@
                 <Label>Беременность:</Label>
                 <Label x:Name="PregnancyDuration">20 н. 3 д.</Label>
             </WrapPanel>
-            <Button Margin="5" Height="25" Width="180" Click="Button_Click">Написать заключение</Button>
+            <Button Margin="5" Click="Button_Click">Написать заключение</Button>
         </StackPanel>
     </Border>
 </UserControl>
