@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MaternityHospital.View.extra"
         mc:Ignorable="d"
         Title="Skelet" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#6e80af">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>

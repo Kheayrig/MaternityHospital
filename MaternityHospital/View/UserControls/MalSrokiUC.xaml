@@ -28,11 +28,11 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <WrapPanel Margin="10,10,10,10" Grid.ColumnSpan="4">
-            <Label Content="Размер матки:" HorizontalAlignment="Left" VerticalAlignment="Center" Width="121"/>
-            <TextBox TextWrapping="Wrap"  x:Name="RazMatki1" Text="" Width="136" Height="26"/>
+        <WrapPanel Margin="10,0,10,0" Grid.ColumnSpan="4">
+            <Label Content="Размер матки:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="158" Height="43"/>
+            <TextBox TextWrapping="Wrap"  x:Name="RazMatki1" Text="" Width="136" Height="35"/>
             <Label Content="мм" Width="138"/>
-            <ComboBox Grid.Column="2" SelectedIndex="0" Height="26"  x:Name="RazMatki2" Width="106">
+            <ComboBox Grid.Column="2" SelectedIndex="0" Height="39"  x:Name="RazMatki2" Width="106">
                 <TextBlock Text="нормальное"/>
                 <TextBlock Text="увеличена"/>
                 <TextBlock Text="уменьшена"/>
@@ -49,7 +49,7 @@
 
         </WrapPanel>
         <WrapPanel Grid.Row="2" Grid.ColumnSpan="4" Margin="10,10,0,10">
-            <Label Content="Форма матки:" HorizontalAlignment="Left" VerticalAlignment="Center" Width="121" Height="26"/>
+            <Label Content="Форма матки:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="231" Height="36"/>
             <ComboBox Width="180" SelectedIndex="0" x:Name="FormaMatki">
                 <TextBlock Text="грушевидная"/>
                 <TextBlock Text="двурогая"/>
@@ -59,7 +59,7 @@
             </ComboBox>
         </WrapPanel>
         <WrapPanel Grid.Row="3" Margin="10,5,10,10" Grid.ColumnSpan="4">
-            <Label Content="Эхоструктура:" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="26" Width="121"/>
+            <Label Content="Эхоструктура:" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="38" Width="121"/>
             <ComboBox Width="180" SelectedIndex="0" x:Name="echostructure1"  >
                 <TextBlock Text="однородная"/>
                 <TextBlock Text="неоднородная"/>
@@ -68,8 +68,8 @@
 
         </WrapPanel>
         <WrapPanel Grid.Row="4" Margin="10,10,10,10" Grid.ColumnSpan="4">
-            <Label Content="Средний диаметр плодного яйца :" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Center" Width="203"/>
-            <TextBox TextWrapping="Wrap" Text="" x:Name="SrednDiametrPlodAiza1" Width="99"/>
+            <Label Content="Средний диаметр плодного яйца :" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Width="290" Height="35"/>
+            <TextBox TextWrapping="Wrap" Text="" x:Name="SrednDiametrPlodAiza1" Width="94"/>
             <Label Content="мм, соответствуют сроку-" Width="150"/>
             <TextBox TextWrapping="Wrap" Text=""  x:Name="SrednDiametrPlodAiza2" Width="120"/>
             <Label Content="недель" Width="85"/>
@@ -77,13 +77,13 @@
         </WrapPanel>
         <WrapPanel Grid.Row="5" Grid.ColumnSpan="4" Margin="10,10,10,10">
             <Label Content="КТР:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="53"/>
-            <TextBox TextWrapping="Wrap" x:Name="KTR1" Text="" Width="120"/>
+            <TextBox TextWrapping="Wrap" x:Name="KTR1" Text="" Width="120" Height="34"/>
             <Label Content="мм, соответствует сроку-"/>
             <TextBox TextWrapping="Wrap" x:Name="KTR2" Text="" Width="120"/>
             <Label Content="недель"/>
         </WrapPanel>
         <WrapPanel Grid.Row="6" Grid.ColumnSpan="4" Margin="10,10,10,10">
-            <Label Content="Сердцебиение" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Center" Width="129"/>
+            <Label Content="Сердцебиение" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Width="185" Height="39"/>
             <ComboBox Width="120"  SelectedIndex="0" x:Name="Serdchbienie">
                 <TextBlock Text="есть"/>
                 <TextBlock Text="нет"/>
@@ -91,7 +91,7 @@
         </WrapPanel>
 
         <WrapPanel Grid.Row="7" Grid.ColumnSpan="4" Margin="10,10,10,10">
-            <Label Content="Диаметр желточного мешка:" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Center" Height="26"/>
+            <Label Content="Диаметр желточного мешка:" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Center" Height="39" Width="308"/>
             <TextBox TextWrapping="Wrap" Text="" x:Name="DiamZheltMechka" Width="90"/>
             <Label Content="мм"/>
         </WrapPanel>
@@ -100,7 +100,7 @@
 
 
         <WrapPanel Grid.Row="9" Grid.ColumnSpan="4" Margin="10,10,10,10">
-            <Label Content="Левый яицник:" HorizontalAlignment="Left" Grid.Row="8" VerticalAlignment="Center" Height="26" Width="109"/>
+            <Label Content="Левый яицник:" HorizontalAlignment="Center" Grid.Row="8" VerticalAlignment="Center" Height="41" Width="183"/>
             <ComboBox Width="175" SelectedIndex="0"  x:Name="LOvary1">
                 <TextBlock Text="обычной эхоструктуры"/>
                 <TextBlock Text="с анэхогенным компонентом"/>
@@ -114,34 +114,34 @@
             <TextBox TextWrapping="Wrap" Text=""  x:Name="LOvary2" Width="120"/>
             <Label Content="размеры:"/>
             <TextBox TextWrapping="Wrap" Text=""  x:Name="LOvary3" Width="96"/>
-            <Label Content="мм,"/>
-            <ComboBox Width="154"  SelectedIndex="0" x:Name="LOvary4" >
+            <Label Content="мм," Width="79"/>
+            <ComboBox Width="145"  SelectedIndex="0" x:Name="LOvary4" >
                 <TextBlock Text="нормальное"/>
                 <TextBlock Text="увеличен."/>
             </ComboBox>
 
         </WrapPanel>
         <WrapPanel Grid.Row="10" Grid.ColumnSpan="4" Margin="10,10,10,10">
-            <Label Content="Правый яичник:" HorizontalAlignment="Center" Grid.Row="9" VerticalAlignment="Center" Width="109"/>
-            <ComboBox Grid.ColumnSpan="2" SelectedIndex="0" x:Name="POvary1" HorizontalAlignment="Left" Grid.Row="9" VerticalAlignment="Center" Width="175">
+            <Label Content="Правый яичник:" HorizontalAlignment="Center" Grid.Row="9" VerticalAlignment="Center" Width="185" Height="45"/>
+            <ComboBox Grid.ColumnSpan="2" SelectedIndex="0" x:Name="POvary1" HorizontalAlignment="Center" Grid.Row="9" VerticalAlignment="Center" Width="175" Height="45">
                 <TextBlock Text="обычной эхоструктуры"/>
                 <TextBlock Text="с анэхогенным компонентом"/>
                 <TextBlock Text="с изоэхогенным компонентом"/>
                 <TextBlock Text="с гиперэхогенным компонентом"/>
                 <TextBlock Text="с желтым телом"/>
-               
+
                 <TextBlock Text="с мелкими фолликулами по переферии"/>
                 <TextBlock Text="с доминантным фолликулом"/>
                 <TextBlock Text="без доминантного фолликула"/>
                 <TextBlock Text="с беспорядочно расположенными мелкими фоллликулами"/>
                 <TextBlock Text="не визуализируется"/>
-                
+
             </ComboBox>
             <Label Content=","/>
             <TextBox TextWrapping="Wrap" x:Name="POvary2" Text="" Width="136"/>
             <Label Content="размеры:" Width="56"/>
             <TextBox TextWrapping="Wrap" Text="" x:Name="POvary3" Width="114"/>
-            <Label Content="мм," Width="24"/>
+            <Label Content="мм," Width="48"/>
             <ComboBox Width="145" SelectedIndex="0" x:Name="POvary4">
                 <TextBlock Text="нормальное"/>
                 <TextBlock Text="увеличен."/>
@@ -149,12 +149,12 @@
 
         </WrapPanel>
         <WrapPanel Grid.Row="11" Grid.ColumnSpan="4" Margin="10,10,10,46" Grid.RowSpan="2">
-            <Label Content="Дополнительные данные:" HorizontalAlignment="Left" Grid.Row="10" VerticalAlignment="Center" Height="26"/>
+            <Label Content="Дополнительные данные:" HorizontalAlignment="Center" Grid.Row="10" VerticalAlignment="Center" Height="51" Width="184"/>
             <TextBox TextWrapping="Wrap" Text="" x:Name="DopDann" Width="618"/>
 
         </WrapPanel>
         <WrapPanel Grid.Row="8" Grid.ColumnSpan="4" Margin="10,10,10,10">
-            <Label Content="Хирион визуализируется на:" Width="177"/>
+            <Label Content="Хирион визуализируется на:" Width="308" Height="41"/>
             <ComboBox Width="240" SelectedIndex="0"  x:Name="Xirion">
                 <TextBlock Text="передней стенке"/>
                 <TextBlock Text="задней стенке"/>
@@ -162,7 +162,7 @@
                 <TextBlock Text="справа"/>
                 <TextBlock Text="краем перекрывает внутренний зев"/>
                 <TextBlock Text="перекрывает внутренниз зев"/>
-                
+
             </ComboBox>
         </WrapPanel>
     </Grid>

@@ -9,7 +9,7 @@
         Loaded="Window_Loaded"
         Closing="Close"
         WindowStartupLocation="CenterScreen">
-    <Grid Margin="5,10,5,5">
+    <Grid Margin="5,10,5,5" Background="#91abbe">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -18,7 +18,7 @@
         <Button  Margin="0,5,0,5" x:Name="AddBtn" Grid.Row="0" Content="Добавить нового врача" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Button_Click"/>
 
         <DataGrid Grid.Row="1" CanUserAddRows="False" CanUserDeleteRows="False" x:Name="DoctorsDataGrid" SelectionUnit="FullRow" d:ItemsSource="{d:SampleData ItemCount=3}" AutoGenerateColumns="False" IsReadOnly="True">
-            <DataGrid.ItemContainerStyle>
+            <DataGrid.ItemContainerStyle >
                 <Style TargetType="{x:Type DataGridRow}">
                     <EventSetter Event="KeyDown" Handler="PatientsDataGrid_KeyDown"/>
                     <EventSetter Event="MouseDoubleClick" Handler="PatientsDataGrid_DoubleClick"/>

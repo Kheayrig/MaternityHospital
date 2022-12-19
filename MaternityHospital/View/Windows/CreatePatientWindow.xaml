@@ -8,7 +8,7 @@
         Title="Добавить пациентку" 
         Height="450" Width="800" 
         MinHeight="400" MinWidth="600">
-    <Grid Margin="15,10,15,5">
+    <Grid Margin="15,10,15,5" Background="#91abbe">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
