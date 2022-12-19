@@ -7,11 +7,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Net;
 using System.Windows;
 
 namespace MaternityHospital.DB.Repositories
 {
-    public class Patient : IRepository<Patient>
+    public class Patient : IRepository
     {
         public int Id { get; set; }
         public string FIO { get; set; }
@@ -123,6 +124,26 @@ namespace MaternityHospital.DB.Repositories
             {
                 db.Patients.Remove(this);
                 db.SaveChanges();
+            }
+        }
+
+        public void GetBy(int Id)
+        {
+            using (var db = new ApplicationContext())
+            {
+                var temp = db.Patients.First(c => c.Id == Id);
+                Id = temp.Id;
+                FIO = temp.FIO;
+                Birthday = temp.Birthday;
+                FirstScanDate = temp.FirstScanDate;
+                Address = temp.Address;
+                LastPeriodDate = temp.LastPeriodDate;
+                PregnancyDurationWeek = temp.PregnancyDurationWeek;
+                PregnancyDurationDay = temp.PregnancyDurationDay;
+                _pregnancyCalculator = temp._pregnancyCalculator ?? new PregnancyCalculator(LastPeriodDate, PregnancyDurationWeek, PregnancyDurationDay);
+                PregnancyDurationWeek = temp._pregnancyCalculator.GetPregnancyDurationWeek();
+                PregnancyDurationDay = temp._pregnancyCalculator.GetPregnancyDurationDay();
+                Trimester = temp._pregnancyCalculator.GetTrimester();
             }
         }
         #endregion

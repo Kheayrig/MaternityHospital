@@ -15,14 +15,14 @@ namespace MaternityHospital.DB.Models.ExtraViewClasses
         public string Gidrotoraks { get; set; }
         public string TOtnochenie1 { get; set; }
         public string TOtnochenie2 { get; set; }
-        public Visit? VisitId { get; set; }
+        public int VisitId { get; set; }
 
-        public Chestcavity(Visit? visit)
+        public Chestcavity(Visit visit)
         {
-            VisitId = visit;
+            VisitId = visit.Id;
         }
 
-        public Chestcavity(int id, string pSerdca, string exoLegkix, string oObrazovanua, string gidrotoraks, string tOtnochenie1, string tOtnochenie2, Visit? visitId)
+        public Chestcavity(int id, string pSerdca, string exoLegkix, string oObrazovanua, string gidrotoraks, string tOtnochenie1, string tOtnochenie2, int visitId)
         {
             Id = id;
             PSerdca = pSerdca;

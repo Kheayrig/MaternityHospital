@@ -16,9 +16,9 @@ namespace MaternityHospital.DB.Models.ExtraViewClasses
         public string LychevKost { get; set; } = "норма";
         public string Kisti { get; set; } = "норма";
         public string Stopi { get; set; } = "норма";
-        public Visit? VisitId { get; set; }
+        public int VisitId { get; set; }
 
-        public Skelet(int id, string pozvonochnik, string bolBer, string malBer, string lOktKosti, string lychevKost, string kisti, string stopi, Visit? visitId)
+        public Skelet(int id, string pozvonochnik, string bolBer, string malBer, string lOktKosti, string lychevKost, string kisti, string stopi, int visitId)
         {
             Id = id;
             Pozvonochnik = pozvonochnik;
@@ -31,9 +31,9 @@ namespace MaternityHospital.DB.Models.ExtraViewClasses
             VisitId = visitId;
         }
 
-        public Skelet(Visit? visit)
+        public Skelet(Visit visit)
         {
-            VisitId = visit;
+            VisitId = visit.Id;
         }
 
 

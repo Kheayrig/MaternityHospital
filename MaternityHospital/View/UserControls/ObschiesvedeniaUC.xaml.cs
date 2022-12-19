@@ -1,6 +1,7 @@
 ﻿using MaternityHospital.Services;
 using MaternityHospital.View.Utils;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Xml.Linq;
@@ -9,6 +10,7 @@ namespace MaternityHospital.View.UserControls
 {
     public partial class ObschieSvedeniaUC : UserControl
     {
+        internal static bool IsSelected = false;
         private int _index = 0;
         private bool _selected1 = false;
         private bool _selected2 = false;
@@ -17,6 +19,21 @@ namespace MaternityHospital.View.UserControls
             InitializeComponent();
             heartRate.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             FontSize = AppSettings.CustomSettings.CurrentFontSize;
+            switch (AppSettings.CurrentPatient.Trimester)
+            {
+                case 1:
+                    _index = (int)(Trimester1Enum)Enum.Parse(typeof(Trimester1Enum), "Obschiesvedenia");
+                    break;
+                case 2:
+                    _index = (int)(Trimester2Enum)Enum.Parse(typeof(Trimester2Enum), "Obschiesvedenia");
+                    break;
+                case 3:
+                    _index = (int)(Trimester3Enum)Enum.Parse(typeof(Trimester3Enum), "Obschiesvedenia");
+                    break;
+                case 4:
+                    _index = (int)(ChildBirthEnum)Enum.Parse(typeof(ChildBirthEnum), "Obschiesvedenia");
+                    break;
+            }
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -53,6 +70,13 @@ namespace MaternityHospital.View.UserControls
             var item = sender as ComboBox;
             var pr = typeof(Obschiesvedenia).GetProperty(item.Name);
             pr.SetValue(AppSettings.WindowsList[_index] as Obschiesvedenia, (item.SelectedValue as TextBlock).Text);
+        }
+
+        private void TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var item = sender as TextBox;
+            var pr = typeof(Obschiesvedenia).GetProperty(item.Name);
+            pr.SetValue(AppSettings.WindowsList[_index] as Obschiesvedenia, item.Text);
         }
 
         private void OK_Click(object sender, RoutedEventArgs e)

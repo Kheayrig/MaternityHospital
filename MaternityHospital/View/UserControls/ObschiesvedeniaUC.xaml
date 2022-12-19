@@ -51,7 +51,7 @@
 
         <WrapPanel Grid.Row="3" VerticalAlignment="Center" Margin="0,10,0,10">
             <Label Content="ритм"/>
-            <ComboBox x:Name="ritm" SelectedIndex="0">
+            <ComboBox x:Name="ritm" SelectedIndex="0" SelectionChanged="SelectionChanged">
                 <TextBlock Text="синусовый"/>
                 <TextBlock Text="брадикардия"/>
                 <TextBlock Text="тахикардия"/>
@@ -63,7 +63,7 @@
 
         <WrapPanel Grid.Row="4" VerticalAlignment="Center" Margin="0,10,0,10">
             <Label Content="сердцебиение"/>
-            <ComboBox x:Name="heartbeat" SelectedIndex="0">
+            <ComboBox x:Name="heartbeat" SelectedIndex="0" SelectionChanged="SelectionChanged">
                 <TextBlock Text="да"/>
                 <TextBlock Text="нет"/>
             </ComboBox>
@@ -71,7 +71,7 @@
 
         <WrapPanel Grid.Row="5" VerticalAlignment="Center" Margin="0,10,0,10">
             <Label Content="ЧСС"/>
-            <TextBox x:Name="heartRate" InputMethod.IsInputMethodEnabled="False" MaxLength="3" Text="" Width="150"/>
+            <TextBox x:Name="heartRate" InputMethod.IsInputMethodEnabled="False" MaxLength="3" Text="" Width="150" TextChanged="TextChanged"/>
         </WrapPanel>
 
         <WrapPanel Grid.Row="6" VerticalAlignment="Center" Margin="0,10,0,10">

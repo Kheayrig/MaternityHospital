@@ -15,9 +15,9 @@ namespace MaternityHospital.DB.Models.ExtraViewClasses
         public string Precreplenie { get; set; } = "центральное";
         public string PypART { get; set; } = "две";
         public string SosydPyp { get; set; } = "три";
-        public Visit? VisitId { get; set; }
+        public int VisitId { get; set; }
 
-        public Pypovina(int id, string pypochnVena1, string pypochnVena2, string pypochnVena3, string precreplenie, string pypART, string sosydPyp, Visit? visitId)
+        public Pypovina(int id, string pypochnVena1, string pypochnVena2, string pypochnVena3, string precreplenie, string pypART, string sosydPyp, int visitId)
         {
             Id = id;
             PypochnVena1 = pypochnVena1;
@@ -29,9 +29,9 @@ namespace MaternityHospital.DB.Models.ExtraViewClasses
             VisitId = visitId;
         }
 
-        public Pypovina(Visit? visit)
+        public Pypovina(Visit visit)
         {
-            VisitId = visit;
+            VisitId = visit.Id;
         }
 
     }

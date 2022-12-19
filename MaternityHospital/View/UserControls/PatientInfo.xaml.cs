@@ -8,7 +8,6 @@ namespace MaternityHospital.View.UserControls
 {
     public partial class PatientInfo : UserControl
     {
-
         public PatientInfo()
         {
             InitializeComponent();
@@ -27,8 +26,12 @@ namespace MaternityHospital.View.UserControls
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var window = new ReportWindow();
-            window.ShowDialog();
+            var win = new ReportWindow();
+            if (win.ShowDialog() == true)
+            {
+                var window = Window.GetWindow(this);
+                window.Close();
+            }
         }
     }
 }

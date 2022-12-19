@@ -1,4 +1,5 @@
 ﻿using MaternityHospital.Services;
+using System.Security.Policy;
 using System.Windows;
 
 namespace MaternityHospital.View.Windows
@@ -13,15 +14,26 @@ namespace MaternityHospital.View.Windows
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var test = AppSettings.WindowsList[0] as Obschiesvedenia;
-            MessageBox.Show(test.position);
-            MessageBox.Show(test.plod);
-            MessageBox.Show(test.predlejanie);
 
-            /*var list = AppSettings.WindowsList;
-            foreach(var item in list)
+            var list = AppSettings.WindowsList;
+            
+            if (AppSettings.isUpdating)
             {
-                item.SendToDB();
-            }*/
+                foreach (var item in list)
+                {
+                    item.Update();
+                }
+            }
+            else
+            {
+                foreach (var item in list)
+                {
+                    item.Add();
+                }
+            }
+            DialogResult = true;
+            Close();
+
         }
     }
 }

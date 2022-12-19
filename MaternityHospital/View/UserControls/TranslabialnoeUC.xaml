@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
         <Label Content="длина шеечного канала" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="37" Width="299" FontSize="24" />
         <WrapPanel Grid.Column="1" Grid.Row="1" Margin="10,10,10,10">
-            <TextBox TextWrapping="Wrap" x:Name="DlinaCHeKanala"  Text="" Width="190" Height="34" FontSize="24"/>
+            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" x:Name="DlinaCHeKanala"  Text="" Width="190" Height="34" FontSize="24"/>
             <Label Content="мм" Width="190" FontSize="24"/>
         </WrapPanel>
         <Label Content="плодные оболочки" HorizontalAlignment="Left" Margin="10,7,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="24" Height="37" Width="237"/>
@@ -34,12 +34,12 @@
 
         <Label Content="расстояние 'головка-симфиз' (HSD)" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="5" VerticalAlignment="Center" FontSize="24" Height="37" Grid.ColumnSpan="2" Width="408"/>
         <WrapPanel Grid.Column="1" Grid.Row="5" Margin="10,10,10,10">
-            <TextBox TextWrapping="Wrap" Text=""  x:Name="RastoanieHSD" Width="190" Height="34"  FontSize="24"/>
+            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" Text=""  x:Name="RastoanieHSD" Width="190" Height="34"  FontSize="24"/>
             <Label Content="мм" Width="190"  FontSize="24" />
         </WrapPanel>
         <Label Content="Subcutaneus edema ()" HorizontalAlignment="Left" Margin="10,7,0,0" Grid.Row="6" VerticalAlignment="Top" Width="265" Height="37" FontSize="24"/>
         <WrapPanel Grid.Column="1" Grid.Row="4" Margin="10,10,10,10">
-            <TextBox TextWrapping="Wrap" Text="" x:Name="RastoaniePD" Width="190" Height="34"  FontSize="24"/>
+            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" Text="" x:Name="RastoaniePD" Width="190" Height="34"  FontSize="24"/>
             <Label Content="мм" Width="190"  FontSize="24"/>
         </WrapPanel>
         <Button Width="127" Margin="10,31,0,0" x:Name="CancelTRans" Content="Назад" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Top"/>

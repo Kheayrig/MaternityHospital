@@ -1,4 +1,5 @@
-﻿using MaternityHospital.DB.Models;
+﻿using MaternityHospital.DB;
+using MaternityHospital.DB.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MaternityHospital.Services
 {
-    class Obschiesvedenia: IViewRepository
+    class Obschiesvedenia: IRepository
     {
         public int Id { get; set; }
         public string plod { get; set; } = "один";
@@ -20,9 +21,9 @@ namespace MaternityHospital.Services
         public string dvijeniye_Copy { get; set; } = "&lt; 3 эпизодов";
         public string Breath_movement { get; set; } = "да";
         public string Breath_movement_Copy { get; set; } = "&lt; 30 сек";
-        public Visit? VisitId { get; set; }
+        public int VisitId { get; set; }
 
-        public Obschiesvedenia(int id, string plod, string position, string predlejanie, string ritm, string heartbeat, string heartRate, string dvijeniye, string dvijeniye_Copy, string breath_movement, string breath_movement_Copy, Visit? visitId)
+        public Obschiesvedenia(int id, string plod, string position, string predlejanie, string ritm, string heartbeat, string heartRate, string dvijeniye, string dvijeniye_Copy, string breath_movement, string breath_movement_Copy, int visitId)
         {
             Id = id;
             this.plod = plod;
@@ -38,19 +39,56 @@ namespace MaternityHospital.Services
             VisitId = visitId;
         }
 
-        public Obschiesvedenia(Visit? visit)
+        public Obschiesvedenia(Visit visit)
         {
-            VisitId = visit;
+            VisitId = visit.Id;
         }
 
-        public void GetFromDB()
+        public void GetBy(int visitId)
         {
-            
+            using (var db = new ApplicationContext())
+            {
+                var temp = db.obschieSvedenia.First(c => c.VisitId == visitId);
+                Id = temp.Id;
+                plod = temp.plod;
+                position = temp.position;
+                predlejanie = temp.predlejanie;
+                ritm = temp.ritm;
+                heartbeat = temp.heartbeat;
+                heartRate = temp.heartRate;
+                dvijeniye = temp.dvijeniye;
+                dvijeniye_Copy = temp.dvijeniye_Copy;
+                Breath_movement = temp.Breath_movement;
+                Breath_movement_Copy = temp.Breath_movement_Copy;
+                VisitId = visitId;
+            }
         }
 
-        public void SendToDB()
+        public void Add()
         {
-            
+            using (var db = new ApplicationContext())
+            {
+                db.obschieSvedenia.Add(this);
+                db.SaveChanges();
+            }
+        }
+
+        public void Update()
+        {
+            using (var db = new ApplicationContext())
+            {
+                db.obschieSvedenia.Update(this);
+                db.SaveChanges();
+            }
+        }
+
+        public void Delete()
+        {
+            using (var db = new ApplicationContext())
+            {
+                db.obschieSvedenia.Remove(this);
+                db.SaveChanges();
+            }
         }
     }
 }

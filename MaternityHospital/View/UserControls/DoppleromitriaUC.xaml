@@ -32,34 +32,34 @@
         <Label Content="диагональная конъюгана" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="6" VerticalAlignment="Center" Width="305"   Grid.ColumnSpan="2"/>
 
         <WrapPanel Grid.Column="1" Grid.Row="2" Margin="39,10,10,10">
-            <TextBox TextWrapping="Wrap"  InputMethod.IsInputMethodEnabled="False" MaxLength="4" x:Name="ArterPypoviny1" Text="" Width="151" Height="34"   />
+            <TextBox TextChanged="TextChanged" TextWrapping="Wrap"  InputMethod.IsInputMethodEnabled="False" MaxLength="4" x:Name="ArterPypoviny1" Text="" Width="151" Height="34"/>
         </WrapPanel>
         <WrapPanel Grid.Column="2" Grid.Row="2" Margin="10,10,10,10">
-            <TextBox TextWrapping="Wrap" Text="" x:Name="ArterPypoviny2" Width="180" Height="34"  />
+            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" Text="" x:Name="ArterPypoviny2" Width="180" Height="34"/>
         </WrapPanel>
         <WrapPanel Grid.Column="3" Grid.Row="2" Margin="10,10,10,10">
-            <TextBox TextWrapping="Wrap" Text="" Width="180" x:Name="ArterPypoviny3" Height="34" />
+            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" Text="" Width="180" x:Name="ArterPypoviny3" Height="34"/>
         </WrapPanel>
         <WrapPanel Grid.Column="1" Grid.Row="3" Margin="39,10,10,10">
-            <TextBox TextWrapping="Wrap" Text="" x:Name="CMozg1" Width="151" Height="34" />
+            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" Text="" x:Name="CMozg1" Width="151" Height="34"/>
         </WrapPanel>
         <WrapPanel Grid.Column="1" Grid.Row="4" Margin="39,10,10,10">
-            <TextBox TextWrapping="Wrap" x:Name="MCA1" Text="" Width="151" Height="34" />
+            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" x:Name="MCA1" Text="" Width="151" Height="34"/>
         </WrapPanel>
         <WrapPanel Grid.Column="2" Grid.Row="3" Margin="10,10,10,10">
-            <TextBox TextWrapping="Wrap" Text="" x:Name="CMozg2" Width="180" Height="34" />
+            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" Text="" x:Name="CMozg2" Width="180" Height="34"/>
         </WrapPanel>
         <WrapPanel Grid.Column="3" Grid.Row="3" Margin="10,10,10,10">
-            <TextBox TextWrapping="Wrap" x:Name="CMozg3" Text="" Width="180" Height="34" />
+            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" x:Name="CMozg3" Text="" Width="180" Height="34"/>
         </WrapPanel>
         <WrapPanel Grid.Column="2" Grid.Row="4" Margin="10,10,10,10">
-            <TextBox TextWrapping="Wrap" Text="" x:Name="MCA2" Width="180" Height="34" />
+            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" Text="" x:Name="MCA2" Width="180" Height="34"/>
         </WrapPanel>
         <WrapPanel Grid.Column="3" Grid.Row="4" Margin="10,10,10,10">
-            <TextBox TextWrapping="Wrap" Text="" x:Name="MCA3" Width="180" Height="34"/>
+            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" Text="" x:Name="MCA3" Width="180" Height="34"/>
         </WrapPanel>
-        <WrapPanel Grid.Column="1" Grid.Row="6" Margin="140,10,83,6" Grid.ColumnSpan="2">
-            <TextBox TextWrapping="Wrap" Text="" x:Name="DiagKonyga" Width="86" Height="34" />
+        <WrapPanel Grid.Column="1" Grid.Row="6" Margin="115,10,112,6" Grid.ColumnSpan="2">
+            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" Text="" x:Name="DiagKonyga" Width="86" Height="34"/>
             <Label Content="мм" Width="87" FontSize="24"/>
         </WrapPanel>
 

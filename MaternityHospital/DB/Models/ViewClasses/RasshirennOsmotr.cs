@@ -1,4 +1,5 @@
-﻿using MaternityHospital.DB.Models;
+﻿using MaternityHospital.DB;
+using MaternityHospital.DB.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MaternityHospital.Services
 {
-    class RasshirennOsmotr : IViewRepository
+    class RasshirennOsmotr : IRepository
     {
         public int Id { get; set; }
         public string placenta { get; set; } = "перекрывает внутренний зев";
@@ -16,9 +17,9 @@ namespace MaternityHospital.Services
         public string kolVod { get; set; } = "нормальное";
         public string StepenZrelosti { get; set; } = "1";
         public int vish { get; set; }
-        public Visit? VisitId { get; set; }
+        public int VisitId { get; set; }
 
-        public RasshirennOsmotr(int id, string placenta, string pPoverxnost, string stryctyra, string kolVod, string stepenZrelosti, int vish, Visit? visitId)
+        public RasshirennOsmotr(int id, string placenta, string pPoverxnost, string stryctyra, string kolVod, string stepenZrelosti, int vish, int visitId)
         {
             Id = id;
             this.placenta = placenta;
@@ -32,17 +33,50 @@ namespace MaternityHospital.Services
 
         public RasshirennOsmotr(Visit? visit)
         {
-            VisitId = visit;
+            VisitId = visit.Id;
         }
 
-        public void GetFromDB()
+        public void GetBy(int visitId)
         {
-            throw new NotImplementedException();
+            using (var db = new ApplicationContext())
+            {
+                var temp = db.rasshirennOsmotr.First(c => c.VisitId == visitId);
+                Id = temp.Id;
+                placenta = temp.placenta;
+                PPoverxnost = temp.PPoverxnost;
+                stryctyra = temp.stryctyra;
+                kolVod = temp.kolVod;
+                StepenZrelosti = temp.StepenZrelosti;
+                vish = temp.vish;
+                VisitId = visitId;
+            }
         }
 
-        public void SendToDB()
+        public void Add()
         {
-            throw new NotImplementedException();
+            using (var db = new ApplicationContext())
+            {
+                db.rasshirennOsmotr.Add(this);
+                db.SaveChanges();
+            }
+        }
+
+        public void Update()
+        {
+            using (var db = new ApplicationContext())
+            {
+                db.rasshirennOsmotr.Update(this);
+                db.SaveChanges();
+            }
+        }
+
+        public void Delete()
+        {
+            using (var db = new ApplicationContext())
+            {
+                db.rasshirennOsmotr.Remove(this);
+                db.SaveChanges();
+            }
         }
     }
 }

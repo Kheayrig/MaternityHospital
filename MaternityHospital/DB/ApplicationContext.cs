@@ -18,7 +18,6 @@ namespace MaternityHospital.DB
         public DbSet<Patient> Patients { get; set; } = null!;
 
         public DbSet<Visit> Visits { get; set; } = null!;
-        /*
         public DbSet<Obschiesvedenia> obschieSvedenia { get; set; } = null!;
         public DbSet<Fetometria> fetometria { get; set; } = null!;
         public DbSet<RasshirennOsmotr> rasshirennOsmotr { get; set; } = null!;
@@ -33,7 +32,6 @@ namespace MaternityHospital.DB
         public DbSet<HeartVM> heartVM { get; set; } = null!;
         public DbSet<Pypovina> pypovina { get; set; } = null!;
         public DbSet<Skelet> skelet { get; set; } = null!;
-        */
         public ApplicationContext() => Database.EnsureCreated();
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -44,7 +42,6 @@ namespace MaternityHospital.DB
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Visit>().HasKey(u => new { u.PatientId, u.VisitDate });
         }
     }
     internal class ArchiveApplicationContext : DbContext
@@ -79,7 +76,6 @@ namespace MaternityHospital.DB
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Visit>().HasKey(u => new { u.PatientId, u.VisitDate });
         }
     }
     internal class TemplateApplicationContext : DbContext

@@ -16,14 +16,14 @@ namespace MaternityHospital.DB.Models.ExtraViewClasses
         public string CHZhelydochek { get; set; }
         public string Talamys { get; set; } = "разделенный";
         public string BCisterna { get; set; }
-        public Visit? VisitId { get; set; }
+        public int VisitId { get; set; }
 
-        public CnsFaceNeck(Visit? visit)
+        public CnsFaceNeck(Visit visit)
         {
-            VisitId = visit;
+            VisitId = visit.Id;
         }
 
-        public CnsFaceNeck(int id, string lico, string bokZhelydochki, string pPPeregorodki, string tZhelydochek, string cHZhelydochek, string talamys, string bCisterna, Visit? visitId)
+        public CnsFaceNeck(int id, string lico, string bokZhelydochki, string pPPeregorodki, string tZhelydochek, string cHZhelydochek, string talamys, string bCisterna, int visitId)
         {
             Id = id;
             Lico = lico;

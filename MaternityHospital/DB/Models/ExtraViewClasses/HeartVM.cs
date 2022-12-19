@@ -7,7 +7,7 @@ using MaternityHospital.Services;
 
 namespace MaternityHospital.DB.Models.ExtraViewClasses
 {
-    public class HeartVM : IViewRepository
+    public class HeartVM
     {
         public int Id { get; set; }
         public string KamSerdca { get; set; }
@@ -31,14 +31,14 @@ namespace MaternityHospital.DB.Models.ExtraViewClasses
         public string NeparVena2 { get; set; } = "недилатирована";
         public string LegVeny { get; set; }
         public string Gidroperekard { get; set; }
-        public Visit? VisitId { get; set; }
+        public int VisitId { get; set; }
 
-        public HeartVM(Visit? visit)
+        public HeartVM(Visit visit)
         {
-            VisitId = visit;
+            VisitId = visit.Id;
         }
 
-        public HeartVM(int id, string kamSerdca, string mPP, string mZHP, string magArterii, string aorta1, string aorta2, string aorta3, string legStvol1, string legStvol2, string legArterii, string arterPotok1, string arterPotok2, string vPV1, string vPV2, string nVP1, string nVP2, string nVP3, string neparVena1, string neparVena2, string legVeny, string gidroperekard, Visit? visitId)
+        public HeartVM(int id, string kamSerdca, string mPP, string mZHP, string magArterii, string aorta1, string aorta2, string aorta3, string legStvol1, string legStvol2, string legArterii, string arterPotok1, string arterPotok2, string vPV1, string vPV2, string nVP1, string nVP2, string nVP3, string neparVena1, string neparVena2, string legVeny, string gidroperekard, int visitId)
         {
             Id = id;
             KamSerdca = kamSerdca;
@@ -63,16 +63,6 @@ namespace MaternityHospital.DB.Models.ExtraViewClasses
             LegVeny = legVeny;
             Gidroperekard = gidroperekard;
             VisitId = visitId;
-        }
-
-        public void GetFromDB()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SendToDB()
-        {
-            throw new NotImplementedException();
         }
     }
 }
