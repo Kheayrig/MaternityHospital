@@ -6,7 +6,7 @@ namespace MaternityHospital.View.UserControls
 {
     public partial class Fetometria : UserControl
     {
-       
+        internal static bool IsSelected= false;
 
         public Fetometria()
         {

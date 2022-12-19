@@ -9,7 +9,6 @@
     <TabControl>
         <TabItem>
             <TabItem.Header>Общие сведения</TabItem.Header>
-           
             <TabItem.Content>
                 <vk:ObschieSvedenia/>
             </TabItem.Content>
@@ -25,17 +24,6 @@
             <TabItem.Content>
                 <vk:RashirenniyOsmotr/>
             </TabItem.Content>
-        </TabItem>
-
-
-
-
-
-        <!--<TabItem Header="1">
-            <Button  Click="OK_Click">Фетометрия</Button>
-        </TabItem>
-        <TabItem x:Name="OK" Header="2">-->
-
         </TabItem>
     </TabControl>
 </UserControl>
