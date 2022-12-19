@@ -44,10 +44,10 @@ namespace MaternityHospital.View.UserControls
 
         private void OK_Click(object sender, RoutedEventArgs e)
         {
-          Fetometria.IsSelected = true;
+           
         }
 
-        private void Cancel_Click(object sender, RoutedEventArgs e)
+            private void Cancel_Click(object sender, RoutedEventArgs e)
         {
 
         }
