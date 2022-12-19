@@ -10,25 +10,25 @@
         <TabItem>
             <TabItem.Header>Общие сведения</TabItem.Header>
             <TabItem.Content>
-                <vk:ObschieSvedenia/>
+                <vk:ObschieSvedeniaUC/>
             </TabItem.Content>
         </TabItem>
         <TabItem>
             <TabItem.Header>Фетометрия</TabItem.Header>
             <TabItem.Content>
-                <vk:Fetometria/>
+                <vk:FetometriaUC/>
             </TabItem.Content>
         </TabItem>
         <TabItem>
             <TabItem.Header>Расширенный осмотр</TabItem.Header>
             <TabItem.Content>
-                <vk:RashirenniyOsmotr/>
+                <vk:RashirenniyOsmotrUC/>
             </TabItem.Content>
         </TabItem>
         <TabItem>
             <TabItem.Header>Допплерометрия</TabItem.Header>
             <TabItem.Content>
-                <vk:Doppleromitria/>
+                <vk:DoppleromitriaUC/>
             </TabItem.Content>
         </TabItem>
     </TabControl>

@@ -14,19 +14,19 @@
                     <TabItem>
                         <TabItem.Header>Общие сведения</TabItem.Header>
                         <TabItem.Content>
-                            <vk:ObschieSvedenia/>
+                            <vk:ObschieSvedeniaUC/>
                         </TabItem.Content>
                     </TabItem>
                     <TabItem>
                         <TabItem.Header>Фетометрия</TabItem.Header>
                         <TabItem.Content>
-                            <vk:Fetometria/>
+                            <vk:FetometriaUC/>
                         </TabItem.Content>
                     </TabItem>
                     <TabItem>
                         <TabItem.Header>Допплерометрия</TabItem.Header>
                         <TabItem.Content>
-                            <vk:Doppleromitria/>
+                            <vk:DoppleromitriaUC/>
                         </TabItem.Content>
                     </TabItem>
                 </TabControl>
@@ -35,13 +35,13 @@
         <TabItem>
             <TabItem.Header>Транслабиальное</TabItem.Header>
             <TabItem.Content>
-                <vk:Translabialnoe/>
+                <vk:TranslabialnoeUC/>
             </TabItem.Content>
         </TabItem>
         <TabItem>
             <TabItem.Header>Трансперинеальное</TabItem.Header>
             <TabItem.Content>
-                <vk:Transperinealnoe/>
+                <vk:TransperinealnoeUC/>
             </TabItem.Content>
         </TabItem>
     </TabControl>

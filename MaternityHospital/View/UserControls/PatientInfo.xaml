@@ -4,26 +4,26 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MaternityHospital.View.UserControls"
-             mc:Ignorable="d" FontSize="15">
+             mc:Ignorable="d">
     <Border Margin="10, 22, 10,0" HorizontalAlignment="Left" BorderThickness="0.5" BorderBrush="Black" Width="auto">
         <StackPanel>
             <WrapPanel Orientation="Horizontal">
                 <Label>Дата обследования:</Label>
-                <Label>23.10.2022</Label>
+                <Label x:Name="CurrentDate">23.10.2022</Label>
             </WrapPanel>
             <WrapPanel Orientation="Horizontal">
                 <Label>Пациентка:</Label>
-                <Label>Галина Петровна</Label>
+                <Label x:Name="FIO">Галина Петровна</Label>
             </WrapPanel>
             <WrapPanel Orientation="Horizontal">
-                <Label>Дата последней менстр.</Label>
-                <Label>10.7.2022</Label>
+                <Label>Дата последней менстр.:</Label>
+                <Label x:Name="LastPeriodDate">х</Label>
             </WrapPanel>
             <WrapPanel Orientation="Horizontal">
                 <Label>Беременность:</Label>
-                <Label>20 н. 3 д.</Label>
+                <Label x:Name="PregnancyDuration">20 н. 3 д.</Label>
             </WrapPanel>
-            <Button Margin="5" Height="25" Width="180" Click="Button_Click">Написать заключение</Button>
+            <Button Margin="5" Click="Button_Click">Написать заключение</Button>
         </StackPanel>
     </Border>
 </UserControl>

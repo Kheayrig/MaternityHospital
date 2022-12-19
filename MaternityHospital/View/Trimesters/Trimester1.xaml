@@ -10,7 +10,7 @@
         <TabItem>
             <TabItem.Header>Исследования для малых сроков</TabItem.Header>
             <TabItem.Content>
-                <vk:MalSroki/>
+                <vk:MalSrokiUC/>
             </TabItem.Content>
         </TabItem>
     </TabControl>

@@ -7,11 +7,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Net;
 using System.Windows;
 
 namespace MaternityHospital.DB.Repositories
 {
-    public class Patient : IRepository<Patient>
+    public class Patient : IRepository
     {
         public int Id { get; set; }
         public string FIO { get; set; }
@@ -19,7 +20,6 @@ namespace MaternityHospital.DB.Repositories
         public string? Address { get; set; }
         public DateTime FirstScanDate { get; set; }
         public bool Dysmenorrhea { get; set; }
-        public string Doctor { get; set; }
         public bool Scan { get; set; } = false;
         public bool DPM { get; set; } = false;
         private DateTime? _lastPeriodDate;
@@ -42,7 +42,7 @@ namespace MaternityHospital.DB.Repositories
         }
         #endregion
         #region Constructors
-        public Patient(string FIO, DateTime birthday, DateTime firstScanDate, string doctor,
+        public Patient(string FIO, DateTime birthday, DateTime firstScanDate,
             string? address = null, DateTime? lastPeriodDate = null, int pregnancyDurationWeek = 0, int pregnancyDurationDay = 0)
         {
             this.FIO = FIO;
@@ -50,7 +50,6 @@ namespace MaternityHospital.DB.Repositories
             FirstScanDate = firstScanDate;
             Address = address;
             LastPeriodDate = lastPeriodDate;
-            Doctor = doctor;
             PregnancyDurationWeek = pregnancyDurationWeek;
             PregnancyDurationDay = pregnancyDurationDay;
             _pregnancyCalculator = new PregnancyCalculator(LastPeriodDate, PregnancyDurationWeek, PregnancyDurationDay);
@@ -58,7 +57,7 @@ namespace MaternityHospital.DB.Repositories
             PregnancyDurationDay = _pregnancyCalculator.GetPregnancyDurationDay();
             Trimester = _pregnancyCalculator.GetTrimester();
         }
-        public Patient(string FIO, DateTime birthday, DateTime firstScanDate, string doctor, IPregnancyCalculator? pregnancyCalculator,
+        public Patient(string FIO, DateTime birthday, DateTime firstScanDate, IPregnancyCalculator? pregnancyCalculator,
             string? address = null, DateTime? lastPeriodDate = null, int pregnancyDurationWeek = 0, int pregnancyDurationDay = 0)
         {
             this.FIO = FIO;
@@ -66,7 +65,6 @@ namespace MaternityHospital.DB.Repositories
             FirstScanDate = firstScanDate;
             Address = address;
             LastPeriodDate = lastPeriodDate;
-            Doctor = doctor;
             PregnancyDurationWeek = pregnancyDurationWeek;
             PregnancyDurationDay = pregnancyDurationDay;
             _pregnancyCalculator = pregnancyCalculator ?? new PregnancyCalculator(LastPeriodDate, PregnancyDurationWeek, PregnancyDurationDay);
@@ -126,6 +124,26 @@ namespace MaternityHospital.DB.Repositories
             {
                 db.Patients.Remove(this);
                 db.SaveChanges();
+            }
+        }
+
+        public void GetBy(int Id)
+        {
+            using (var db = new ApplicationContext())
+            {
+                var temp = db.Patients.First(c => c.Id == Id);
+                Id = temp.Id;
+                FIO = temp.FIO;
+                Birthday = temp.Birthday;
+                FirstScanDate = temp.FirstScanDate;
+                Address = temp.Address;
+                LastPeriodDate = temp.LastPeriodDate;
+                PregnancyDurationWeek = temp.PregnancyDurationWeek;
+                PregnancyDurationDay = temp.PregnancyDurationDay;
+                _pregnancyCalculator = temp._pregnancyCalculator ?? new PregnancyCalculator(LastPeriodDate, PregnancyDurationWeek, PregnancyDurationDay);
+                PregnancyDurationWeek = temp._pregnancyCalculator.GetPregnancyDurationWeek();
+                PregnancyDurationDay = temp._pregnancyCalculator.GetPregnancyDurationDay();
+                Trimester = temp._pregnancyCalculator.GetTrimester();
             }
         }
         #endregion

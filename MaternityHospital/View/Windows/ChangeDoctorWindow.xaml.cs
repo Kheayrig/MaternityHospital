@@ -28,7 +28,7 @@ namespace MaternityHospital.View.Windows
         public ChangeDoctor()
         {
             InitializeComponent();
-            FontSize = AppSettings.customSettings.CurrentFontSize;
+            FontSize = AppSettings.CustomSettings.CurrentFontSize;
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -54,14 +54,14 @@ namespace MaternityHospital.View.Windows
             if (e.Key == Key.Enter)
             {
                 var doctor = (Doctor)DoctorsDataGrid.SelectedItem;
-                AppSettings.customSettings.CurrentDoctor = doctor.FIO;
+                AppSettings.CustomSettings.CurrentDoctor = doctor.FIO;
                 Close();
             }
         }
         void PatientsDataGrid_DoubleClick(object sender, RoutedEventArgs e)
         {
             var doctor = (Doctor)DoctorsDataGrid.SelectedItem;
-            AppSettings.customSettings.CurrentDoctor = doctor.FIO;
+            AppSettings.CustomSettings.CurrentDoctor = doctor.FIO;
             DialogResult = true;
             Close();
         }
@@ -75,7 +75,7 @@ namespace MaternityHospital.View.Windows
 
         private void Close(object sender, CancelEventArgs e)
         {
-            if (AppSettings.customSettings.CurrentDoctor == "???")
+            if (AppSettings.CustomSettings.CurrentDoctor == "???")
             {
                 e.Cancel = true;
                 MessageBox.Show("Вам нужно выбрать или добавить врача, чтобы продолжить.");

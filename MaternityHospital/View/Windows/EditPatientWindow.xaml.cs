@@ -33,7 +33,7 @@ namespace MaternityHospital.View.Windows
             InitializeComponent();
             _patient = patient;
             fioTextBox.PreviewTextInput += TextBoxFilters.FilterRusLettersSpaceDashApostrophe;
-            FontSize = AppSettings.customSettings.CurrentFontSize;
+            FontSize = AppSettings.CustomSettings.CurrentFontSize;
             SetDatePickersValues();
             SetPatientInfo();
         }

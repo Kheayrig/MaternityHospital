@@ -8,16 +8,12 @@ using System.Windows.Navigation;
 
 namespace MaternityHospital.Services
 {
-    public interface IRepository<T>
+    public interface IRepository
     {
         void Add();
         void Update();
         void Delete();
-    }
-    public interface IViewRepository
-    {
-        void SendToDB();
-        void GetFromDB();
+        void GetBy(int fieldValue);
     }
     public interface IPregnancyCalculator
     {
