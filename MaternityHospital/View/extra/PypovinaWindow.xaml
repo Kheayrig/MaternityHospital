@@ -1,0 +1,56 @@
+﻿<Window x:Class="MaternityHospital.View.extra.pypovinaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaternityHospital.View.extra"
+        mc:Ignorable="d"
+        Title="pypovina" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Label Content="Пупочные артерии" HorizontalAlignment="Left" Margin="26,0,0,0" Grid.Row="1" VerticalAlignment="Center" />
+        <ComboBox Margin="182,10,53,10"  x:Name="PypART"  SelectedIndex="0" Grid.Row="2">
+            <TextBlock Text="левая"/>
+            <TextBlock Text="правая"/>
+        </ComboBox>
+        <Label Content="Пупочная вена" HorizontalAlignment="Left" Margin="26,0,0,0" Grid.Row="2" VerticalAlignment="Center" />
+        <ComboBox Margin="182,10,53,10"  x:Name="PypochnVena1"  SelectedIndex="0" Grid.Row="1">
+            <TextBlock Text="две"/>
+            <TextBlock Text="см. дополнения"/>
+        </ComboBox>
+        <ComboBox Margin="0,10,242,10" x:Name="PypochnVena2"  SelectedIndex="0" Grid.Row="2" Grid.Column="1">
+            <TextBlock Text="в портальный синус"/>
+            <TextBlock Text="в нижнюю полую вену"/>
+            <TextBlock Text="в правое предсердие"/>
+        </ComboBox>
+        <ComboBox Margin="213,10,32,10" x:Name="PypochnVena3" SelectedIndex="0"  Grid.Row="2" Grid.Column="1">
+            <TextBlock Text="не расширена"/>
+            <TextBlock Text="внуутрибрюшная дилатация"/>
+            <TextBlock Text="внутриамниональная дилатация"/>
+        </ComboBox>
+        <Label Content="Сосуды пуповины" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center"  Margin="26,0,0,0"/>
+        <ComboBox Margin="182,10,53,10"  x:Name="SosydPyp"  SelectedIndex="0" Grid.Row="3">
+            <TextBlock Text="три"/>
+            <TextBlock Text="см. дополнения"/>
+        </ComboBox>
+        <Label Content="Прикрепление" HorizontalAlignment="Left" Margin="26,0,0,0" Grid.Row="4" VerticalAlignment="Center" />
+        <ComboBox x:Name="Precreplenie" SelectedIndex="0" Margin="182,10,53,16"  Grid.Row="4">
+            <TextBlock Text="центральное"/>
+            <TextBlock Text="боковое"/>
+            <TextBlock Text="краевое"/>
+            <TextBlock Text="оболочечное"/>
+        </ComboBox>
+    </Grid>
+</Window>

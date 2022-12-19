@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MaternityHospital.DB.Models;
+using MaternityHospital.DB.Models.ExtraViewClasses;
 using MaternityHospital.DB.Repositories;
+using MaternityHospital.Services;
+using MaternityHospital.Services.ViewClasses;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
@@ -17,6 +16,24 @@ namespace MaternityHospital.DB
 
         public DbSet<Doctor> Doctors { get; set; } = null!;
         public DbSet<Patient> Patients { get; set; } = null!;
+
+        public DbSet<Visit> Visits { get; set; } = null!;
+        /*
+        public DbSet<Obschiesvedenia> obschieSvedenia { get; set; } = null!;
+        public DbSet<Fetometria> fetometria { get; set; } = null!;
+        public DbSet<RasshirennOsmotr> rasshirennOsmotr { get; set; } = null!;
+        public DbSet<Dopplerometria> dopplerometria { get; set; } = null!;
+        public DbSet<Translabialnoe> translabialnoe { get; set; } = null!;
+        public DbSet<Transperinealnoe> transperinealnoe { get; set; } = null!;
+        public DbSet<Report> reports { get; set; } = null!;
+
+        public DbSet<AbdominalCavity> abdominalCavity { get; set; } = null!;
+        public DbSet<Chestcavity> chestcavity { get; set; } = null!;
+        public DbSet<CnsFaceNeck> cnsFaceNeck { get; set; } = null!;
+        public DbSet<HeartVM> heartVM { get; set; } = null!;
+        public DbSet<Pypovina> pypovina { get; set; } = null!;
+        public DbSet<Skelet> skelet { get; set; } = null!;
+        */
         public ApplicationContext() => Database.EnsureCreated();
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -27,7 +44,7 @@ namespace MaternityHospital.DB
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Doctor>().HasAlternateKey(u => u.FIO);
+            modelBuilder.Entity<Visit>().HasKey(u => new { u.PatientId, u.VisitDate });
         }
     }
     internal class ArchiveApplicationContext : DbContext
@@ -36,7 +53,23 @@ namespace MaternityHospital.DB
 
         public DbSet<Doctor> Doctors { get; set; } = null!;
         public DbSet<Patient> Patients { get; set; } = null!;
-        public ArchiveApplicationContext() => Database.EnsureCreated();
+
+        public DbSet<Visit> Visits { get; set; } = null!;
+
+        public DbSet<Obschiesvedenia> obschieSvedenia { get; set; } = null!;
+        public DbSet<Fetometria> fetometria { get; set; } = null!;
+        public DbSet<RasshirennOsmotr> rasshirennOsmotr { get; set; } = null!;
+        public DbSet<Dopplerometria> dopplerometria { get; set; } = null!;
+        public DbSet<Translabialnoe> translabialnoe { get; set; } = null!;
+        public DbSet<Transperinealnoe> transperinealnoe { get; set; } = null!;
+        public DbSet<Report> reports { get; set; } = null!;
+
+        public DbSet<AbdominalCavity> abdominalCavity { get; set; } = null!;
+        public DbSet<Chestcavity> chestcavity { get; set; } = null!;
+        public DbSet<CnsFaceNeck> cnsFaceNeck { get; set; } = null!;
+        public DbSet<HeartVM> heartVM { get; set; } = null!;
+        public DbSet<Pypovina> pypovina { get; set; } = null!;
+        public DbSet<Skelet> skelet { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -46,7 +79,7 @@ namespace MaternityHospital.DB
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Doctor>().HasAlternateKey(u => u.FIO);
+            modelBuilder.Entity<Visit>().HasKey(u => new { u.PatientId, u.VisitDate });
         }
     }
     internal class TemplateApplicationContext : DbContext

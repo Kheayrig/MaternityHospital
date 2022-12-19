@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="MaternityHospital.View.UserControls.RashirenniyOsmotrUC"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaternityHospital.View.UserControls"
+        mc:Ignorable="d">
+    <Grid HorizontalAlignment="Left" Width="800">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Плацента" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="5" VerticalAlignment="Center" Height="37" Width="142" />
+        <ComboBox Grid.Column="1" Grid.Row="5"  SelectedIndex="6" x:Name="placenta" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="160" Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="38,0,0,0">
+            <TextBlock Text="на передней стенке"/>
+            <TextBlock Text="на задней стенке"/>
+            <TextBlock Text="в дне"/>
+            <TextBlock Text="справа"/>
+            <TextBlock Text="слева"/>
+            <TextBlock Text="не доходит до внутреннего зева"/>
+            <TextBlock Text="перекрывает внутренний зев"/>
+        </ComboBox>
+        <Label Content="плодовая плацентарная поверхность" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="9" VerticalAlignment="Center" Height="37" Width="256"  Grid.ColumnSpan="2" />
+        <ComboBox Grid.Column="1" SelectedIndex="0" Margin="38,18,68,14" Grid.Row="9" x:Name="PPoverxnost" Width="160" Height="40">
+            <TextBlock Text="нормальная"/>
+            <TextBlock Text="измененная"/>
+        </ComboBox>
+
+        <Label Content="Структура" HorizontalAlignment="Left"  Margin="11,0,0,0" Grid.Row="7" VerticalAlignment="Center" Height="37" Width="142" />
+        <ComboBox Margin="38,17,68,17"  SelectedIndex="0"  x:Name="stryctyra" Grid.Row="7" Grid.Column="1">
+            <TextBlock Text="однородная"/>
+            <TextBlock Text="неоднородная"/>
+            <TextBlock Text="с диффузными изменениями"/>
+            <TextBlock Text="с очаговыми изменениями"/>
+        </ComboBox>
+
+        <Label Content="Количество вод" HorizontalAlignment="Left"  Margin="11,0,0,0" Grid.Row="6" VerticalAlignment="Center" Height="37" Width="220"  />
+        <ComboBox Grid.Column="1" SelectedIndex="0"  x:Name="kolVod" Margin="38,17,68,17" Grid.Row="6">
+            <TextBlock Text="нормальное"/>
+            <TextBlock Text="увеличенное"/>
+            <TextBlock Text="уменьшенное"/>
+
+        </ComboBox>
+        <Button Content="Скелет" HorizontalAlignment="Left" Margin="215,0,0,0" Grid.Row="2" VerticalAlignment="Center" Height="37" Width="142"   Grid.Column="1" Grid.ColumnSpan="2" Click="Skelet"/>
+        <Button Content="Пуповина" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Height="37" Width="142"   Margin="215,0,0,0" Grid.Column="1" Grid.ColumnSpan="2" Click="Pypovina"/>
+        <Button Content="Брюшная полость" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="37" Width="220"   Click="Abdominal"/>
+        <Button Content="Грудная полость" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="2" VerticalAlignment="Center" Height="37" Width="220"   Click="Chest"/>
+        <Button Content="Сердце и крупные сосуды" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="37" Width="310"  Grid.ColumnSpan="2" Click="Heart"/>
+        <Button Content="ЦНС. Лицо. Шея" HorizontalAlignment="Left" Margin="215,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="37" Width="273"  Grid.Column="1" Grid.ColumnSpan="2" Click="Cns"/>
+        <Label Content="Степень зрелости" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="8" VerticalAlignment="Center" Height="37" Width="220" />
+        <ComboBox Margin="38,17,68,17"  SelectedIndex="0"  x:Name="StepenZrelosti" Grid.Row="8" Grid.Column="1">
+            <TextBlock Text="1"/>
+            <TextBlock Text="2"/>
+            <TextBlock Text="3"/>
+        </ComboBox>
+
+        <Label Grid.Column="2" Content="ВИЖ" HorizontalAlignment="Left" Margin="10,17,0,0" Grid.Row="6" VerticalAlignment="Top" Height="37" Width="100"  />
+        <TextBox Grid.Column="2"  x:Name="vish" InputMethod.IsInputMethodEnabled="False" MaxLength="4" HorizontalAlignment="Left" Margin="110,0,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="61" Height="37"/>
+
+        <Button Width="126" Margin="11,33,0,0" x:Name="CancelRo" Content="Назад" Grid.Row="10" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button Width="127" x:Name="OKRo" Grid.Row="10" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Далее" Margin="130,33,0,0" Grid.Column="2"/>
+
+    </Grid>
+</UserControl>

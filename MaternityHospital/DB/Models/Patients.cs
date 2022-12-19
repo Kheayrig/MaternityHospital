@@ -19,7 +19,6 @@ namespace MaternityHospital.DB.Repositories
         public string? Address { get; set; }
         public DateTime FirstScanDate { get; set; }
         public bool Dysmenorrhea { get; set; }
-        public string Doctor { get; set; }
         public bool Scan { get; set; } = false;
         public bool DPM { get; set; } = false;
         private DateTime? _lastPeriodDate;
@@ -42,7 +41,7 @@ namespace MaternityHospital.DB.Repositories
         }
         #endregion
         #region Constructors
-        public Patient(string FIO, DateTime birthday, DateTime firstScanDate, string doctor,
+        public Patient(string FIO, DateTime birthday, DateTime firstScanDate,
             string? address = null, DateTime? lastPeriodDate = null, int pregnancyDurationWeek = 0, int pregnancyDurationDay = 0)
         {
             this.FIO = FIO;
@@ -50,7 +49,6 @@ namespace MaternityHospital.DB.Repositories
             FirstScanDate = firstScanDate;
             Address = address;
             LastPeriodDate = lastPeriodDate;
-            Doctor = doctor;
             PregnancyDurationWeek = pregnancyDurationWeek;
             PregnancyDurationDay = pregnancyDurationDay;
             _pregnancyCalculator = new PregnancyCalculator(LastPeriodDate, PregnancyDurationWeek, PregnancyDurationDay);
@@ -58,7 +56,7 @@ namespace MaternityHospital.DB.Repositories
             PregnancyDurationDay = _pregnancyCalculator.GetPregnancyDurationDay();
             Trimester = _pregnancyCalculator.GetTrimester();
         }
-        public Patient(string FIO, DateTime birthday, DateTime firstScanDate, string doctor, IPregnancyCalculator? pregnancyCalculator,
+        public Patient(string FIO, DateTime birthday, DateTime firstScanDate, IPregnancyCalculator? pregnancyCalculator,
             string? address = null, DateTime? lastPeriodDate = null, int pregnancyDurationWeek = 0, int pregnancyDurationDay = 0)
         {
             this.FIO = FIO;
@@ -66,7 +64,6 @@ namespace MaternityHospital.DB.Repositories
             FirstScanDate = firstScanDate;
             Address = address;
             LastPeriodDate = lastPeriodDate;
-            Doctor = doctor;
             PregnancyDurationWeek = pregnancyDurationWeek;
             PregnancyDurationDay = pregnancyDurationDay;
             _pregnancyCalculator = pregnancyCalculator ?? new PregnancyCalculator(LastPeriodDate, PregnancyDurationWeek, PregnancyDurationDay);

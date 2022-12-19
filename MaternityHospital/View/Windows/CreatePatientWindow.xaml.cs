@@ -30,7 +30,7 @@ namespace MaternityHospital.View.Windows
         {
             InitializeComponent();
             fioTextBox.PreviewTextInput += TextBoxFilters.FilterRusLettersSpaceDashApostrophe;
-            FontSize = AppSettings.customSettings.CurrentFontSize;
+            FontSize = AppSettings.CustomSettings.CurrentFontSize;
             SetDatePickersValues();
         }
         private void SetDatePickersValues()
@@ -56,15 +56,15 @@ namespace MaternityHospital.View.Windows
             if (isFilled)
             {
                 string fio = fioTextBox.Text.Trim();
-                string doctor = AppSettings.customSettings.CurrentDoctor;
+                string doctor = AppSettings.CustomSettings.CurrentDoctor;
                 string address = AddressTextBox.Text;
                 DateTime? lastPeriodDate = LastPeriodDatePicker.SelectedDate;
                 DateTime birthday = birthdayDatePicker.SelectedDate.Value;
                 DateTime firstScanDate = FirstScanDatePicker.SelectedDate.Value;
-                Patient patient = new Patient(fio, birthday, firstScanDate, doctor, address, lastPeriodDate);
+                Patient patient = new Patient(fio, birthday, firstScanDate, address, lastPeriodDate);
                 patient.Add();
                 DialogResult = true;
-                AppSettings.currentPatient = new CurrentPatient(patient);
+                AppSettings.CurrentPatient = patient;
                 Close();
             }
         }

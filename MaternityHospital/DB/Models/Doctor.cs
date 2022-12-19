@@ -1,19 +1,12 @@
-﻿using MaternityHospital.DB.Repositories;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace MaternityHospital.DB.Models
 {
     public class Doctor
     {
-        public int Id { get; set; }
+        [Key]
         public string FIO { get; set; }
 
         public Doctor(string fIO)

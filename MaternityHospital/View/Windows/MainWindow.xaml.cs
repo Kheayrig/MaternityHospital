@@ -21,7 +21,7 @@ namespace MaternityHospital
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
-            FontSize = AppSettings.customSettings.CurrentFontSize;
+            FontSize = AppSettings.CustomSettings.CurrentFontSize;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -45,13 +45,13 @@ namespace MaternityHospital
         {
             _data = Patient.GetAllTableView();
             PatientsDataGrid.ItemsSource = _data;
-            if (AppSettings.customSettings.CurrentDoctor == "???")
+            if (AppSettings.CustomSettings.CurrentDoctor == "???")
             {
                 var win = new ChangeDoctor();
                 win.Owner = this;
                 win.ShowDialog();
             }
-            currentDoctor.Content = AppSettings.customSettings.CurrentDoctor;
+            currentDoctor.Content = AppSettings.CustomSettings.CurrentDoctor;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -89,7 +89,7 @@ namespace MaternityHospital
         private void ToNextWindow()
         {
             var patient = (Patient)PatientsDataGrid.SelectedItem;
-            AppSettings.currentPatient = new CurrentPatient(patient);
+            AppSettings.CurrentPatient = patient;
             new Examinations().ShowDialog();
         }
         private void Button_Click(object sender, RoutedEventArgs e)
