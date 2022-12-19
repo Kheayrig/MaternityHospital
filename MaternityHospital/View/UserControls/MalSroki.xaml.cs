@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaternityHospital.View.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,21 @@ namespace MaternityHospital.View.UserControls
         public MalSroki()
         {
             InitializeComponent();
+            RazMatki1.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            RazMatki3.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            Yvelichina1.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            Yvelichina2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+
+            SrednDiametrPlodAiza1.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            SrednDiametrPlodAiza2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            KTR1.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            KTR2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            DiamZheltMechka.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            LOvary2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            LOvary3.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+
+            POvary2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            POvary3.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
         }
     }
 }

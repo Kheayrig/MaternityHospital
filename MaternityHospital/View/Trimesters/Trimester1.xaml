@@ -10,7 +10,7 @@
         <TabItem>
             <TabItem.Header>Исследования для малых сроков</TabItem.Header>
             <TabItem.Content>
-                <TextBlock>Здесь будут ваши малые сроки</TextBlock>
+                <vk:MalSroki/>
             </TabItem.Content>
         </TabItem>
     </TabControl>
