@@ -14,6 +14,7 @@ namespace MaternityHospital.Services
         void Update();
         void Delete();
         void GetBy(int fieldValue);
+        void ChangeProperty(string name, object? value);
     }
     public interface IPregnancyCalculator
     {

@@ -2,6 +2,7 @@
 using MaternityHospital.View.Utils;
 using System.Windows.Controls;
 using System;
+using System.Windows;
 
 namespace MaternityHospital.View.UserControls
 {
@@ -34,6 +35,20 @@ namespace MaternityHospital.View.UserControls
             }
         }
 
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            var l = (Fetometria)AppSettings.WindowsList[_index];
+            SetValues(l);
+        }
+
+        private void SetValues(Fetometria item)
+        {
+            BR.Text = item.BR;
+            DBK.Text = item.DBK;
+            OJ.Text = item.OJ;
+            Mass.Text = item.Mass;
+        }
+
         private void SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (!IsLoaded) return;
@@ -46,7 +61,7 @@ namespace MaternityHospital.View.UserControls
         {
             var item = sender as TextBox;
             var pr = typeof(Fetometria).GetProperty(item.Name);
-            pr.SetValue(AppSettings.WindowsList[_index] as Fetometria, int.Parse(item.Text));
+            if(item.Text != "") pr.SetValue(AppSettings.WindowsList[_index] as Fetometria, item.Text);
         }
 
         private void CancelFet_Click(object sender, System.Windows.RoutedEventArgs e)

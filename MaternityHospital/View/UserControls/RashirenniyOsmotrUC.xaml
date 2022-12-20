@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital.View.UserControls"
-        mc:Ignorable="d">
+        mc:Ignorable="d"
+        Loaded="UserControl_Loaded">
     <Grid HorizontalAlignment="Left" Width="800">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -37,8 +38,8 @@
         </ComboBox>
         <Label Content="плодовая плацентарная поверхность" HorizontalAlignment="Left" Margin="11,0,0,0" Grid.Row="9" VerticalAlignment="Center" Height="37" Width="256"  Grid.ColumnSpan="2" />
         <ComboBox SelectionChanged="SelectionChanged" Grid.Column="1" SelectedIndex="0" Margin="38,18,68,14" Grid.Row="9" x:Name="PPoverxnost" Width="160" Height="40">
-            <TextBlock Text="нормальная"/>
-            <TextBlock Text="измененная"/>
+            <TextBlock Name="нормальная" Text="нормальная"/>
+            <TextBlock Name="измененная" Text="измененная"/>
         </ComboBox>
 
         <Label Content="Структура" HorizontalAlignment="Left"  Margin="11,0,0,0" Grid.Row="7" VerticalAlignment="Center" Height="37" Width="142" />
@@ -51,9 +52,9 @@
 
         <Label Content="Количество вод" HorizontalAlignment="Left"  Margin="11,0,0,0" Grid.Row="6" VerticalAlignment="Center" Height="37" Width="220"  />
         <ComboBox SelectionChanged="SelectionChanged" Grid.Column="1" SelectedIndex="0"  x:Name="kolVod" Margin="38,17,68,17" Grid.Row="6">
-            <TextBlock Text="нормальное"/>
-            <TextBlock Text="увеличенное"/>
-            <TextBlock Text="уменьшенное"/>
+            <TextBlock Name="нормальное" Text="нормальное"/>
+            <TextBlock Name="увеличенное" Text="увеличенное"/>
+            <TextBlock Name="уменьшенное" Text="уменьшенное"/>
 
         </ComboBox>
         <Button Content="Скелет" HorizontalAlignment="Left" Margin="215,0,0,0" Grid.Row="2" VerticalAlignment="Center" Height="37" Width="142"   Grid.Column="1" Grid.ColumnSpan="2" Click="Skelet"/>

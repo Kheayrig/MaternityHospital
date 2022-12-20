@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:MaternityHospital.View.Windows"
         xmlns:vk="clr-namespace:MaternityHospital.View.UserControls"
         mc:Ignorable="d"
-        WindowState="Maximized"
-        Title="Examinations" Height="450" Width="800">
+        WindowState="Maximized" 
+        Title="Examinations" Height="450" Width="800" Closing="Window_Closing">
     <Grid Background="#C9E8F0">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>

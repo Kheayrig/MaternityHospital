@@ -23,15 +23,21 @@ namespace MaternityHospital.View.Windows
                 {
                     item.Update();
                 }
+                AppSettings.CurrentVisit.Update();
             }
             else
             {
+                AppSettings.CurrentVisit.Add();
+                AppSettings.CurrentVisit.GetBy(AppSettings.CurrentPatient.Id);
                 foreach (var item in list)
                 {
+                    item.ChangeProperty("VisitId", AppSettings.CurrentVisit.Id);
                     item.Add();
                 }
             }
             DialogResult = true;
+            AppSettings.isUpdating = false;
+            AppSettings.WindowsList.Clear();
             Close();
 
         }

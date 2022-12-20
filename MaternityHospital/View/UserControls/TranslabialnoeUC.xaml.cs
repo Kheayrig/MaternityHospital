@@ -1,6 +1,7 @@
 ﻿using MaternityHospital.Services;
 using MaternityHospital.View.Utils;
 using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace MaternityHospital.View.UserControls
@@ -30,6 +31,19 @@ namespace MaternityHospital.View.UserControls
                     _index = (int)(ChildBirthEnum)Enum.Parse(typeof(ChildBirthEnum), "Translabialnoe");
                     break;
             }
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            var l = (Translabialnoe)AppSettings.WindowsList[_index];
+            SetValues(l);
+        }
+
+        private void SetValues(Translabialnoe item)
+        {
+            DlinaCHeKanala.Text = item.DlinaCHeKanala;
+            RastoanieHSD.Text = item.RastoanieHSD;
+            RastoaniePD.Text = item.RastoaniePD;
         }
 
         private void SelectionChanged(object sender, SelectionChangedEventArgs e)

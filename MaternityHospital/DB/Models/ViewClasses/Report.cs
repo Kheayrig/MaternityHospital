@@ -14,16 +14,14 @@ namespace MaternityHospital.Services.ViewClasses
         public string ReportInfo { get; set; }
         public int VisitId { get; set; }
 
-        public Report(int id, string reportInfo, int visitId)
+        public Report(string reportInfo, int visitId)
         {
-            Id = id;
             ReportInfo = reportInfo;
             VisitId = visitId;
         }
 
-        public Report(Visit visit)
+        public Report()
         {
-            VisitId = visit.Id;
         }
 
         public void GetBy(int visitId)
@@ -62,6 +60,12 @@ namespace MaternityHospital.Services.ViewClasses
                 db.reports.Remove(this);
                 db.SaveChanges();
             }
+        }
+
+        public void ChangeProperty(string name, object? value)
+        {
+            var pr = typeof(Report).GetProperty(name);
+            pr.SetValue(this, value);
         }
     }
 }

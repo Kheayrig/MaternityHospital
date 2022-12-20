@@ -11,15 +11,14 @@ namespace MaternityHospital.Services
     class Fetometria : IRepository
     {
         public int Id { get; set; }
-        public int  BR { get; set; }
-        public int DBK { get; set; }
-        public int OJ { get; set; }
-        public int  Mass { get; set; }
+        public string  BR { get; set; }
+        public string DBK { get; set; }
+        public string OJ { get; set; }
+        public string Mass { get; set; }
         public int VisitId { get; set; }
 
-        public Fetometria(int id, int bR, int dBK, int oJ, int mass, int visitId)
+        public Fetometria(string bR, string dBK, string oJ, string mass, int visitId)
         {
-            Id = id;
             BR = bR;
             DBK = dBK;
             OJ = oJ;
@@ -27,9 +26,8 @@ namespace MaternityHospital.Services
             VisitId = visitId;
         }
 
-        public Fetometria(Visit visit)
+        public Fetometria()
         {
-            VisitId = visit.Id;
         }
 
         public void GetBy(int visitId)
@@ -71,6 +69,12 @@ namespace MaternityHospital.Services
                 db.fetometria.Remove(this);
                 db.SaveChanges();
             }
+        }
+
+        public void ChangeProperty(string name, object? value)
+        {
+            var pr = typeof(Fetometria).GetProperty(name);
+            pr.SetValue(this, value);
         }
     }
 }

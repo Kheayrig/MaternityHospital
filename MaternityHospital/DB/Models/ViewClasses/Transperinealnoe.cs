@@ -8,23 +8,21 @@ namespace MaternityHospital.Services
     class Transperinealnoe : IRepository
     {
         public int Id { get; set; }
-        public int RaskrMatochnogoZeva { get; set; }
-        public int RastoanieHPD { get; set; }
-        public int YgolMLA { get; set; }
+        public string RaskrMatochnogoZeva { get; set; }
+        public string RastoanieHPD { get; set; }
+        public string YgolMLA { get; set; }
         public int VisitId { get; set; }
 
-        public Transperinealnoe(int id, int raskrMatochnogoZeva, int rastoanieHPD, int ygolMLA, int visitId)
+        public Transperinealnoe(string raskrMatochnogoZeva, string rastoanieHPD, string ygolMLA, int visitId)
         {
-            Id = id;
             RaskrMatochnogoZeva = raskrMatochnogoZeva;
             RastoanieHPD = rastoanieHPD;
             YgolMLA = ygolMLA;
             VisitId = visitId;
         }
 
-        public Transperinealnoe(Visit visit)
+        public Transperinealnoe()
         {
-            VisitId = visit.Id;
         }
 
         public void GetBy(int visitId)
@@ -65,6 +63,12 @@ namespace MaternityHospital.Services
                 db.transperinealnoe.Remove(this);
                 db.SaveChanges();
             }
+        }
+
+        public void ChangeProperty(string name, object? value)
+        {
+            var pr = typeof(Transperinealnoe).GetProperty(name);
+            pr.SetValue(this, value);
         }
     }
 }

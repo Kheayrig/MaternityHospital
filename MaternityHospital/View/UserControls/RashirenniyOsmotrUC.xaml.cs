@@ -32,6 +32,44 @@ namespace MaternityHospital.View.UserControls
             }
         }
 
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            var l = (RasshirennOsmotr)AppSettings.WindowsList[_index];
+            SetValues(l);
+        }
+
+        private void SetValues(RasshirennOsmotr item)
+        {
+            //костыль
+            for(int i = 0; i < placenta.Items.Count; i++)
+            {
+                if ((placenta.Items[i] as TextBlock).Text == item.placenta )
+                {
+                    placenta.SelectedIndex = i;
+                    break;
+                }
+            }
+            PPoverxnost.SelectedItem = PPoverxnost.FindName(item.PPoverxnost);
+            for (int i = 0; i < stryctyra.Items.Count; i++)
+            {
+                if ((stryctyra.Items[i] as TextBlock).Text == item.stryctyra)
+                {
+                    stryctyra.SelectedIndex = i;
+                    break;
+                }
+            }
+            for (int i = 0; i < StepenZrelosti.Items.Count; i++)
+            {
+                if ((StepenZrelosti.Items[i] as TextBlock).Text == item.StepenZrelosti)
+                {
+                    StepenZrelosti.SelectedIndex = i;
+                    break;
+                }
+            }
+            kolVod.SelectedItem = kolVod.FindName(item.kolVod);
+            vish.Text = item.vish;
+        }
+
         private void Cns(object sender, RoutedEventArgs e)
         {
             new CnsFaceNeckWindow().ShowDialog();
@@ -66,7 +104,7 @@ namespace MaternityHospital.View.UserControls
         {
             var item = sender as TextBox;
             var pr = typeof(RasshirennOsmotr).GetProperty(item.Name);
-            pr.SetValue(AppSettings.WindowsList[_index] as RasshirennOsmotr, int.Parse(item.Text));
+            pr.SetValue(AppSettings.WindowsList[_index] as RasshirennOsmotr, item.Text);
         }
 
         private void SelectionChanged(object sender, SelectionChangedEventArgs e)

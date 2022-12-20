@@ -16,12 +16,11 @@ namespace MaternityHospital.Services
         public string stryctyra { get; set; } = "однородная";
         public string kolVod { get; set; } = "нормальное";
         public string StepenZrelosti { get; set; } = "1";
-        public int vish { get; set; }
+        public string vish { get; set; }
         public int VisitId { get; set; }
 
-        public RasshirennOsmotr(int id, string placenta, string pPoverxnost, string stryctyra, string kolVod, string stepenZrelosti, int vish, int visitId)
+        public RasshirennOsmotr(string placenta, string pPoverxnost, string stryctyra, string kolVod, string stepenZrelosti, string vish, int visitId)
         {
-            Id = id;
             this.placenta = placenta;
             PPoverxnost = pPoverxnost;
             this.stryctyra = stryctyra;
@@ -31,9 +30,8 @@ namespace MaternityHospital.Services
             VisitId = visitId;
         }
 
-        public RasshirennOsmotr(Visit? visit)
+        public RasshirennOsmotr()
         {
-            VisitId = visit.Id;
         }
 
         public void GetBy(int visitId)
@@ -77,6 +75,12 @@ namespace MaternityHospital.Services
                 db.rasshirennOsmotr.Remove(this);
                 db.SaveChanges();
             }
+        }
+
+        public void ChangeProperty(string name, object? value)
+        {
+            var pr = typeof(RasshirennOsmotr).GetProperty(name);
+            pr.SetValue(this, value);
         }
     }
 }

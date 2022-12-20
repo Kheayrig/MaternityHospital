@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace MaternityHospital.Services
 {
@@ -18,14 +19,13 @@ namespace MaternityHospital.Services
         public string heartbeat { get; set; } = "да";
         public string heartRate { get; set; }
         public string dvijeniye { get; set; } = "да";
-        public string dvijeniye_Copy { get; set; } = "&lt; 3 эпизодов";
+        public string dvijeniye_Copy { get; set; } = "< 3 эпизодов";
         public string Breath_movement { get; set; } = "да";
-        public string Breath_movement_Copy { get; set; } = "&lt; 30 сек";
+        public string Breath_movement_Copy { get; set; } = "< 30 сек";
         public int VisitId { get; set; }
 
-        public Obschiesvedenia(int id, string plod, string position, string predlejanie, string ritm, string heartbeat, string heartRate, string dvijeniye, string dvijeniye_Copy, string breath_movement, string breath_movement_Copy, int visitId)
+        public Obschiesvedenia(string plod, string position, string predlejanie, string ritm, string heartbeat, string heartRate, string dvijeniye, string dvijeniye_Copy, string breath_movement, string breath_movement_Copy, int visitId)
         {
-            Id = id;
             this.plod = plod;
             this.position = position;
             this.predlejanie = predlejanie;
@@ -39,9 +39,8 @@ namespace MaternityHospital.Services
             VisitId = visitId;
         }
 
-        public Obschiesvedenia(Visit visit)
+        public Obschiesvedenia()
         {
-            VisitId = visit.Id;
         }
 
         public void GetBy(int visitId)
@@ -89,6 +88,13 @@ namespace MaternityHospital.Services
                 db.obschieSvedenia.Remove(this);
                 db.SaveChanges();
             }
+        }
+
+
+        public void ChangeProperty(string name, object? value)
+        {
+            var pr = typeof(Obschiesvedenia).GetProperty(name);
+            pr.SetValue(this, value);
         }
     }
 }

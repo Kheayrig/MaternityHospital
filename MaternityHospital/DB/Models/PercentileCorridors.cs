@@ -59,7 +59,7 @@ namespace MaternityHospital.DB.Models
             {
                 var str = db.TemplateValues
                     .FromSqlRaw($"SELECT * FROM TemplateValues WHERE Min{field}<={value} AND Max{field}>={value}")
-                    .First();
+                    .Last();
                 return str.Week;
             }
         }

@@ -5,6 +5,7 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Xml.Linq;
+using System.Linq;
 
 namespace MaternityHospital.View.UserControls
 {
@@ -33,6 +34,33 @@ namespace MaternityHospital.View.UserControls
                     _index = (int)(ChildBirthEnum)Enum.Parse(typeof(ChildBirthEnum), "Obschiesvedenia");
                     break;
             }
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            var l = (Obschiesvedenia)AppSettings.WindowsList[_index];
+            SetValues(l);
+        }
+
+        private void SetValues(Obschiesvedenia item)
+        {
+            //костыль
+            plod.SelectedItem = plod.FindName(item.plod);
+            position.SelectedItem = position.FindName(item.position);
+            predlejanie.SelectedItem = predlejanie.FindName(item.predlejanie);
+            ritm.SelectedItem = ritm.FindName(item.ritm.Split(' ')[0]);
+
+            if(item.heartbeat == "да") heartbeat.SelectedIndex = 0;
+            else heartbeat.SelectedIndex = 1;
+            if(item.dvijeniye == "да") dvijeniye.SelectedIndex = 0;
+            else dvijeniye.SelectedIndex = 1;
+            if(item.Breath_movement == "да") Breath_movement.SelectedIndex = 0;
+            else Breath_movement.SelectedIndex = 1;
+            if(item.dvijeniye_Copy == "<= 3 эпизодов") dvijeniye_Copy.SelectedIndex = 0;
+            else dvijeniye_Copy.SelectedIndex = 1;
+            if(item.Breath_movement_Copy == "<= 30 сек") Breath_movement_Copy.SelectedIndex = 0;
+            else Breath_movement_Copy.SelectedIndex = 1;
+            heartRate.Text = item.heartRate;
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -66,6 +94,7 @@ namespace MaternityHospital.View.UserControls
         }
         private void SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (!IsLoaded) return;
             var item = sender as ComboBox;
             var pr = typeof(Obschiesvedenia).GetProperty(item.Name);
             pr.SetValue(AppSettings.WindowsList[_index] as Obschiesvedenia, (item.SelectedValue as TextBlock).Text);

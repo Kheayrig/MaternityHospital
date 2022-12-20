@@ -28,6 +28,8 @@ namespace MaternityHospital.DB.Repositories
         [NotMapped]
         private IPregnancyCalculator _pregnancyCalculator;
         [NotMapped]
+        public string Doctor;
+        [NotMapped]
         public int Trimester { get; set; }
         #region Properties
         public DateTime? LastPeriodDate
@@ -145,6 +147,12 @@ namespace MaternityHospital.DB.Repositories
                 PregnancyDurationDay = temp._pregnancyCalculator.GetPregnancyDurationDay();
                 Trimester = temp._pregnancyCalculator.GetTrimester();
             }
+        }
+
+        public void ChangeProperty(string name, object? value)
+        {
+            var pr = typeof(Patient).GetProperty(name);
+            pr.SetValue(this, value);
         }
         #endregion
     }

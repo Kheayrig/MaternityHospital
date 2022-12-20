@@ -11,15 +11,14 @@ namespace MaternityHospital.Services
     class Translabialnoe : IRepository
     {
         public int Id { get; set; }
-        public int DlinaCHeKanala { get; set; }
+        public string DlinaCHeKanala { get; set; }
         public string PlodnyeObolochki { get; set; } = "визуализируется";
-        public int RastoanieHSD { get; set; }
-        public int RastoaniePD { get; set; }
+        public string RastoanieHSD { get; set; }
+        public string RastoaniePD { get; set; }
         public int VisitId { get; set; }
 
-        public Translabialnoe(int id, int dlinaCHeKanala, string plodnyeObolochki, int rastoanieHSD, int rastoaniePD, int visitId)
+        public Translabialnoe(string dlinaCHeKanala, string plodnyeObolochki, string rastoanieHSD, string rastoaniePD, int visitId)
         {
-            Id = id;
             DlinaCHeKanala = dlinaCHeKanala;
             PlodnyeObolochki = plodnyeObolochki;
             RastoanieHSD = rastoanieHSD;
@@ -27,9 +26,8 @@ namespace MaternityHospital.Services
             VisitId = visitId;
         }
 
-        public Translabialnoe(Visit visit)
+        public Translabialnoe()
         {
-            VisitId = visit.Id;
         }
 
         public void GetBy(int visitId)
@@ -71,6 +69,12 @@ namespace MaternityHospital.Services
                 db.translabialnoe.Remove(this);
                 db.SaveChanges();
             }
+        }
+
+        public void ChangeProperty(string name, object? value)
+        {
+            var pr = typeof(Translabialnoe).GetProperty(name);
+            pr.SetValue(this, value);
         }
     }
 }

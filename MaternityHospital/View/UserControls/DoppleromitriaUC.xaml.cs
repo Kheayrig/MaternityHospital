@@ -1,6 +1,7 @@
 ﻿using MaternityHospital.Services;
 using MaternityHospital.View.Utils;
 using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace MaternityHospital.View.UserControls
@@ -37,6 +38,26 @@ namespace MaternityHospital.View.UserControls
                     _index = (int)(ChildBirthEnum)Enum.Parse(typeof(ChildBirthEnum), "Dopplerometria");
                     break;
             }
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            var l = (Dopplerometria)AppSettings.WindowsList[_index];
+            SetValues(l);
+        }
+
+        private void SetValues(Dopplerometria item)
+        {
+            ArterPypoviny1.Text = item.ArterPypovinyPI;
+            ArterPypoviny2.Text = item.ArterPypovinySrok;
+            ArterPypoviny3.Text = item.ArterPypovinyMass;
+            CMozg1.Text = item.CMozgPI;
+            CMozg2.Text = item.CMozgSrok;
+            CMozg3.Text = item.CMozgMass;
+            MCA1.Text = item.MCAPI;
+            MCA2.Text = item.MCASrok;
+            MCA3.Text = item.MCAMass;
+            DiagKonyga.Text = item.DiagKonyga;
         }
 
         private void SelectionChanged(object sender, SelectionChangedEventArgs e)

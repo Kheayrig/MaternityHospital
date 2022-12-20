@@ -11,19 +11,19 @@ namespace MaternityHospital.Services
     class Dopplerometria : IRepository
     {
         public int Id { get; set; }
-        public int ArterPypovinyPI { get; set; }
-        public int ArterPypovinySrok { get; set; }
-        public int ArterPypovinyMass { get; set; }
-        public int CMozgPI { get; set; }
-        public int CMozgSrok { get; set; }
-        public int CMozgMass { get; set; }
-        public int MCAPI { get; set; }
-        public int MCASrok { get; set; }
-        public int MCAMass { get; set; }
-        public int DiagKonyga { get; set; }
+        public string ArterPypovinyPI { get; set; }
+        public string ArterPypovinySrok { get; set; }
+        public string ArterPypovinyMass { get; set; }
+        public string CMozgPI { get; set; }
+        public string CMozgSrok { get; set; }
+        public string CMozgMass { get; set; }
+        public string MCAPI { get; set; }
+        public string MCASrok { get; set; }
+        public string MCAMass { get; set; }
+        public string DiagKonyga { get; set; }
         public int VisitId { get; set; }
 
-        public Dopplerometria(int id, int arterPypovinyPI, int arterPypovinySrok, int arterPypovinyMass, int cMozgPI, int cMozgSrok, int cMozgMass, int mCAPI, int mCASrok, int mCAMass, int diagKonyga, int visitId)
+        public Dopplerometria(int id, string arterPypovinyPI, string arterPypovinySrok, string arterPypovinyMass, string cMozgPI, string cMozgSrok, string cMozgMass, string mCAPI, string mCASrok, string mCAMass, string diagKonyga, int visitId)
         {
             Id = id;
             ArterPypovinyPI = arterPypovinyPI;
@@ -39,9 +39,9 @@ namespace MaternityHospital.Services
             VisitId = visitId;
         }
 
-        public Dopplerometria(Visit visit)
+        public Dopplerometria()
         {
-            VisitId = visit.Id;
+
         }
 
         public void GetBy(int visitId)
@@ -90,6 +90,12 @@ namespace MaternityHospital.Services
                 db.dopplerometria.Remove(this);
                 db.SaveChanges();
             }
+        }
+
+        public void ChangeProperty(string name, object? value)
+        {
+            var pr = typeof(Dopplerometria).GetProperty(name);
+            pr.SetValue(this, value);
         }
     }
 }

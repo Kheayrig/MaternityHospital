@@ -8,7 +8,7 @@ namespace MaternityHospital.View.Utils
 {
     public enum Trimester1Enum
     {
-        SmallDuration,
+        MalSroki,
     }
     public enum Trimester2Enum
     {
