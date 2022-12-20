@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital.View.UserControls"
         mc:Ignorable="d" Loaded="UserControl_Loaded">
-    <Grid Margin="5,10,5,10">
+    <Grid Margin="20,10,10,10">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -25,7 +25,7 @@
 
         <WrapPanel Grid.Row="0" VerticalAlignment="Center" Margin="0,10,0,10">
             <Label Content="плод"/>
-            <ComboBox Margin="5,0,0,0" SelectedIndex="0" x:Name="plod" SelectionChanged="SelectionChanged">
+            <ComboBox Margin="5,0,5,0" SelectedIndex="0" x:Name="plod" SelectionChanged="SelectionChanged">
                 <TextBlock Name="один" Text="один"/>
                 <TextBlock Name="двойня" Text="двойня"/>
                 <TextBlock Name="тройня" Text="тройня"/>
@@ -34,7 +34,7 @@
 
         <WrapPanel Grid.Row="1" VerticalAlignment="Center" Margin="0,10,0,10">
             <Label Content="положение"/>
-            <ComboBox Margin="5,0,0,0" x:Name="position" SelectedIndex="1" SelectionChanged="SelectionChanged">
+            <ComboBox Margin="5,0,5,0" x:Name="position" SelectedIndex="1" SelectionChanged="SelectionChanged">
                 <TextBlock Name="косое" Text="косое"/>
                 <TextBlock Name="продольное" Text="продольное"/>
                 <TextBlock Name="поперечное" Text="поперечное"/>
@@ -43,7 +43,7 @@
 
         <WrapPanel Grid.Row="2" VerticalAlignment="Center" Margin="0,10,0,10" HorizontalAlignment="Stretch">
             <Label Content="предлежание"/>
-            <ComboBox Margin="5,0,0,0" x:Name="predlejanie" SelectedIndex="1" SelectionChanged="SelectionChanged">
+            <ComboBox Margin="5,0,5,0" x:Name="predlejanie" SelectedIndex="1" SelectionChanged="SelectionChanged">
                 <TextBlock Name="тазовое" Text="тазовое"/>
                 <TextBlock Name="головное" Text="головное"/>
             </ComboBox>
@@ -51,7 +51,7 @@
 
         <WrapPanel Grid.Row="3" VerticalAlignment="Center" Margin="0,10,0,10">
             <Label Content="ритм"/>
-            <ComboBox x:Name="ritm" SelectedIndex="0" SelectionChanged="SelectionChanged">
+            <ComboBox Margin="5,0,5,0" x:Name="ritm" SelectedIndex="0" SelectionChanged="SelectionChanged">
                 <TextBlock Name="синусовый"  Text="синусовый"/>
                 <TextBlock Name="брадикардия" Text="брадикардия"/>
                 <TextBlock Name="тахикардия" Text="тахикардия"/>
@@ -63,7 +63,7 @@
 
         <WrapPanel Grid.Row="4" VerticalAlignment="Center" Margin="0,10,0,10">
             <Label Content="сердцебиение"/>
-            <ComboBox x:Name="heartbeat" SelectedIndex="0" SelectionChanged="SelectionChanged">
+            <ComboBox Margin="5,0,5,0" x:Name="heartbeat" SelectedIndex="0" SelectionChanged="SelectionChanged">
                 <TextBlock Text="да"/>
                 <TextBlock Text="нет"/>
             </ComboBox>
@@ -71,12 +71,12 @@
 
         <WrapPanel Grid.Row="5" VerticalAlignment="Center" Margin="0,10,0,10">
             <Label Content="ЧСС"/>
-            <TextBox x:Name="heartRate" InputMethod.IsInputMethodEnabled="False" MaxLength="3" Text="" Width="150" TextChanged="TextChanged"/>
+            <TextBox Margin="5,0,5,0" x:Name="heartRate" InputMethod.IsInputMethodEnabled="False" MaxLength="3" Text="" Width="150" TextChanged="TextChanged"/>
         </WrapPanel>
 
         <WrapPanel Grid.Row="6" VerticalAlignment="Center" Margin="0,10,0,10">
             <Label Content="движение"/>
-            <ComboBox x:Name="dvijeniye" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0">
+            <ComboBox Margin="5,0,5,0" x:Name="dvijeniye" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0">
                 <TextBlock Text="да"/>
                 <TextBlock Text="нет"/>
             </ComboBox>
@@ -88,7 +88,7 @@
 
         <WrapPanel Grid.Row="7" VerticalAlignment="Center" Margin="0,10,0,10">
             <Label Content="дыхательное движение"/>
-            <ComboBox x:Name="Breath_movement" SelectionChanged="ComboBox_SelectionChanged_1" SelectedIndex="0">
+            <ComboBox Margin="5,0,5,0" x:Name="Breath_movement" SelectionChanged="ComboBox_SelectionChanged_1" SelectedIndex="0">
                 <TextBlock Text="да"/>
                 <TextBlock Text="нет"/>
             </ComboBox>
@@ -97,11 +97,5 @@
                 <TextBlock Text="&gt;= 30 сек"/>
             </ComboBox>
         </WrapPanel>
-
-        <Button Width="140" Margin="0,15,0,0" x:Name="Cancel" Content="Отмена" Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Cancel_Click"/>
-        <Button Width="149" x:Name="OK" Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Далее" Margin="0,15,0,0" Grid.Column="1" Click="OK_Click"/>
-
-
-
     </Grid>
 </UserControl>

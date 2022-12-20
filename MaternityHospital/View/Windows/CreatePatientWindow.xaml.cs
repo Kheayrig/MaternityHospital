@@ -61,7 +61,7 @@ namespace MaternityHospital.View.Windows
                 DateTime? lastPeriodDate = LastPeriodDatePicker.SelectedDate;
                 DateTime birthday = birthdayDatePicker.SelectedDate.Value;
                 DateTime firstScanDate = FirstScanDatePicker.SelectedDate.Value;
-                Patient patient = new Patient(fio, birthday, firstScanDate, address, lastPeriodDate);
+                Patient patient = new Patient(fio, birthday, firstScanDate, AppSettings.CustomSettings.CurrentDoctor, address, lastPeriodDate);
                 patient.Add();
                 DialogResult = true;
                 AppSettings.CurrentPatient = patient;

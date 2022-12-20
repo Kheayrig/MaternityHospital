@@ -112,7 +112,9 @@ namespace MaternityHospital.View.UserControls
             if (!IsLoaded) return;
             var item = sender as ComboBox;
             var pr = typeof(RasshirennOsmotr).GetProperty(item.Name);
-            pr.SetValue(AppSettings.WindowsList[_index] as RasshirennOsmotr, (item.SelectedValue as TextBlock).Text);
+            var i = item.SelectedValue as TextBlock;
+            if(i==null) return;
+            pr.SetValue(AppSettings.WindowsList[_index] as RasshirennOsmotr, i.Text);
         }
     }
 }
