@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using MaternityHospital.Services;
+using System.Windows;
 using MaternityHospital.DB.Models.ViewClasses;
 using MaternityHospital.Services;
 using MaternityHospital.View.Utils;
@@ -14,6 +15,5 @@ namespace MaternityHospital.View.extra
             InitializeComponent();
             FontSize = AppSettings.CustomSettings.CurrentFontSize;
         }
-
     }
 }
