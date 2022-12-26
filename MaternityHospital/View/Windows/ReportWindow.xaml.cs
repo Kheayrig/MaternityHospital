@@ -9,6 +9,7 @@ namespace MaternityHospital.View.Windows
         public ReportWindow()
         {
             InitializeComponent();
+            FontSize = AppSettings.CustomSettings.CurrentFontSize;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

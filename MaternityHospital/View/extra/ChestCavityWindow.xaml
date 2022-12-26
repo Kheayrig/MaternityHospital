@@ -6,31 +6,31 @@
         xmlns:local="clr-namespace:MaternityHospital.View.extra"
         mc:Ignorable="d"
         Title="ChestCavity" Height="450" Width="800">
-    <Grid Background="#6e80af">
+    <Grid Background="#91abbe">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Label Content="Расположение сердца" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="1" VerticalAlignment="Center" />
+        <Label Content="Расположение сердца" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="278" />
         <ComboBox Grid.ColumnSpan="2" Margin="303,10,194,10" SelectedIndex="0" x:Name="PSerdca" Grid.Row="1">
             <TextBlock Text="правильное"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <Label Content="Эхоструктура легких" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="2" VerticalAlignment="Center" />
+        <Label Content="Эхоструктура легких" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="2" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="278" />
         <ComboBox Grid.ColumnSpan="2" Margin="303,10,194,10" SelectedIndex="0"  x:Name="ExoLegkix" Grid.Row="2">
             <TextBlock Text="обычное"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <Label Content="Обьемные образования" HorizontalAlignment="Left" Margin="21,0,0,0" Grid.Row="3" VerticalAlignment="Center"/>
+        <Label Content="Обьемные образования" HorizontalAlignment="Left" Margin="21,0,0,0" Grid.Row="3" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="277"/>
         <ComboBox Grid.ColumnSpan="2" SelectedIndex="0" Margin="303,10,194,10" x:Name="OObrazovanua" Grid.Row="3">
             <TextBlock Text="нет"/>
             <TextBlock Text="см.дополнительно"/> 
@@ -42,10 +42,10 @@
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
         <Label Content="Торакоабдоминальное отношение" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="5" VerticalAlignment="Center"  Grid.ColumnSpan="2" Width="418"/>
-        <ComboBox Margin="30,10,205,10" Grid.Row="5" SelectedIndex="0" x:Name="TOtnochenie1" Grid.Column="1">
+        <ComboBox Margin="150,10,85,10" Grid.Row="5" SelectedIndex="0" x:Name="TOtnochenie1" Grid.Column="1">
 
         </ComboBox>
-        <ComboBox Margin="212,10,23,10" Grid.Row="5" SelectedIndex="0" x:Name="TOtnochenie2" Grid.Column="1">
+        <ComboBox Margin="324,10,-89,10" Grid.Row="5" SelectedIndex="0" x:Name="TOtnochenie2" Grid.Column="1">
         </ComboBox>
     </Grid>
 </Window>

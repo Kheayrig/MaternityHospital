@@ -6,31 +6,31 @@
         xmlns:local="clr-namespace:MaternityHospital.View.extra"
         mc:Ignorable="d"
         Title="HeartLargeonesVessels" Height="800" Width="800">
-    <Grid Background="#6e80af">
+    <Grid Background="#91abbe">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Label Content="Камеры сердца" HorizontalAlignment="Left" Margin="40,49,0,0" VerticalAlignment="Top"  Grid.RowSpan="2"/>
-        <ComboBox Margin="235,4,0,7" SelectedIndex="0"  x:Name="KamSerdca" Grid.Row="1">
+        <ComboBox Margin="235,4,0,33" SelectedIndex="0"  x:Name="KamSerdca" Grid.Row="1" Grid.RowSpan="2">
             <TextBlock Text="не увеличины"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
@@ -55,7 +55,7 @@
             <TextBlock Text="правая"/>
         </ComboBox>
         <ComboBox Margin="245,6,55,5" Grid.Row="5" SelectedIndex="0"  x:Name="Aorta2"/>
-        <ComboBox Margin="75,6,231,5" Grid.Row="5"  SelectedIndex="0" x:Name="Aorta3" Grid.Column="1">
+        <ComboBox Margin="120,6,186,5" Grid.Row="5"  SelectedIndex="0" x:Name="Aorta3" Grid.Column="1">
 
         </ComboBox>
         <Label Content="Легочный ствол" HorizontalAlignment="Left" Margin="40,0,0,0" Grid.Row="6" VerticalAlignment="Center" />
@@ -85,7 +85,7 @@
 
 
         <Label Content="НВП" HorizontalAlignment="Left" Margin="40,0,0,0" Grid.Row="10" VerticalAlignment="Center" />
-        <ComboBox Margin="84,10,216,1" Grid.Row="10" SelectedIndex="0" x:Name="NVP3" Grid.Column="1">
+        <ComboBox Margin="114,7,186,4" Grid.Row="10" SelectedIndex="0" x:Name="NVP3" Grid.Column="1">
             <TextBlock Text="визуализируется"/>
             <TextBlock Text="прерванная"/>
         </ComboBox>

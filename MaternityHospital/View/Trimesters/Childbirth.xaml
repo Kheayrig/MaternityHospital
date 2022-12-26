@@ -10,7 +10,7 @@
         <TabItem>
             <TabItem.Header>Трансабдоминальное</TabItem.Header>
             <TabItem.Content>
-                <TabControl>
+                <TabControl Background="#FFC7D5">
                     <TabItem>
                         <TabItem.Header>Общие сведения</TabItem.Header>
                         <TabItem.Content>

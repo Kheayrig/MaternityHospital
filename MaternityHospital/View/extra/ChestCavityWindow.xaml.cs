@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using MaternityHospital.Services;
+using System.Windows;
 
 namespace MaternityHospital.View.extra
 {
@@ -7,6 +8,7 @@ namespace MaternityHospital.View.extra
         public ChestCavityWindow()
         {
             InitializeComponent();
+            FontSize = AppSettings.CustomSettings.CurrentFontSize;
         }
     }
 }
