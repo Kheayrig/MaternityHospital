@@ -32,15 +32,14 @@
                 <TextBlock Name="уменьшена" Text="уменьшена"/>
 
             </ComboBox>
-            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" Text="" x:Name="RazMatki3" MinWidth="80"/>
+            
 
         </WrapPanel>
         <WrapPanel Grid.Row="1" Margin="0,10,0,10">
             <Label Content="Увеличена до:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center"/>
-            <TextBox Margin="5,0,5,0" TextChanged="TextChanged" TextWrapping="Wrap" MinWidth="80" x:Name="Yvelichina1" InputMethod.IsInputMethodEnabled="False" MaxLength="3" Text=""/>
+            <TextBox Margin="5,0,5,0" TextChanged="TextChanged" TextWrapping="Wrap" MinWidth="80" x:Name="Yvelichina1" InputMethod.IsInputMethodEnabled="False" MaxLength="2" Text=""/>
             <Label Content="недель" Width="138"/>
-            <TextBox Margin="5,0,5,0" TextChanged="TextChanged" TextWrapping="Wrap" MinWidth="80" Text="" InputMethod.IsInputMethodEnabled="False" MaxLength="3" x:Name="Yvelichina2"/>
-
+            
         </WrapPanel>
         <WrapPanel Grid.Row="2" Margin="0,10,0,10">
             <Label Content="Форма матки:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
@@ -65,7 +64,7 @@
             <Label Content="Средний диаметр плодного яйца :" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <TextBox Margin="5,0,5,0" TextChanged="TextChanged" MinWidth="80" TextWrapping="Wrap" Text="" InputMethod.IsInputMethodEnabled="False" MaxLength="3" x:Name="SrednDiametrPlodAiza1"/>
             <Label Content="мм, соответствуют сроку-"/>
-            <TextBox Margin="5,0,5,0" TextChanged="TextChanged" MinWidth="80" TextWrapping="Wrap" Text="" InputMethod.IsInputMethodEnabled="False" MaxLength="3"  x:Name="SrednDiametrPlodAiza2"/>
+            <TextBox Margin="5,0,5,0" TextChanged="TextChanged" MinWidth="80" TextWrapping="Wrap" Text="" InputMethod.IsInputMethodEnabled="False" MaxLength="2"  x:Name="SrednDiametrPlodAiza2"/>
             <Label Content="недель"/>
 
         </WrapPanel>
@@ -73,7 +72,7 @@
             <Label Content="КТР:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <TextBox Margin="5,0,5,0" TextChanged="TextChanged" MinWidth="80" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="3" x:Name="KTR1" Text=""/>
             <Label Content="мм, соответствует сроку-"/>
-            <TextBox Margin="5,0,5,0" TextChanged="TextChanged" MinWidth="80" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="3" x:Name="KTR2" Text=""/>
+            <TextBox Margin="5,0,5,0" TextChanged="TextChanged" MinWidth="80" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="2" x:Name="KTR2" Text=""/>
             <Label Content="недель"/>
         </WrapPanel>
         <WrapPanel Grid.Row="6" Margin="0,10,0,10">
@@ -85,8 +84,8 @@
         </WrapPanel>
 
         <WrapPanel Grid.Row="7" Margin="0,10,0,10">
-            <Label Content="Диаметр желточного мешка:" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Center"/>
-            <TextBox Margin="5,0,5,0" MinWidth="80" TextChanged="TextChanged" TextWrapping="Wrap" Text="" x:Name="DiamZheltMechka"/>
+            <Label Content="Диаметр желточного мешка:" HorizontalAlignment="Left" Grid.Row="7"  VerticalAlignment="Center"/>
+            <TextBox Margin="5,0,5,0" MinWidth="80" TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="3" Text="" x:Name="DiamZheltMechka"/>
             <Label Content="мм"/>
         </WrapPanel>
 
@@ -94,7 +93,7 @@
 
 
         <WrapPanel Grid.Row="9" Margin="0,10,0,10">
-            <Label Content="Левый яицник:" HorizontalAlignment="Left" Grid.Row="8" VerticalAlignment="Center"/>
+            <Label Content="Левый яичник:" HorizontalAlignment="Left" Grid.Row="8" VerticalAlignment="Center"/>
             <ComboBox Margin="5,0,5,0" SelectionChanged="SelectionChanged" SelectedIndex="0"  x:Name="LOvary1">
                 <TextBlock Text="обычной эхоструктуры"/>
                 <TextBlock Text="с анэхогенным компонентом"/>
@@ -104,10 +103,8 @@
                 <TextBlock Text="с фолликулами по периферии"/>
 
             </ComboBox>
-            <Label Content=","/>
-            <TextBox Margin="5,0,5,0" TextChanged="TextChanged" MinWidth="80" TextWrapping="Wrap" Text=""  x:Name="LOvary2"/>
-            <Label Content="размеры:"/>
-            <TextBox Margin="5,0,5,0" TextChanged="TextChanged" MinWidth="80" TextWrapping="Wrap" Text=""  x:Name="LOvary3"/>
+            <Label Margin="20,0,0,0" Content="размеры:"/>
+            <TextBox Margin="5,0,5,0" TextChanged="TextChanged" MinWidth="80" TextWrapping="Wrap" Text=""  x:Name="LOvary3" InputMethod.IsInputMethodEnabled="False" MaxLength="3"/>
             <Label Content="мм,"/>
             <ComboBox Margin="5,0,5,0" SelectionChanged="SelectionChanged"  SelectedIndex="0" x:Name="LOvary4" >
                 <TextBlock Text="нормальное"/>
@@ -130,9 +127,7 @@
                 <TextBlock Text="не визуализируется"/>
 
             </ComboBox>
-            <Label Content=","/>
-            <TextBox Margin="5,0,5,0" TextChanged="TextChanged" MinWidth="80" TextWrapping="Wrap" x:Name="POvary2" InputMethod.IsInputMethodEnabled="False" MaxLength="3" Text=""/>
-            <Label Content="размеры:"/>
+            <Label Margin="20,0,0,0" Content="размеры:"/>
             <TextBox Margin="5,0,5,0" TextChanged="TextChanged" MinWidth="80" TextWrapping="Wrap" Text="" InputMethod.IsInputMethodEnabled="False" MaxLength="3" x:Name="POvary3"/>
             <Label Content="мм,"/>
             <ComboBox Margin="5,0,5,0" SelectionChanged="SelectionChanged" SelectedIndex="0" x:Name="POvary4">
