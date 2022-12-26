@@ -11,7 +11,7 @@ namespace MaternityHospital.Services.ViewClasses
     internal class Report : IRepository
     {
         public int Id { get; set; }
-        public string ReportInfo { get; set; }
+        public string? ReportInfo { get; set; }
         public int VisitId { get; set; }
 
         public Report(string reportInfo, int visitId)

@@ -9,13 +9,13 @@ namespace MaternityHospital.DB.Models.ExtraViewClasses
     class CnsFaceNeck
     {
         public int Id { get; set; }
-        public string Lico { get; set; }
-        public string BokZhelydochki { get; set; }
-        public string PPPeregorodki { get; set; } = "норма";
-        public string TZhelydochek { get; set; }
-        public string CHZhelydochek { get; set; }
-        public string Talamys { get; set; } = "разделенный";
-        public string BCisterna { get; set; }
+        public string? Lico { get; set; }
+        public string? BokZhelydochki { get; set; }
+        public string? PPPeregorodki { get; set; } = "норма";
+        public string? TZhelydochek { get; set; }
+        public string? CHZhelydochek { get; set; }
+        public string? Talamys { get; set; } = "разделенный";
+        public string? BCisterna { get; set; }
         public int VisitId { get; set; }
 
         public CnsFaceNeck(Visit visit)

@@ -11,10 +11,10 @@ namespace MaternityHospital.Services
     class Translabialnoe : IRepository
     {
         public int Id { get; set; }
-        public string DlinaCHeKanala { get; set; }
-        public string PlodnyeObolochki { get; set; } = "визуализируется";
-        public string RastoanieHSD { get; set; }
-        public string RastoaniePD { get; set; }
+        public string? DlinaCHeKanala { get; set; }
+        public string? PlodnyeObolochki { get; set; } = "визуализируется";
+        public string? RastoanieHSD { get; set; }
+        public string? RastoaniePD { get; set; }
         public int VisitId { get; set; }
 
         public Translabialnoe(string dlinaCHeKanala, string plodnyeObolochki, string rastoanieHSD, string rastoaniePD, int visitId)

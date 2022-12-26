@@ -16,7 +16,7 @@
         <StackPanel Grid.Row="0">
             <!--Здесь будет настройки и данные пациентки-->
             <Grid Margin="10">
-                <Button Grid.Row="0"  Content="Сменить врача" Width="auto" HorizontalAlignment="Left" Height="auto" />
+                <Button Grid.Row="0"  Content="Сменить врача" Width="auto" HorizontalAlignment="Left" Height="auto" Click="createPatientButton_Click" />
                 <WrapPanel Grid.Row="0" HorizontalAlignment="Right">
                     <Label x:Name="currentDoctorLabel" Content="Текущий врач: "/>
                     <Label x:Name="currentDoctor" Content="???" Width="auto"/>
