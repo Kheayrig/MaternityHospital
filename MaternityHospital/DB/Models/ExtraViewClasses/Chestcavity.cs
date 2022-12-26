@@ -9,12 +9,12 @@ namespace MaternityHospital.DB.Models.ExtraViewClasses
     class Chestcavity
     {
         public int Id { get; set; }
-        public string PSerdca { get; set; }
-        public string ExoLegkix { get; set; }
-        public string OObrazovanua { get; set; }
-        public string Gidrotoraks { get; set; }
-        public string TOtnochenie1 { get; set; }
-        public string TOtnochenie2 { get; set; }
+        public string? PSerdca { get; set; }
+        public string? ExoLegkix { get; set; }
+        public string? OObrazovanua { get; set; }
+        public string? Gidrotoraks { get; set; }
+        public string? TOtnochenie1 { get; set; }
+        public string? TOtnochenie2 { get; set; }
         public int VisitId { get; set; }
 
         public Chestcavity(Visit visit)

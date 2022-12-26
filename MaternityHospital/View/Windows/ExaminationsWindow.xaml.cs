@@ -123,5 +123,14 @@ namespace MaternityHospital.View.Windows
             AppSettings.isUpdating = false;
             AppSettings.WindowsList.Clear();
         }
+
+        private void createPatientButton_Click(object sender, RoutedEventArgs e)
+        {
+            var win = new ChangeDoctor();
+            if (win.ShowDialog() == true)
+            {
+                currentDoctor.Content = AppSettings.CustomSettings.CurrentDoctor;
+            }
+        }
     }
 }

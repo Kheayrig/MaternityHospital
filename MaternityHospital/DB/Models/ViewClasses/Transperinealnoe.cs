@@ -8,9 +8,9 @@ namespace MaternityHospital.Services
     class Transperinealnoe : IRepository
     {
         public int Id { get; set; }
-        public string RaskrMatochnogoZeva { get; set; }
-        public string RastoanieHPD { get; set; }
-        public string YgolMLA { get; set; }
+        public string? RaskrMatochnogoZeva { get; set; }
+        public string? RastoanieHPD { get; set; }
+        public string? YgolMLA { get; set; }
         public int VisitId { get; set; }
 
         public Transperinealnoe(string raskrMatochnogoZeva, string rastoanieHPD, string ygolMLA, int visitId)

@@ -11,12 +11,12 @@ namespace MaternityHospital.Services
     class RasshirennOsmotr : IRepository
     {
         public int Id { get; set; }
-        public string placenta { get; set; } = "перекрывает внутренний зев";
-        public string PPoverxnost { get; set; } = "нормальная";
-        public string stryctyra { get; set; } = "однородная";
-        public string kolVod { get; set; } = "нормальное";
-        public string StepenZrelosti { get; set; } = "1";
-        public string vish { get; set; }
+        public string? placenta { get; set; } = "перекрывает внутренний зев";
+        public string? PPoverxnost { get; set; } = "нормальная";
+        public string? stryctyra { get; set; } = "однородная";
+        public string? kolVod { get; set; } = "нормальное";
+        public string? StepenZrelosti { get; set; } = "1";
+        public string? vish { get; set; }
         public int VisitId { get; set; }
 
         public RasshirennOsmotr(string placenta, string pPoverxnost, string stryctyra, string kolVod, string stepenZrelosti, string vish, int visitId)

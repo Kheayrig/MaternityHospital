@@ -11,10 +11,10 @@ namespace MaternityHospital.Services
     class Fetometria : IRepository
     {
         public int Id { get; set; }
-        public string  BR { get; set; }
-        public string DBK { get; set; }
-        public string OJ { get; set; }
-        public string Mass { get; set; }
+        public string?  BR { get; set; }
+        public string? DBK { get; set; }
+        public string? OJ { get; set; }
+        public string? Mass { get; set; }
         public int VisitId { get; set; }
 
         public Fetometria(string bR, string dBK, string oJ, string mass, int visitId)

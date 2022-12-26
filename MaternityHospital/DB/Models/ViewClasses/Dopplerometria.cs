@@ -11,16 +11,16 @@ namespace MaternityHospital.Services
     class Dopplerometria : IRepository
     {
         public int Id { get; set; }
-        public string ArterPypovinyPI { get; set; }
-        public string ArterPypovinySrok { get; set; }
-        public string ArterPypovinyMass { get; set; }
-        public string CMozgPI { get; set; }
-        public string CMozgSrok { get; set; }
-        public string CMozgMass { get; set; }
-        public string MCAPI { get; set; }
-        public string MCASrok { get; set; }
-        public string MCAMass { get; set; }
-        public string DiagKonyga { get; set; }
+        public string? ArterPypovinyPI { get; set; }
+        public string? ArterPypovinySrok { get; set; }
+        public string? ArterPypovinyMass { get; set; }
+        public string? CMozgPI { get; set; }
+        public string? CMozgSrok { get; set; }
+        public string? CMozgMass { get; set; }
+        public string? MCAPI { get; set; }
+        public string? MCASrok { get; set; }
+        public string? MCAMass { get; set; }
+        public string? DiagKonyga { get; set; }
         public int VisitId { get; set; }
 
         public Dopplerometria(int id, string arterPypovinyPI, string arterPypovinySrok, string arterPypovinyMass, string cMozgPI, string cMozgSrok, string cMozgMass, string mCAPI, string mCASrok, string mCAMass, string diagKonyga, int visitId)

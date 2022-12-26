@@ -9,12 +9,12 @@ namespace MaternityHospital.DB.Models.ExtraViewClasses
     class Pypovina
     {
         public int Id { get; set; }
-        public string PypochnVena1 { get; set; } = "левая";
-        public string PypochnVena2 { get; set; } = "в портальный синус";
-        public string PypochnVena3 { get; set; } = "не расширена";
-        public string Precreplenie { get; set; } = "центральное";
-        public string PypART { get; set; } = "две";
-        public string SosydPyp { get; set; } = "три";
+        public string? PypochnVena1 { get; set; } = "левая";
+        public string? PypochnVena2 { get; set; } = "в портальный синус";
+        public string? PypochnVena3 { get; set; } = "не расширена";
+        public string? Precreplenie { get; set; } = "центральное";
+        public string? PypART { get; set; } = "две";
+        public string? SosydPyp { get; set; } = "три";
         public int VisitId { get; set; }
 
         public Pypovina(int id, string pypochnVena1, string pypochnVena2, string pypochnVena3, string precreplenie, string pypART, string sosydPyp, int visitId)
