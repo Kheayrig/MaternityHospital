@@ -24,19 +24,15 @@ namespace MaternityHospital.View.UserControls
         {
             InitializeComponent();
             RazMatki1.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
-            RazMatki3.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             Yvelichina1.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
-            Yvelichina2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
 
             SrednDiametrPlodAiza1.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             SrednDiametrPlodAiza2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             KTR1.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             KTR2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             DiamZheltMechka.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
-            LOvary2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             LOvary3.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
 
-            POvary2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             POvary3.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             FontSize = AppSettings.CustomSettings.CurrentFontSize;
             switch (AppSettings.CurrentPatient.Trimester)
@@ -67,9 +63,7 @@ namespace MaternityHospital.View.UserControls
             //костыль
             RazMatki1.Text = item.RazMatki1;
             RazMatki2.SelectedItem = RazMatki2.FindName(item.RazMatki2);
-            RazMatki3.Text = item.RazMatki3;
             Yvelichina1.Text = item.Yvelichina1;
-            Yvelichina2.Text = item.Yvelichina2;
             for (int i = 0; i < FormaMatki.Items.Count; i++)
             {
                 if ((FormaMatki.Items[i] as TextBlock).Text == item.FormaMatki)
@@ -99,7 +93,6 @@ namespace MaternityHospital.View.UserControls
                     break;
                 }
             }
-            LOvary2.Text = item.LOvary2;
             LOvary3.Text = item.LOvary3;
 
             for (int i = 0; i < LOvary4.Items.Count; i++)
@@ -118,7 +111,6 @@ namespace MaternityHospital.View.UserControls
                     break;
                 }
             }
-            POvary2.Text = item.POvary2;
             POvary3.Text = item.POvary3;
             for (int i = 0; i < POvary4.Items.Count; i++)
             {
