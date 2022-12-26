@@ -12,15 +12,15 @@ namespace MaternityHospital.View.UserControls
         public DoppleromitriaUC()
         {
             InitializeComponent();
-            ArterPypoviny1.PreviewTextInput += TextBoxFilters.FilterOnlyDoubleNumber;
-            ArterPypoviny2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
-            ArterPypoviny3.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
-            CMozg1.PreviewTextInput += TextBoxFilters.FilterOnlyDoubleNumber;
-            CMozg2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
-            CMozg3.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
-            MCA1.PreviewTextInput += TextBoxFilters.FilterOnlyDoubleNumber;
-            MCA2.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
-            MCA3.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            ArterPypovinyPI.PreviewTextInput += TextBoxFilters.FilterOnlyDoubleNumber;
+            ArterPypovinySrok.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            ArterPypovinyMass.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            CMozgPI.PreviewTextInput += TextBoxFilters.FilterOnlyDoubleNumber;
+            CMozgSrok.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            CMozgMass.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            MCAPI.PreviewTextInput += TextBoxFilters.FilterOnlyDoubleNumber;
+            MCASrok.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
+            MCAMass.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             DiagKonyga.PreviewTextInput += TextBoxFilters.FilterOnlyNumber;
             FontSize = AppSettings.CustomSettings.CurrentFontSize;
             switch (AppSettings.CurrentPatient.Trimester)
@@ -48,15 +48,15 @@ namespace MaternityHospital.View.UserControls
 
         private void SetValues(Dopplerometria item)
         {
-            ArterPypoviny1.Text = item.ArterPypovinyPI;
-            ArterPypoviny2.Text = item.ArterPypovinySrok;
-            ArterPypoviny3.Text = item.ArterPypovinyMass;
-            CMozg1.Text = item.CMozgPI;
-            CMozg2.Text = item.CMozgSrok;
-            CMozg3.Text = item.CMozgMass;
-            MCA1.Text = item.MCAPI;
-            MCA2.Text = item.MCASrok;
-            MCA3.Text = item.MCAMass;
+            ArterPypovinyPI.Text = item.ArterPypovinyPI;
+            ArterPypovinySrok.Text = item.ArterPypovinySrok;
+            ArterPypovinyMass.Text = item.ArterPypovinyMass;
+            CMozgPI.Text = item.CMozgPI;
+            CMozgSrok.Text = item.CMozgSrok;
+            CMozgMass.Text = item.CMozgMass;
+            MCAPI.Text = item.MCAPI;
+            MCASrok.Text = item.MCASrok;
+            MCAMass.Text = item.MCAMass;
             DiagKonyga.Text = item.DiagKonyga;
         }
 
@@ -72,7 +72,8 @@ namespace MaternityHospital.View.UserControls
         {
             var item = sender as TextBox;
             var pr = typeof(Dopplerometria).GetProperty(item.Name);
-            pr.SetValue(AppSettings.WindowsList[_index] as Dopplerometria, item.Text);
+
+            if (item.Text != "") pr.SetValue(AppSettings.WindowsList[_index] as Dopplerometria, item.Text);
         }
     }
 }

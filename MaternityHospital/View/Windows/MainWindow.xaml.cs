@@ -90,7 +90,14 @@ namespace MaternityHospital
         {
             var patient = (Patient)PatientsDataGrid.SelectedItem;
             AppSettings.CurrentPatient = patient;
-            new Examinations().ShowDialog();
+            try
+            {
+                new Examinations().ShowDialog();
+            }
+            catch
+            {
+
+            }
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {

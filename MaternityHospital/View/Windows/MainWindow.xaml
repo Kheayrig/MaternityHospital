@@ -9,7 +9,8 @@
         Title="Главное окно" 
         Height="450" Width="900" 
         MinHeight="500" MinWidth="800"
-        Loaded="Window_Loaded">
+        Loaded="Window_Loaded"
+        >
     <Grid Margin="5,10,5,5" Background="#91abbe">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
