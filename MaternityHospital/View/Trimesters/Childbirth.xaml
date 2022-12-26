@@ -6,11 +6,11 @@
              xmlns:local="clr-namespace:MaternityHospital.View.Trimesters"
              xmlns:vk="clr-namespace:MaternityHospital.View.UserControls"
              mc:Ignorable="d">
-    <TabControl  Background="#FFC7D5">
+    <TabControl  >
         <TabItem>
             <TabItem.Header>Трансабдоминальное</TabItem.Header>
             <TabItem.Content>
-                <TabControl Background="#FFC7D5">
+                <TabControl >
                     <TabItem>
                         <TabItem.Header>Общие сведения</TabItem.Header>
                         <TabItem.Content>

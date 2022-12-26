@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MaternityHospital.View.extra"
         mc:Ignorable="d"
         Title="Скелет" Height="600" Width="800">
-    <Grid Background="#6e80af">
+    <Grid Background="#91abbe">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -17,57 +17,61 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
         <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Margin="20,20,20,20">
-            <Label Content="Позвоночник"/>
-            <ComboBox Margin="5,0,5,0" x:Name="Pozvonochnik"  SelectedIndex="0">
+            <Label Content="Позвоночник" Width="194"/>
+            <ComboBox x:Name="Pozvonochnik"  SelectedIndex="0" Width="125">
                 <TextBlock Text="без дефектов"/>
                 <TextBlock Text="см. примечания"/>
             </ComboBox>
         </WrapPanel>
         <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Margin="20,20,20,20">
-            <Label Content="Большеберцовые кости"/>
-            <ComboBox Margin="5,0,5,0" x:Name="BolBer" SelectedIndex="0">
+            <Label Content="Большеберцовые кости" Width="250"/>
+            <ComboBox x:Name="BolBer" SelectedIndex="0" Width="80">
                 <TextBlock Text="норма"/>
                 <TextBlock Text="см. примечания"/>
             </ComboBox>
         </WrapPanel>
         <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Margin="20,20,20,20">
-            <Label Content="Малоберцовые кости"/>
-            <ComboBox Margin="5,0,5,0" x:Name="MalBer"  SelectedIndex="0">
+            <Label Content="Малоберцовые кости" Width="250"/>
+            <ComboBox x:Name="MalBer"  SelectedIndex="0" Width="80">
                 <TextBlock Text="норма"/>
                 <TextBlock Text="см. примечания"/>
             </ComboBox>
         </WrapPanel>
         <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" Margin="20,20,20,20">
-            <Label Content="Локтевые кости"/>
-            <ComboBox Margin="5,0,5,0" x:Name="LOktKosti"  SelectedIndex="0">
+            <Label Content="Локтевые кости" Width="250"/>
+            <ComboBox x:Name="LOktKosti"  SelectedIndex="0" Width="80">
                 <TextBlock Text="норма"/>
                 <TextBlock Text="см. примечания"/>
             </ComboBox>
         </WrapPanel>
         <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="4" Margin="20,20,20,20">
-            <Label Content="Лучевые кости"/>
-            <ComboBox Margin="5,0,5,0" x:Name="LychevKost"  SelectedIndex="0">
+            <Label Content="Лучевые кости" Width="194"/>
+            <ComboBox x:Name="LychevKost"  SelectedIndex="0" Width="125">
                 <TextBlock Text="норма"/>
                 <TextBlock Text="см. примечания"/>
             </ComboBox>
         </WrapPanel>
         <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="5" Margin="20,20,20,20">
-            <Label Content="Кисти"/>
-            <ComboBox Margin="5,0,5,0" x:Name="Kisti"  SelectedIndex="0">
+            <Label Content="Кисти" Width="194"/>
+            <ComboBox x:Name="Kisti"  SelectedIndex="0" Width="125">
                 <TextBlock Text="норма"/>
                 <TextBlock Text="см. примечания"/>
             </ComboBox>
         </WrapPanel>
         <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="6" Margin="20,20,20,20">
-            <Label Content="Стопы"/>
-            <ComboBox Margin="5,0,5,0" x:Name="Stopi"  SelectedIndex="0">
+            <Label Content="Стопы" Width="194"/>
+            <ComboBox x:Name="Stopi"  SelectedIndex="0" Width="125">
                 <TextBlock Text="норма"/>
                 <TextBlock Text="см. примечания"/>
             </ComboBox>
         </WrapPanel>
-        
-        
-        
+
+
+
     </Grid>
 </Window>
