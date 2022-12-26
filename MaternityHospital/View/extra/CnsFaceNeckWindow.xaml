@@ -4,33 +4,34 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital.View.extra"
-        mc:Ignorable="d"
+        mc:Ignorable="d" 
+        
         Title="CnsFaceNeck" Height="450" Width="800">
-    <Grid Background="#6e80af">
+    <Grid Background="#91abbe">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto" MinHeight="32.96"/>
+            <RowDefinition Height="auto" MinHeight="36"/>
+            <RowDefinition Height="auto" MinHeight="39"/>
+            <RowDefinition Height="auto" MinHeight="34"/>
+            <RowDefinition Height="auto" MinHeight="32.96"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Боковые желудочки" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top"   Width="268" Margin="22,5,0,0" Grid.RowSpan="2"/>
-        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0"  x:Name="BokZhelydochki" Margin="265,10,374,1" Grid.Row="2">
+        <Label Content="Боковые желудочки" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center"   Width="255" Margin="22,0,0,0" Height="39"/>
+        <ComboBox SelectedIndex="0"  x:Name="BokZhelydochki" Margin="277,6,126,5" Grid.Row="2">
             <TextBlock Text="норма"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <Label Content="Полость прозрачной перегородки" HorizontalAlignment="Left" Margin="22,4,0,0" Grid.Row="3" VerticalAlignment="Top"   Grid.ColumnSpan="2" Width="425" Grid.RowSpan="2"/>
-        <ComboBox Margin="238,10,374,43" SelectedIndex="0"   x:Name="PPPeregorodki" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2">
+        <Label Content="Полость прозрачной перегородки" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="417" Height="39"/>
+        <ComboBox Margin="420,5,126,9" SelectedIndex="0"   x:Name="PPPeregorodki" Grid.Row="3">
             <TextBlock Text="норма"/>
             <TextBlock Text="3мм"/>
             <TextBlock Text="4мм"/>
@@ -47,32 +48,32 @@
             <TextBlock Text="15мм"/>
             <TextBlock Text="не визуализируется"/>
         </ComboBox>
-        <Label Content="III желудочек" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top"  Margin="22,7,0,0" Grid.RowSpan="2"/>
-        <ComboBox Grid.ColumnSpan="2"  Margin="214,10,374,0" SelectedIndex="0"  x:Name="TZhelydochek" Grid.Row="4">
+        <Label Content="III желудочек" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Center"  Margin="22,0,0,0" Height="39" Width="255"/>
+        <ComboBox  Margin="277,6,126,8" SelectedIndex="0"  x:Name="TZhelydochek" Grid.Row="4">
             <TextBlock Text="норма"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <Label Content="IV желудочек" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Margin="22,4,0,0" Grid.RowSpan="2"/>
-        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0"  Margin="214,10,374,0" x:Name="CHZhelydochek" Grid.Row="5">
+        <Label Content="IV желудочек" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Center" Margin="22,0,0,0" Height="39" Width="255"/>
+        <ComboBox SelectedIndex="0"  Margin="277,6,126,6" x:Name="CHZhelydochek" Grid.Row="5">
             <TextBlock Text="норма"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <Label Content="Таламус" HorizontalAlignment="Left" Margin="22,43,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2"/>
-        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0"  Margin="214,10,374,1"  x:Name="Talamys" Grid.Row="6">
+        <Label Content="Таламус" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="6" VerticalAlignment="Center" Height="39" Width="250"/>
+        <ComboBox SelectedIndex="0"  Margin="277,6,126,5"  x:Name="Talamys" Grid.Row="6">
             <TextBlock Text="разделенный"/>
             <TextBlock Text="неразделенный"/>
         </ComboBox>
-        <Label Content="Мозжечок" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="7" VerticalAlignment="Top" />
+        <Label Content="Мозжечок" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="7" VerticalAlignment="Center" Height="39" Width="68" />
 
 
 
-        <Label Content="Большая цистерна" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Top"  Margin="22,42,0,0" Grid.RowSpan="2"/>
-        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0"  Margin="242,10,374,3" x:Name="BCisterna"  Grid.Row="8">
+        <Label Content="Большая цистерна" HorizontalAlignment="Left" Grid.Row="8" VerticalAlignment="Top"  Margin="22,0,0,0" Grid.RowSpan="2" Height="39" Width="250"/>
+        <ComboBox SelectedIndex="0"  Margin="277,6,127,7" x:Name="BCisterna"  Grid.Row="8">
             <TextBlock Text="норма"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <Label Content="Лицо" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="1" VerticalAlignment="Center" />
-        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0"  x:Name="Lico" Margin="214,10,374,1" Grid.Row="1">
+        <Label Content="Лицо" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="39" Width="255" />
+        <ComboBox SelectedIndex="0"  x:Name="Lico" Margin="277,6,127,5" Grid.Row="1">
             <TextBlock Text="визуализируется"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>

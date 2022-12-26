@@ -7,20 +7,20 @@
         mc:Ignorable="d" Loaded="UserControl_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Label Content="допплерометрия" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
         <Label Grid.Column="1" Content="PI" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"/>
@@ -58,7 +58,7 @@
         <WrapPanel Grid.Column="3" Grid.Row="4" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBox TextChanged="TextChanged" TextWrapping="Wrap" Text="" x:Name="MCA3" MinWidth="120"/>
         </WrapPanel>
-        <WrapPanel Grid.Column="1" Grid.Row="6" Margin="70,10,0,10" Grid.ColumnSpan="2" VerticalAlignment="Center">
+        <WrapPanel Grid.Column="1" Grid.Row="6" Margin="89,0,0,0" Grid.ColumnSpan="2" VerticalAlignment="Center">
             <TextBox TextChanged="TextChanged" TextWrapping="Wrap" Text="" x:Name="DiagKonyga" MinWidth="120"/>
             <Label Content="мм" FontSize="24"/>
         </WrapPanel>

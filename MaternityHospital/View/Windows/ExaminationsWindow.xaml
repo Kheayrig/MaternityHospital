@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         WindowState="Maximized" 
         Title="Examinations" Height="450" Width="800" Closing="Window_Closing">
-    <Grid Background="#C9E8F0">
+    <Grid Background="#91abbe">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>

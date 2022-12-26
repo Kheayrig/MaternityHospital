@@ -6,57 +6,57 @@
         xmlns:local="clr-namespace:MaternityHospital.View.extra"
         mc:Ignorable="d"
         Title="AbdominalCavity" Height="600" Width="800">
-    <Grid  Background="#6e80af">
+    <Grid  Background="#91abbe">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Label Content="Передняя брюшная стенка"  HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="1" VerticalAlignment="Top" />
-        <ComboBox Grid.ColumnSpan="2" x:Name="PerBrStenka" SelectedIndex="0" Margin="349,10,249,10" Grid.Row="1">
+        <ComboBox x:Name="PerBrStenka" SelectedIndex="0" Margin="223,10,477,10" Grid.Row="1" Grid.ColumnSpan="2">
             <TextBlock Text="без дефектов"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
         <Label Content="Печень" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="2" VerticalAlignment="Center" />
-        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0" x:Name="Pechen" Margin="349,10,249,10" Grid.Row="2">
+        <ComboBox SelectedIndex="0" x:Name="Pechen" Margin="223,10,477,10" Grid.Row="2" Grid.ColumnSpan="2">
             <TextBlock Text="без особенностей"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
         <Label Content="Желочный пузырь " HorizontalAlignment="Left" Margin="22,49,0,0" Grid.Row="2" VerticalAlignment="Top"  Grid.RowSpan="2"/>
-        <ComboBox Margin="248,8,23,13" SelectedIndex="0" x:Name="zheloPyz1" Grid.Row="3">
+        <ComboBox Margin="223,8,477,13" SelectedIndex="0" x:Name="zheloPyz1" Grid.Row="3" Grid.ColumnSpan="2">
             <TextBlock Text="расположен типично"/>
             <TextBlock Text="медиальнее пупочной вены"/>
         </ComboBox>
-        <ComboBox Margin="0,6,249,14" SelectedIndex="0"  x:Name="zheloPyz2" Grid.Row="3" Grid.Column="1">
+        <ComboBox Margin="172,9,249,11" SelectedIndex="0"  x:Name="zheloPyz2" Grid.Row="3" Grid.Column="1">
             <TextBlock Text="без особенностей"/>
             <TextBlock Text="с неоднородным содержанием"/>
             <TextBlock Text="с неоднородным гиперэхогенным содержимым"/>
         </ComboBox>
         <Label Content="Селезенка" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="4" VerticalAlignment="Top" />
-        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0"  x:Name="Selizionka" Margin="349,8,249,10" Grid.Row="4">
+        <ComboBox SelectedIndex="0"  x:Name="Selizionka" Margin="223,9,477,9" Grid.Row="4" Grid.ColumnSpan="2">
             <TextBlock Text="без особенностей"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
         <Label Content="Желудок" HorizontalAlignment="Left" Margin="22,48,0,0" Grid.Row="4" VerticalAlignment="Top"  Grid.RowSpan="2"/>
-        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0" Margin="349,9,249,12"  x:Name="Zhelydok" Grid.Row="5">
+        <ComboBox SelectedIndex="0" Margin="223,9,478,12"  x:Name="Zhelydok" Grid.Row="5" Grid.ColumnSpan="2">
             <TextBlock Text="визуализируется"/>
             <TextBlock Text="не визуализируется"/>
         </ComboBox>
         <Label Content="Кишечник" HorizontalAlignment="Left" Margin="22,49,0,0" Grid.Row="5" VerticalAlignment="Top"  Grid.RowSpan="2"/>
-        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0" Margin="349,10,249,10"  x:Name="Kichetschnik" Grid.Row="6">
+        <ComboBox SelectedIndex="0" Margin="223,10,477,10"  x:Name="Kichetschnik" Grid.Row="6" Grid.ColumnSpan="2">
             <TextBlock Text="без особенностей"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
@@ -65,22 +65,22 @@
             <TextBlock Text="без особенностей,ЧЛК не расширен"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <ComboBox Margin="233,10,23,10" SelectedIndex="0" x:Name="Potschki1" Grid.Row="7">
+        <ComboBox Margin="223,10,10,10" SelectedIndex="0" x:Name="Potschki1" Grid.Row="7">
 
         </ComboBox>
         <Label Content="Мочевой пузырь" HorizontalAlignment="Left" Margin="22,48,0,0" Grid.Row="7" VerticalAlignment="Top"  Grid.RowSpan="2"/>
-        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0" Margin="349,10,249,11" x:Name="MPyzyr" Grid.Row="8">
+        <ComboBox SelectedIndex="0" Margin="223,10,478,11" x:Name="MPyzyr" Grid.Row="8" Grid.ColumnSpan="2">
             <TextBlock Text="без особенностей"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
 
         <Label Content="Объемные образования" HorizontalAlignment="Left" Margin="22,49,0,0" Grid.Row="8" VerticalAlignment="Top"  Grid.RowSpan="2"/>
-        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0" Margin="349,10,249,10" x:Name="OObrazovania" Grid.Row="9">
+        <ComboBox SelectedIndex="0" Margin="223,6,477,14" x:Name="OObrazovania" Grid.Row="9" Grid.ColumnSpan="2">
             <TextBlock Text="нет"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
         <Label Content="Асцит" HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="10" VerticalAlignment="Top" />
-        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0" Margin="349,10,249,10"  x:Name="Ascit" Grid.Row="10">
+        <ComboBox Grid.ColumnSpan="2" SelectedIndex="0" Margin="223,10,477,10"  x:Name="Ascit" Grid.Row="10">
             <TextBlock Text="нет"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
