@@ -41,11 +41,11 @@
             <TextBlock Text="нет"/>
             <TextBlock Text="см.дополнительно"/>
         </ComboBox>
-        <Label Content="Торакоабдоминальное отношение" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="5" VerticalAlignment="Center"  Grid.ColumnSpan="2" Width="418"/>
-        <ComboBox Margin="150,10,85,10" Grid.Row="5" SelectedIndex="0" x:Name="TOtnochenie1" Grid.Column="1">
+        <Label Content="Торакоабдоминальное отношение" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="5" VerticalAlignment="Center"  Grid.ColumnSpan="2" Width="437"/>
+        <ComboBox Margin="195,10,70,10" Grid.Row="5" SelectedIndex="0" x:Name="TOtnochenie1" Grid.Column="1">
 
         </ComboBox>
-        <ComboBox Margin="324,10,-89,10" Grid.Row="5" SelectedIndex="0" x:Name="TOtnochenie2" Grid.Column="1">
+        <ComboBox Margin="349,10,-80,10" Grid.Row="5" SelectedIndex="0" x:Name="TOtnochenie2" Grid.Column="1">
         </ComboBox>
     </Grid>
 </Window>
