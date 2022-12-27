@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital.View.extra"
         mc:Ignorable="d"
-        Title="ChestCavity" Height="450" Width="800">
-    <Grid Background="#91abbe">
+        Title="ChestCavity" Height="450" Width="800"
+         Background="#DDCDFF"
+        >
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>

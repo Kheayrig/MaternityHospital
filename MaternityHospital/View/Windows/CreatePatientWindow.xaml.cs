@@ -18,6 +18,7 @@ using MaternityHospital.DB.Models;
 using MaternityHospital.Services;
 using System.Globalization;
 using System.Windows.Media.Converters;
+using System.Text.RegularExpressions;
 
 namespace MaternityHospital.View.Windows
 {
@@ -43,6 +44,8 @@ namespace MaternityHospital.View.Windows
             LastPeriodDatePicker.DisplayDateStart = DateTime.Now.AddDays(-280);
 
             birthdayDatePicker.DisplayDateEnd = DateTime.Now.AddYears(-11);
+            birthdayDatePicker.SelectedDate = DateTime.Now.AddYears(-18);
+            birthdayDatePicker.DisplayDateEnd = DateTime.Now.AddYears(-60);
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
@@ -55,12 +58,37 @@ namespace MaternityHospital.View.Windows
             var isFilled = CheckIsFilled();
             if (isFilled)
             {
+
                 string fio = fioTextBox.Text.Trim();
-                string doctor = AppSettings.CustomSettings.CurrentDoctor;
+                if (!TextBoxFilters.CheckFIO(fio))
+                {
+                    MessageBox.Show("Проверьте правильность ввода ФИО!");
+                    return;
+                }
                 string address = AddressTextBox.Text;
+                if (address != "" && !Regex.IsMatch(address, "[А-ЯЁа-яё]{5,}"))
+                {
+                    MessageBox.Show("Проверьте правильность ввода адреса!");
+                    return;
+                }
                 DateTime? lastPeriodDate = LastPeriodDatePicker.SelectedDate;
+                if(lastPeriodDate != null && (lastPeriodDate < DateTime.Now.AddDays(-280) || lastPeriodDate > DateTime.Now.AddDays(-7)))
+                {
+                    MessageBox.Show($"Неправильно заполнена дата месячных\nДата должна быть в пределах от {DateTime.Now.AddDays(-280)} до {DateTime.Now.AddDays(-7)}.");
+                    return;
+                }
                 DateTime birthday = birthdayDatePicker.SelectedDate.Value;
+                if (birthday < DateTime.Now.AddYears(-60) || birthday > DateTime.Now.AddYears(-11))
+                {
+                    MessageBox.Show($"Неправильно заполнена дата рождения\nДата должна быть в пределах от {DateTime.Now.AddYears(-60)} до {DateTime.Now.AddYears(-11)}.");
+                    return;
+                }
                 DateTime firstScanDate = FirstScanDatePicker.SelectedDate.Value;
+                if (firstScanDate < DateTime.Now.AddYears(-2) || firstScanDate > DateTime.Now)
+                {
+                    MessageBox.Show($"Неправильно заполнена дата сканирования\nДата должна быть в пределах от {DateTime.Now.AddYears(-2)} до {DateTime.Now}.");
+                    return;
+                }
                 Patient patient = new Patient(fio, birthday, firstScanDate, AppSettings.CustomSettings.CurrentDoctor, address, lastPeriodDate);
                 patient.Add();
                 DialogResult = true;
@@ -68,6 +96,7 @@ namespace MaternityHospital.View.Windows
                 Close();
             }
         }
+
         private bool CheckIsFilled()
         {
             bool isFilled = true;

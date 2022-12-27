@@ -8,8 +8,8 @@
         Title="Изменить врача" Height="450" Width="800"
         Loaded="Window_Loaded"
         Closing="Close"
-        WindowStartupLocation="CenterScreen">
-    <Grid Margin="5,10,5,5" Background="#91abbe">
+        WindowStartupLocation="CenterScreen" Background="#DDCDFF">
+    <Grid Margin="5,10,5,5">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>

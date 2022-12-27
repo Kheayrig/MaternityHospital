@@ -45,6 +45,8 @@ namespace MaternityHospital.View.Windows
             LastPeriodDatePicker.SelectedDate = _patient.LastPeriodDate;
             birthdayDatePicker.SelectedDate = _patient.Birthday;
             FirstScanDatePicker.SelectedDate = _patient.FirstScanDate;
+            DPM.IsChecked = _patient.DPM;
+            Scan.IsChecked = _patient.Scan;
         }
 
         private void SetDatePickersValues()
@@ -76,6 +78,10 @@ namespace MaternityHospital.View.Windows
                     _patient.LastPeriodDate = LastPeriodDatePicker.SelectedDate;
                     _patient.Birthday = birthdayDatePicker.SelectedDate.Value;
                     _patient.FirstScanDate = FirstScanDatePicker.SelectedDate.Value;
+                    if(DPM.IsChecked.Value == null) _patient.DPM = false;
+                    else _patient.DPM = DPM.IsChecked.Value;
+                    if(Scan.IsChecked.Value == null) _patient.Scan = false;
+                    else _patient.Scan = Scan.IsChecked.Value;
                     _patient.Update();
                     DialogResult = true;
                     Close();

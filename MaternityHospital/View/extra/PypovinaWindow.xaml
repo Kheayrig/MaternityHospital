@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital.View.extra"
         mc:Ignorable="d"
-        Title="pypovina" Height="450" Width="1000">
-    <Grid Background="#91abbe">
+        Title="pypovina" Height="450" Width="1000"
+         Background="#DDCDFF"
+        >
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>

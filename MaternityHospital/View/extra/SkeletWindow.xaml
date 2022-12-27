@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital.View.extra"
         mc:Ignorable="d"
-        Title="Скелет" Height="600" Width="800">
-    <Grid Background="#91abbe">
+        Title="Скелет" Height="600" Width="800"
+         Background="#DDCDFF"
+        >
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>

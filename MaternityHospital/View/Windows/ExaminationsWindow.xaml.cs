@@ -54,15 +54,19 @@ namespace MaternityHospital.View.Windows
             {
                 case 1:
                     Tabs.Content = new Trimester1();
+                    Title = "1-ый триместр";
                     break;
                 case 2:
                     Tabs.Content = new Trimester2();
+                    Title = "2-ый триместр";
                     break;
                 case 3:
                     Tabs.Content = new Trimester3();
+                    Title = "3-ый триместр";
                     break;
                 case 4:
                     Tabs.Content = new Childbirth();
+                    Title = "Роды";
                     break;
             }
         }

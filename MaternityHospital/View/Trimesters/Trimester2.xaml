@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:MaternityHospital.View.Trimesters"
              xmlns:vk="clr-namespace:MaternityHospital.View.UserControls"
              mc:Ignorable="d">
-    <TabControl >
+    <TabControl>
         <TabItem>
             <TabItem.Header>Общие сведения</TabItem.Header>
             <TabItem.Content>

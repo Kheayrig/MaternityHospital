@@ -33,15 +33,16 @@ namespace MaternityHospital.View.Windows
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string doctorFIO = DoctorInfoTextBox.Text.Trim();
-            if(doctorFIO.Length == 0)
+            if (doctorFIO.Length == 0)
             {
                 _borderColor = Brushes.Red;
                 WarningLabel.Visibility = Visibility.Visible;
             }
+            else if (!TextBoxFilters.CheckFIOWithPoints(doctorFIO)) MessageBox.Show("Проверьте правильность ввода ФИО!");
             else
             {
                 var doctor = new Doctor(doctorFIO);
-                
+
                 doctor.Add();
                 DialogResult = true;
                 Close();

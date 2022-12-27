@@ -7,8 +7,10 @@
         mc:Ignorable="d"
         Title="Добавить пациентку" 
         Height="450" Width="800" 
-        MinHeight="400" MinWidth="600">
-    <Grid Margin="15,10,15,5" Background="#91abbe">
+        MinHeight="400" MinWidth="600"
+        Background="#DDCDFF"
+        >
+    <Grid Margin="15,10,15,5">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -49,8 +51,8 @@
 
         <Label x:Name="WarningLabel" Margin="20,5,0,5" Content="Заполните пустые поля, отмеченные '!!!'" Foreground="Red" Visibility="Hidden" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" />
 
-        <Button Width="140" Margin="20,5,0,5" x:Name="Cancel" Content="Отмена" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Cancel_Click"/>
-        <Button Width="140" Margin="0,5,20,5" x:Name="OK" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center" Content="OK" Click="OK_Click"/>
+        <Button Background="#fff" Width="140" Margin="20,5,0,5" x:Name="Cancel" Content="Отмена" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Cancel_Click"/>
+        <Button Background="#fff" Width="140" Margin="0,5,20,5" x:Name="OK" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center" Content="OK" Click="OK_Click"/>
 
     </Grid>
 </Window>
