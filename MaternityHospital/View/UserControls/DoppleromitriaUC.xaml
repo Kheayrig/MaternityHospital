@@ -5,61 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaternityHospital.View.UserControls"
         mc:Ignorable="d" Loaded="UserControl_Loaded">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-        </Grid.ColumnDefinitions>
+    <Grid Margin="10,0,10,0">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Label Content="допплерометрия" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
-        <Label Grid.Column="1" Content="PI" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"/>
-        <Label Grid.Column="2" Content="(срок)" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" />
-        <Label Grid.Column="3" Content="(вес)" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" />
-        <Label Content="артерия пуповины" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Center"   Grid.ColumnSpan="2" Width="229"/>
-        <Label Content="С-мозг артерия" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Center"/>
-        <Label Content="MCA-PSV (см/сек)" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" VerticalAlignment="Center"  Grid.ColumnSpan="2" Width="214"/>
-        <Label Content="диагональная конъюгана" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="6" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="160"/>
-
-        <WrapPanel Grid.Column="1" Grid.Row="2" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBox TextChanged="TextChanged" TextWrapping="Wrap"  InputMethod.IsInputMethodEnabled="False" MaxLength="4" x:Name="ArterPypovinyPI" Text="" MinWidth="120"/>
+        <WrapPanel Margin="0,10,0,10" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <Label Content="допплерометрия"/>
+            <Label Margin="150,0,150,0" Content="PI"/>
+            <Label Content="(срок)"/>
+            <Label Margin="140,0,140,0" Content="(вес)"/>
         </WrapPanel>
-        <WrapPanel Grid.Column="2" Grid.Row="2" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <WrapPanel Margin="0,10,0,10" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <Label Content="артерия пуповины"/>
+            <TextBox Margin="90,0,80,0" TextChanged="TextChanged" TextWrapping="Wrap"  InputMethod.IsInputMethodEnabled="False" MaxLength="4" x:Name="ArterPypovinyPI" Text="" MinWidth="120"/>
             <TextBox TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="2" Text="" x:Name="ArterPypovinySrok" MinWidth="120"/>
+            <TextBox Margin="80,0,70,0" TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="4" Text="" x:Name="ArterPypovinyMass" MinWidth="120"/>
         </WrapPanel>
-        <WrapPanel Grid.Column="3" Grid.Row="2" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="4" Text="" x:Name="ArterPypovinyMass" MinWidth="120"/>
-        </WrapPanel>
-        <WrapPanel Grid.Column="1" Grid.Row="3" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="4" Text="" x:Name="CMozgPI" MinWidth="120"/>
-        </WrapPanel>
-        <WrapPanel Grid.Column="1" Grid.Row="4" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="4" x:Name="MCAPI" Text="" MinWidth="120"/>
-        </WrapPanel>
-        <WrapPanel Grid.Column="2" Grid.Row="3" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+        <WrapPanel Margin="0,10,0,10" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <Label Content="С-мозг артерия"/>
+            <TextBox Margin="123,0,80,0" TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="4" Text="" x:Name="CMozgPI" MinWidth="120"/>
             <TextBox TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="2" Text="" x:Name="CMozgSrok" MinWidth="120"/>
+            <TextBox Margin="80,0,70,0" TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="4" x:Name="CMozgMass" Text="" MinWidth="120"/>
         </WrapPanel>
-        <WrapPanel Grid.Column="3" Grid.Row="3" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="4" x:Name="CMozgMass" Text="" MinWidth="120"/>
-        </WrapPanel>
-        <WrapPanel Grid.Column="2" Grid.Row="4" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <WrapPanel Margin="0,10,0,10" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <Label Content="MCA-PSV (см/сек)"/>
+            <TextBox Margin="100,0,80,0" TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="4" x:Name="MCAPI" Text="" MinWidth="120"/>
             <TextBox TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="2" Text="" x:Name="MCASrok" MinWidth="120"/>
+            <TextBox Margin="80,0,70,0" TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="4" Text="" x:Name="MCAMass" MinWidth="120"/>
         </WrapPanel>
-        <WrapPanel Grid.Column="3" Grid.Row="4" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="4" Text="" x:Name="MCAMass" MinWidth="120"/>
-        </WrapPanel>
-        <WrapPanel Grid.Column="1" Grid.Row="6" Margin="70,10,0,10" Grid.ColumnSpan="2" VerticalAlignment="Center">
-            <TextBox TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="4" Text="" x:Name="DiagKonyga" MinWidth="120"/>
+        <WrapPanel Margin="0,50,0,10" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <Label Content="диагональная конъюгана"/>
+            <TextBox Margin="25,0,10,0" TextChanged="TextChanged" TextWrapping="Wrap" InputMethod.IsInputMethodEnabled="False" MaxLength="4" Text="" x:Name="DiagKonyga" MinWidth="120"/>
             <Label Content="мм" FontSize="24"/>
         </WrapPanel>
 
